@@ -87,6 +87,7 @@ const CONTEUDO = {
       eixo: "identidade",
       ano: "2026",
       cliente: "Projeto pessoal",
+      papel: "Identidade visual completa",
       resumo: "Da estrela à flor: o redesenho da minha própria marca, dois anos depois da primeira versão.",
       ferramentas: ["Illustrator", "Photoshop"],
       descricao: [
@@ -119,6 +120,8 @@ const CONTEUDO = {
       eixo: "identidade",
       ano: "2025",
       cliente: "Deathmare Studios",
+      papel: "Redesign de marca e aplicações",
+      duracao: "5 semanas",
       resumo: "Redesign da marca de um estúdio indie de jogos de Manaus.",
       ferramentas: ["Illustrator", "Photoshop"],
       descricao: [
@@ -126,11 +129,24 @@ const CONTEUDO = {
         "A dor concreta era de aplicação: a logo anterior tinha cores demais e não entrava em nenhum material. Era também uma logo datada, que não representava bem um unicórnio. O processo foi briefing, rascunho de alternativas e vetorização.",
         "Com o redesign, a marca ganhou variantes — inclusive de cor única — o que destravou a aplicação em papelaria, produto e comunicação de evento.",
       ],
-      capa: "imagens/projetos/deathmare-01.jpg",
+      capa: "imagens/projetos/deathmare/apresentacao-logo.jpg",
       imagens: [
-        "imagens/projetos/deathmare-01.jpg",
-        "imagens/projetos/deathmare-02.jpg",
-        "imagens/projetos/deathmare-b-01.jpg",
+        { src: "imagens/projetos/deathmare/apresentacao-logo.jpg", formato: "dupla",
+          legenda: "Marca principal sobre a padronagem do estúdio." },
+        { src: "imagens/projetos/deathmare/estamparia.jpg", formato: "dupla",
+          legenda: "Padronagem em cor única, feita a partir do símbolo." },
+        { src: "imagens/projetos/deathmare/business-card.jpg", formato: "dupla",
+          legenda: "Cartão de visita com QR para o itch.io do estúdio." },
+        { src: "imagens/projetos/deathmare/card-front.jpg", formato: "dupla",
+          legenda: "Verso do cartão." },
+        { src: "imagens/projetos/deathmare/caderno.jpg", formato: "tripla",
+          legenda: "Caderno de anotações." },
+        { src: "imagens/projetos/deathmare/copo.jpg", formato: "tripla",
+          legenda: "Copo térmico." },
+        { src: "imagens/projetos/deathmare/cracha.jpg", formato: "tripla",
+          legenda: "Crachá de evento." },
+        { src: "imagens/projetos/deathmare/card-jogo.jpg",
+          legenda: "Cartucho comemorativo — a marca aplicada em produto." },
       ],
       destaque: false,
     },
@@ -141,18 +157,48 @@ const CONTEUDO = {
       eixo: "identidade",
       ano: "2025",
       cliente: "Clube Os Rejeitados",
+      papel: "Identidade visual e aplicações",
+      duracao: "4 semanas",
       resumo: "Identidade para um clube literário de Manaus que cresceu e precisou se profissionalizar.",
       ferramentas: ["Illustrator", "Photoshop"],
       descricao: [
         "O Clube Os Rejeitados promove encontros mensais e conversas com autores, com foco em leituras regionais e nacionais. A identidade visual veio da urgência de profissionalizar o clube diante do alcance que ele já tinha conquistado.",
         "O nome vem do filme Os Rejeitados (The Holdovers), indicado ao Oscar em 2024, e foi ressignificado para mostrar que os eventos literários acontecem na região com muito esforço. As cadeiras vazias do símbolo carregam essa ideia de encontro que insiste em existir.",
       ],
-      capa: "imagens/projetos/clube-01.jpg",
+      capa: "imagens/projetos/clube-rejeitados/papelaria-mockup.jpg",
       imagens: [
-        "imagens/projetos/clube-01.jpg",
-        "imagens/projetos/clube-02.jpg",
+        { src: "imagens/projetos/clube-rejeitados/papelaria-mockup.jpg", formato: "sangria",
+          legenda: "Papelaria completa: papel timbrado, cartão de visita e padronagem de apoio." },
+        { src: "imagens/projetos/clube-rejeitados/cartaovisita-mockup.jpg", formato: "dupla",
+          legenda: "Cartão de visita da presidência." },
+        { src: "imagens/projetos/clube-rejeitados/cadernoleitura-mockup.jpg", formato: "dupla",
+          legenda: "Caderno de leitura 2026." },
+        { src: "imagens/projetos/clube-rejeitados/pin1black.jpg", formato: "tripla",
+          legenda: "Pin em preto." },
+        { src: "imagens/projetos/clube-rejeitados/pin2blue.jpg", formato: "tripla",
+          legenda: "Pin em azul." },
+        { src: "imagens/projetos/clube-rejeitados/pin3red.jpg", formato: "tripla",
+          legenda: "Pin em vermelho." },
+        { src: "imagens/projetos/clube-rejeitados/bookmark-mockup.jpg", formato: "dupla",
+          legenda: "Marcador de página." },
+        { src: "imagens/projetos/clube-rejeitados/copocafe-mockup.jpg", formato: "dupla",
+          legenda: "Copo de café dos encontros." },
+        { src: "imagens/projetos/clube-rejeitados/buckethat-mockup.jpg", formato: "tripla",
+          legenda: "Bucket hat com o mote do clube." },
+        { src: "imagens/projetos/clube-rejeitados/bone-mockup.jpg", formato: "tripla",
+          legenda: "Boné." },
+        { src: "imagens/projetos/clube-rejeitados/blusafrente-mockup.jpg", formato: "tripla",
+          legenda: "Camiseta, frente." },
+        { src: "imagens/projetos/clube-rejeitados/ecobag1-mockup.jpg", formato: "dupla",
+          legenda: "Ecobag em duas versões." },
+        { src: "imagens/projetos/clube-rejeitados/ecobag2-mockup.jpg", formato: "dupla",
+          legenda: "Ecobag, segunda versão." },
+        { src: "imagens/projetos/clube-rejeitados/post-1-instagram.jpg", formato: "post",
+          legenda: "Post de divulgação dos encontros." },
+        { src: "imagens/projetos/clube-rejeitados/post-2-instagram.jpg", formato: "post",
+          legenda: "Segundo post da linha editorial." },
       ],
-      destaque: false,
+      destaque: true,
     },
 
     {
@@ -161,14 +207,28 @@ const CONTEUDO = {
       eixo: "identidade",
       ano: "2025",
       cliente: "Deathmare Studios",
+      papel: "Redesign de marca",
       resumo: "Redesign da marca de um jogo, acompanhando o redesign do estúdio.",
       ferramentas: ["Illustrator", "Photoshop"],
       descricao: [
         "LabRattack é um jogo da Deathmare Studios. Assim como o estúdio, a marca precisava de um redesign que representasse as novas atualizações do jogo.",
         "Com a logo reticulada, o resultado ficou mais moderno e com aplicação mais fácil em materiais gráficos, graças às variantes monocromáticas.",
       ],
-      capa: "imagens/projetos/labrattack-01.jpg",
-      imagens: ["imagens/projetos/labrattack-01.jpg"],
+      capa: "imagens/projetos/labrattack/mockup-card-game.jpg",
+      imagens: [
+        { src: "imagens/projetos/labrattack/esboco-logo.jpg",
+          legenda: "Rascunho de alternativas: o ponto de partida do redesign." },
+        { src: "imagens/projetos/labrattack/mockup-card-game.jpg", formato: "dupla",
+          legenda: "Cartucho do jogo." },
+        { src: "imagens/projetos/labrattack/mockup-notebook.jpg", formato: "dupla",
+          legenda: "Caderno com a variante monocromática." },
+        { src: "imagens/projetos/labrattack/caneca.jpg", formato: "tripla",
+          legenda: "Caneca." },
+        { src: "imagens/projetos/labrattack/hood.jpg", formato: "tripla",
+          legenda: "Moletom." },
+        { src: "imagens/projetos/labrattack/ecobag.jpg", formato: "tripla",
+          legenda: "Ecobag." },
+      ],
       destaque: false,
     },
 
@@ -178,14 +238,24 @@ const CONTEUDO = {
       eixo: "identidade",
       ano: "2024",
       cliente: "Projeto fictício",
+      papel: "Rebranding",
       resumo: "Identidade para uma loja de acessórios, com símbolo nascido do astrolábio.",
       ferramentas: ["Illustrator", "Photoshop"],
       descricao: [
-        "Identidade visual fictícia para uma loja de acessórios. Foi refeita porque a versão original não representava bem uma papelaria criativa.",
+        "Rebranding de uma identidade visual fictícia para loja de acessórios. Foi refeita porque a versão original não representava bem uma papelaria criativa.",
         "O símbolo surge do astrolábio e o slogan fecha o conceito: eternize momentos e desperte a magia.",
       ],
-      capa: "imagens/projetos/stardust-01.jpg",
-      imagens: ["imagens/projetos/stardust-01.jpg"],
+      capa: "imagens/projetos/stardust-sun/behance-stardust-sun-portfolio-05.jpg",
+      imagens: [
+        { src: "imagens/projetos/stardust-sun/behance-stardust-sun-portfolio-05.jpg",
+          legenda: "Sistema completo: marca, paleta e aplicações." },
+        { src: "imagens/projetos/stardust-sun/fachada.jpg", formato: "dupla",
+          legenda: "Fachada da loja." },
+        { src: "imagens/projetos/stardust-sun/leather-drawstring-pouch-mockup.jpg", formato: "dupla",
+          legenda: "Saquinho de veludo para as peças." },
+        { src: "imagens/projetos/stardust-sun/pexels-cottonbro-studio-9428777.jpg", formato: "retrato",
+          legenda: "Peça de campanha." },
+      ],
       destaque: false,
     },
 
@@ -195,21 +265,55 @@ const CONTEUDO = {
       eixo: "diagramacao",
       ano: "2026",
       cliente: "Centro de Educação Tecnológica do Amazonas",
-      resumo: "Editoração de e-books e infográficos para a plataforma de Ensino a Distância.",
+      papel: "Editoração e design de informação",
+      resumo: "Infográficos e e-books para a plataforma de Ensino a Distância.",
       ferramentas: ["InDesign", "Illustrator", "Photoshop"],
       descricao: [
         "Editoração de e-books para cursos técnicos e de qualificação em regime de Ensino a Distância, além de peças gráficas como infográficos, mapas mentais, thumbnails e banners para a plataforma EAD.",
         "Os infográficos são material complementar e funcionam como síntese dos assuntos e dados mostrados nas aulas e nos e-books. Alguns são compostos como cenários, outros como fluxogramas — a escolha depende de o conteúdo ser descritivo ou sequencial.",
-        "Parte dos materiais do CETAM não tem divulgação autorizada, como os e-books. Os infográficos exibidos aqui têm divulgação permitida.",
+        "Parte dos materiais do CETAM não tem divulgação autorizada, como os e-books. Os infográficos exibidos aqui têm divulgação permitida. Clique em qualquer um para ler na íntegra.",
       ],
       capa: "imagens/projetos/cetam-01.jpg",
       imagens: [
-        { src: "imagens/projetos/cetam-01.jpg",
-          legenda: "Infográficos na plataforma EAD, em formato de leitura vertical." },
-        { src: "imagens/projetos/cetam-02.jpg", formato: "sangria",
-          legenda: "Cinco infográficos completos: inglês instrumental, turismo em espanhol, roteiros turísticos, fluxogramas e estrutura de classes em Python." },
+        { src: "imagens/projetos/cetam/info-ingles.jpg", formato: "retrato",
+          legenda: "Inglês instrumental: tarefas, habilidades e tempos verbais." },
+        { src: "imagens/projetos/cetam/info-turismo-espanhol.jpg", formato: "retrato",
+          legenda: "Turismo em espanhol: leitura e comunicação intercultural, composto como cenário." },
+        { src: "imagens/projetos/cetam/info-roteiro-turistico.jpg", formato: "retrato",
+          legenda: "Elementos estruturais de um roteiro turístico." },
+        { src: "imagens/projetos/cetam/info-fluxograma.jpg", formato: "retrato",
+          legenda: "Tomada de decisão e repetição em algoritmos, composto como fluxograma." },
+        { src: "imagens/projetos/cetam/info-python.jpg", formato: "retrato",
+          legenda: "Estrutura básica de uma classe em Python." },
       ],
       destaque: true,
+    },
+
+    {
+      id: "propesp",
+      titulo: "Revista do CONIC",
+      eixo: "diagramacao",
+      ano: "2023",
+      cliente: "PROPESP — UFAM",
+      papel: "Projeto gráfico e diagramação",
+      resumo: "Três alternativas de capa e miolo para a revista de iniciação científica da UFAM.",
+      ferramentas: ["InDesign", "Illustrator"],
+      descricao: [
+        "Projeto gráfico da revista de iniciação científica do CONIC 2023, desenvolvido para a PROPESP da UFAM. Foram três alternativas de capa, todas construídas para abraçar a identidade que o congresso apresentou naquele ano.",
+        "O projeto não foi adiante. Mantenho ele aqui porque proposta recusada também é trabalho feito, e porque as três rotas mostram como uma mesma identidade aceita leituras diferentes: uma mais cromática, uma mais sólida e uma mais editorial.",
+      ],
+      capa: "imagens/projetos/propesp/capa-livro-conic.jpg",
+      imagens: [
+        { src: "imagens/projetos/propesp/capa-livro-2.jpg", formato: "dupla",
+          legenda: "Alternativa 1: degradê completo da paleta do congresso." },
+        { src: "imagens/projetos/propesp/capa-livro-3.jpg", formato: "dupla",
+          legenda: "Alternativa 2: bloco sólido com o ano em destaque." },
+        { src: "imagens/projetos/propesp/capa-livro-conic.jpg", formato: "dupla",
+          legenda: "Alternativa 3: fundo claro, leitura mais editorial." },
+        { src: "imagens/projetos/propesp/miolo.jpg", formato: "dupla",
+          legenda: "Miolo: grid de duas colunas para artigos científicos." },
+      ],
+      destaque: false,
     },
 
     {
@@ -223,7 +327,7 @@ const CONTEUDO = {
       equipe: "Individual",
       resumo: "App de orientação no campus, nascido de uma dor que todo estudante de Design da UFAM conhece.",
       ferramentas: ["Figma", "Illustrator", "Photoshop"],
-      capa: "imagens/projetos/meudu-01.jpg",
+      capa: "imagens/projetos/meudu/mockup-meu-du.jpg",
       metricas: [
         { valor: "6 meses", rotulo: "do briefing ao protótipo" },
         { valor: "6 etapas", rotulo: "Metodologia E" },
@@ -236,29 +340,44 @@ const CONTEUDO = {
             "O campus da UFAM fica dentro de uma Área de Preservação Ambiental e é cheio de blocos de salas e instalações espalhadas. Se localizar ali é uma dor comum a estudantes e egressos do curso de Design — foi dela que o trabalho de conclusão partiu.",
             "ESCREVA AQUI como você confirmou que a dor era coletiva e não só sua: conversou com quantas pessoas, aplicou questionário, observou o campus? É o parágrafo que transforma percepção em evidência.",
           ],
+          imagens: [
+            { src: "imagens/projetos/meudu/mockup-meu-du.jpg",
+              legenda: "Tela de entrada: acesso por matrícula e senha do e-campus." },
+          ],
         },
         {
           titulo: "O caminho",
           texto: ["Adotei a Metodologia E, de Meurer e Szabluk, que organiza o projeto em seis etapas encadeadas."],
-          lista: [
-            "Estratégia — projeto preliminar, contextualização, análise de similares e definição de requisitos e parâmetros",
-            "Escopo — definição do sistema, posicionamento da linguagem gráfico-visual e painel de diferencial semântico",
-            "Estrutura — definição de ferramentas e fluxograma de telas",
-            "Esqueleto — criação de wireframes",
-            "Estética — identidade gráfico-visual, diagramação e composição; logografia, tipografia, pictografia e iconografia",
-            "Execução — modelo funcional navegável, teste com usuários e melhorias",
+          etapas: [
+            { nome: "Estratégia", cor: "#3b3bd6", texto: "Projeto preliminar, contextualização, análise de similares e definição de requisitos e parâmetros." },
+            { nome: "Escopo", cor: "#1a1a9e", texto: "Definição do sistema, posicionamento da linguagem gráfico-visual e painel de diferencial semântico." },
+            { nome: "Estrutura", cor: "#f278c0", texto: "Definição de ferramentas e fluxograma de telas." },
+            { nome: "Esqueleto", cor: "#e00040", texto: "Criação de wireframes." },
+            { nome: "Estética", cor: "#9e1236", texto: "Identidade gráfico-visual, diagramação e composição; logografia, tipografia, pictografia e iconografia." },
+            { nome: "Execução", cor: "#6b0d20", texto: "Modelo funcional navegável, teste com usuários e melhorias." },
           ],
-          imagens: ["imagens/projetos/meudu-02.jpg"],
+        },
+        {
+          titulo: "Arquitetura do app",
+          texto: ["O sistema foi organizado em quatro frentes, todas alcançáveis a partir da home."],
+          fluxo: [
+            { grupo: "Entrada", passos: ["Login por matrícula", "Senha do e-campus"] },
+            { grupo: "Home", passos: ["Avisos", "Loja", "Contatos", "Redes sociais", "CADe", "Discentes"] },
+            { grupo: "Campus", passos: ["Oportunidades", "Locais", "Mapa"] },
+            { grupo: "Perfil", passos: ["Informações pessoais", "Configurações", "Ajuda"] },
+          ],
         },
         {
           titulo: "Do esqueleto à interface",
           texto: [
-            "Foram feitos wireframes de baixa e de alta fidelidade para o fluxo inteiro: entrada por matrícula e senha do e-campus, avisos, loja, contatos por departamento, redes sociais, oportunidades, locais, mapa e perfil.",
+            "Foram feitos wireframes de baixa e de alta fidelidade para o fluxo inteiro, e só depois entrou a camada de identidade visual.",
             "ESCREVA AQUI uma decisão de interface que você defende, e por quê. Por exemplo: por que o mapa não é a primeira tela, ou por que os contatos ficam agrupados por departamento em vez de uma lista única.",
           ],
           imagens: [
-            { src: "imagens/projetos/meudu-03.jpg", formato: "sangria",
-              legenda: "Wireframes de baixa e de alta fidelidade, lado a lado, para o fluxo inteiro." },
+            { src: "imagens/projetos/meudu/wireframe-1.jpg", legenda: "Wireframes: home, loja, avisos e redes sociais." },
+            { src: "imagens/projetos/meudu/wireframe-3.jpg", legenda: "Wireframes: oportunidades, locais, mapa e perfil." },
+            { src: "imagens/projetos/meudu/telas-1.jpg", legenda: "Mesmas telas, já com a identidade aplicada." },
+            { src: "imagens/projetos/meudu/telas-3.jpg", legenda: "Campus e perfil em alta fidelidade." },
           ],
         },
         {
@@ -267,7 +386,10 @@ const CONTEUDO = {
             "O projeto fechou com um documento de design de interface e um modelo funcional navegável, testado com usuários e revisado a partir do que apareceu nos testes.",
             "ESCREVA AQUI o resultado dos testes: quantas pessoas participaram, o que travou, o que você mudou depois. É o parágrafo que um recrutador de UX procura primeiro.",
           ],
-          imagens: ["imagens/projetos/meudu-01.jpg"],
+          imagens: [
+            { src: "imagens/projetos/meudu/telas-2.jpg", formato: "dupla", legenda: "Contatos por departamento." },
+            { src: "imagens/projetos/meudu/wireframe-2.jpg", formato: "dupla", legenda: "A mesma tela em baixa fidelidade." },
+          ],
         },
       ],
       aprendizados: [
@@ -286,7 +408,7 @@ const CONTEUDO = {
       equipe: "Time de hackathon",
       resumo: "Terceiro lugar com um app de gestão financeira e aprendizado gamificado.",
       ferramentas: ["Figma", "Illustrator", "Maze.co"],
-      capa: "imagens/projetos/supi-01.jpg",
+      capa: "imagens/projetos/supi/mockup-supi.jpg",
       metricas: [
         { valor: "3º lugar", rotulo: "Hackathon da PwC" },
         { valor: "11 usuários", rotulo: "no teste de usabilidade" },
@@ -297,24 +419,37 @@ const CONTEUDO = {
           texto: [
             "O hackathon pedia uma solução para uma dificuldade comum a diferentes localidades. Escolhemos a relação das pessoas com o próprio dinheiro: Supi é um app de gestão financeira com aprendizado gamificado e apoio de inteligência artificial.",
           ],
-        },
-        {
-          titulo: "Descoberta e definição",
-          texto: [
-            "Desk research sobre gestão e aprendizado financeiro, questionário via Google Forms para entender hábitos e definir o público-alvo, e criação de personas com a ferramenta PBB Canvas.",
-            "A ideação usou Product Backlog Building para definir problemas, personas e funcionalidades, além do nome e da identidade visual.",
+          imagens: [
+            { src: "imagens/projetos/supi/mockup-supi.jpg", legenda: "Marca e tela de abertura." },
           ],
-          imagens: ["imagens/projetos/supi-02.jpg"],
         },
         {
-          titulo: "Minha parte",
+          titulo: "O processo",
+          texto: ["O time seguiu Design Thinking, do desk research ao teste com usuários."],
+          etapas: [
+            { nome: "Empatia", cor: "#7a0d22", texto: "Desk research sobre gestão e aprendizado financeiro e questionário via Google Forms." },
+            { nome: "Definir", cor: "#a8103a", texto: "Público-alvo e dores a partir das respostas; personas criadas com PBB Canvas." },
+            { nome: "Ideação", cor: "#e00040", texto: "Product Backlog Building: problemas, personas, funcionalidades, nome e identidade visual." },
+            { nome: "Prototipar", cor: "#f278c0", texto: "Protótipo da parte gamificada no Figma; prototipação funcional em React com Firebase e Gemini." },
+            { nome: "Testar", cor: "#3b3bd6", texto: "Teste com 11 usuários via Maze.Co e documento de recomendações de UX/UI." },
+          ],
+          imagens: [
+            { src: "imagens/projetos/supi/wireframes.jpg", formato: "sangria",
+              legenda: "Fluxo de telas montado no Excalidraw, do cadastro ao orçamento." },
+          ],
+        },
+        {
+          titulo: "Minha parte: a gamificação",
           texto: [
-            "Fiquei responsável pelo protótipo da parte gamificada — as telas de flipcard e a passagem de nível de aprendiz para pupilo — feito no Figma. A prototipação funcional foi desenvolvida por Kauã Moraes em React, com Firebase e Gemini.",
+            "Fiquei responsável pelo protótipo da parte gamificada — as telas de flipcard de termos financeiros e a passagem de nível de aprendiz para pupilo. A prototipação funcional foi desenvolvida por Kauã Moraes em React, com Firebase e Gemini.",
             "Sem tempo para um guia de estilo, a interface acabou adotando o estilo liquid glass de forma inconsciente. Registrar isso importa: foi uma escolha que aconteceu, não uma que foi feita.",
           ],
           imagens: [
-            "imagens/projetos/supi-03.jpg",
-            "imagens/projetos/supi-04.jpg",
+            { src: "imagens/projetos/supi/tela-gami-1.jpg", formato: "retrato", legenda: "Nível aprendiz." },
+            { src: "imagens/projetos/supi/tela-gami-3.jpg", formato: "retrato", legenda: "Flipcard de termo financeiro." },
+            { src: "imagens/projetos/supi/tela-gami-4.jpg", formato: "retrato", legenda: "Resposta correta." },
+            { src: "imagens/projetos/supi/tela-gami-6.jpg", formato: "retrato", legenda: "Passagem para nível pupilo." },
+            { src: "imagens/projetos/supi/mockup-supi-2.jpg", formato: "retrato", legenda: "Protótipo navegável." },
           ],
         },
         {
@@ -343,7 +478,7 @@ const CONTEUDO = {
       equipe: "Trabalho em grupo",
       resumo: "A experiência de uma livraria e um café em casa, como resposta ao isolamento da pandemia.",
       ferramentas: ["Figma", "Illustrator", "Photoshop"],
-      capa: "imagens/projetos/litteralis-01.jpg",
+      capa: "imagens/projetos/cafe-litteralis/mockup.jpg",
       metricas: [
         { valor: "3 personas", rotulo: "sendo uma fora do público-alvo" },
         { valor: "4 telas", rotulo: "em média fidelidade" },
@@ -355,40 +490,56 @@ const CONTEUDO = {
           texto: [
             "A disciplina pedia um aplicativo que resolvesse algum problema causado pela pandemia de COVID-19. Escolhemos o afastamento presencial entre as pessoas — e a resposta foi levar para casa a experiência de uma livraria com café.",
           ],
+          imagens: [
+            { src: "imagens/projetos/cafe-litteralis/mockup.jpg", formato: "dupla",
+              legenda: "Marca e tela de abertura do aplicativo." },
+          ],
         },
         {
-          titulo: "Empatia",
-          texto: [
-            "Começamos por desk research sobre cafeterias e livrarias na plataforma Café/Capes e aplicamos um questionário via Google Forms para entender os hábitos dos consumidores.",
-            "ESCREVA AQUI o número de respostas do questionário e o achado que mais mudou o rumo do projeto. Um dado concreto vale mais que a descrição do método.",
+          titulo: "O processo",
+          texto: ["Design Thinking em cinco etapas, da pesquisa ao protótipo revisado."],
+          etapas: [
+            { nome: "Empatia", cor: "#7a0d22", texto: "Desk research sobre cafeterias e livrarias na plataforma Café/Capes e questionário via Google Forms." },
+            { nome: "Definir", cor: "#a8103a", texto: "Debrief das respostas, diagrama de afinidades em serviço, qualidade e ambientação, e três personas." },
+            { nome: "Ideação", cor: "#e00040", texto: "O exercício do Como nós poderíamos, requisitos, funcionalidades, jornada do usuário e identidade visual." },
+            { nome: "Prototipar", cor: "#f278c0", texto: "Wireframe de média fidelidade em quatro telas, design system e protótipo navegável." },
+            { nome: "Testar", cor: "#3b3bd6", texto: "Teste com três usuários por roteiro de usabilidade e revisão da interface e da jornada." },
           ],
-          imagens: ["imagens/projetos/litteralis-02.jpg"],
         },
         {
           titulo: "Definição",
           texto: [
-            "Fizemos o debrief das respostas e um diagrama de afinidades que organizou tudo em três eixos: serviço, qualidade do serviço e ambientação.",
+            "O diagrama de afinidades organizou as respostas em três eixos: serviço, qualidade do serviço e ambientação.",
             "Daí saíram três personas — duas dentro do público-alvo e uma deliberadamente fora, como desafio de projeto. A persona fora do alvo obriga a testar os limites da solução em vez de confirmar o que já se acredita.",
+            "ESCREVA AQUI o número de respostas do questionário e o achado que mais mudou o rumo do projeto. Um dado concreto vale mais que a descrição do método.",
           ],
         },
         {
-          titulo: "Ideação",
-          texto: [
-            "Usamos o exercício do “Como nós poderíamos?” para abrir alternativas, e fechamos com a definição de requisitos visuais, estéticos, técnico-funcionais e ergonômicos.",
-            "Nessa etapa saíram também as funcionalidades, o fluxo de jornada do usuário e a identidade visual da marca e do aplicativo.",
-          ],
-          imagens: ["imagens/projetos/litteralis-03.jpg"],
-        },
-        {
-          titulo: "Protótipo e teste",
-          texto: [
-            "Wireframe de média fidelidade em quatro telas, definição do design system e protótipo navegável.",
-            "O teste foi feito com três usuários a partir de um roteiro de usabilidade, seguido de perguntas sobre o aplicativo e a interface. A interface e o fluxo de jornada foram revisados para o protótipo final.",
-            "ESCREVA AQUI o que os três usuários travaram e o que vocês mudaram por causa disso. Sem essa frase, o teste vira etapa cumprida; com ela, vira decisão de projeto.",
+          titulo: "A jornada do usuário",
+          texto: ["O fluxo foi desenhado em torno da reserva de eventos, que é o que diferencia o app de um delivery comum."],
+          fluxo: [
+            { grupo: "Entrada", passos: ["Abrir aplicativo", "Onboarding", "Login ou cadastro"] },
+            { grupo: "Home", passos: ["Reserva de eventos", "Promoções", "Mais pedidos"] },
+            { grupo: "Reserva", passos: ["Escolher evento", "Selecionar data no calendário", "Lembrete para convidados", "Conferir informações"] },
+            { grupo: "Pagamento", passos: ["Confirmar pagamento", "Pop-up de confirmação", "Voltar à tela inicial"] },
+            { grupo: "Navegação", passos: ["Perfil", "Buscar", "Favoritos", "Carrinho"] },
           ],
           imagens: [
-            "imagens/projetos/litteralis-04.jpg",
-            "imagens/projetos/litteralis-05.jpg",
+            { src: "imagens/projetos/cafe-litteralis/jornada-usuario.jpg", formato: "sangria",
+              legenda: "O fluxograma original da jornada, com os caminhos de erro e retorno." },
+          ],
+        },
+        {
+          titulo: "Design system e telas",
+          texto: [
+            "A paleta saiu dos próprios tipos de café — expresso, macchiato, frappuccino, cappuccino e latte — e a tipografia foi escalada em nove tamanhos a partir da Kumbh Sans.",
+            "ESCREVA AQUI o que os três usuários travaram no teste e o que vocês mudaram por causa disso. Sem essa frase, o teste vira etapa cumprida; com ela, vira decisão de projeto.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/cafe-litteralis/design-system.jpg",
+              legenda: "Paleta nomeada pelos tipos de café e escala tipográfica." },
+            { src: "imagens/projetos/cafe-litteralis/telas.jpg", formato: "sangria",
+              legenda: "Protótipo navegável completo." },
           ],
         },
       ],
@@ -408,23 +559,40 @@ const CONTEUDO = {
       equipe: "Individual",
       resumo: "App de gerenciamento de projetos e tarefas, projetado sob prazo apertado.",
       ferramentas: ["Figma", "Illustrator", "Photoshop"],
-      capa: "imagens/projetos/taskin-01.jpg",
+      capa: "imagens/projetos/taskin/mockup-taskin.jpg",
       blocos: [
         {
           titulo: "O desafio",
           texto: [
             "TaskIn saiu de um processo seletivo para vaga de estágio em UX/UI. A avaliação técnica pedia um aplicativo de gerenciamento de projetos e tarefas por trabalhadores.",
           ],
+          imagens: [
+            { src: "imagens/projetos/taskin/mockup-taskin.jpg", formato: "dupla",
+              legenda: "Tela de entrada com login social." },
+          ],
         },
         {
-          titulo: "Como eu trabalhei",
-          texto: [
-            "Os wireframes começaram em esboço no papel e foram transferidos para o Figma. A escolha de cores e estilo priorizou a leitura: minimalista, com hierarquia clara entre projeto, tarefa e responsável.",
-            "O fluxo cobre login e cadastro, home com projetos em andamento e finalizados, criação de projeto com atribuição de tarefas a pessoas e definição de prazo, além de conta, equipes, segurança e acessibilidade.",
+          titulo: "O mapa de telas",
+          texto: ["O fluxo foi desenhado antes de qualquer interface, para garantir que criar um projeto e atribuir tarefas fosse o caminho mais curto do app."],
+          fluxo: [
+            { grupo: "Entrada", passos: ["Tela de início", "Login", "Criar conta", "Confirmação por e-mail", "Esqueceu a senha"] },
+            { grupo: "Home", passos: ["Projetos em andamento", "Projetos finalizados", "Criar novo projeto"] },
+            { grupo: "Novo projeto", passos: ["Nome e descrição", "Adicionar tarefas", "Atribuir tarefas às pessoas", "Definir prazo"] },
+            { grupo: "Conta", passos: ["Informações pessoais", "Equipes", "Segurança", "Acessibilidade"] },
           ],
           imagens: [
-            "imagens/projetos/taskin-02.jpg",
-            "imagens/projetos/taskin-03.jpg",
+            { src: "imagens/projetos/taskin/fluxo-taskin.jpg", formato: "sangria",
+              legenda: "O fluxograma original, feito no Canva." },
+          ],
+        },
+        {
+          titulo: "Telas de alta fidelidade",
+          texto: [
+            "Os wireframes começaram em esboço no papel e foram transferidos para o Figma. A escolha de cores e estilo priorizou a leitura: minimalista, com hierarquia clara entre projeto, tarefa e responsável.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/taskin/telas-taskin.jpg", formato: "sangria",
+              legenda: "Fluxo completo em alta fidelidade, do login ao projeto salvo." },
           ],
         },
         {
@@ -433,7 +601,6 @@ const CONTEUDO = {
             "Com o prazo curto, não houve tempo de validar o app com usuários nem de coletar informações próprias — ele foi construído a partir de similares do mercado. As ilustrações e os ícones vieram do Flaticon e do Freepik Storyset, e não são autorais.",
             "Digo isso no case de propósito. Um projeto de avaliação técnica com prazo de dias tem limites reais, e apresentá-los como se não existissem é o tipo de coisa que um entrevistador descobre na primeira pergunta.",
           ],
-          imagens: ["imagens/projetos/taskin-04.jpg"],
         },
       ],
       aprendizados: [
@@ -447,15 +614,52 @@ const CONTEUDO = {
       titulo: "Ghosts Squeezed",
       eixo: "uxui",
       ano: "2025",
-      cliente: "Projeto profissional",
-      resumo: "ESCREVA AQUI uma frase que apareça no card da grade.",
-      ferramentas: ["Figma"],
-      descricao: [
-        "ESCREVA AQUI o desafio: que produto é esse, para quem, e qual problema você precisava resolver.",
-        "ESCREVA AQUI o processo e o resultado.",
+      cliente: "Deathmare Studios",
+      papel: "Interface e elementos de jogo",
+      resumo: "Interface de um jogo de fantasmas e totens: menu, botões, tutorial e avisos.",
+      ferramentas: ["Illustrator", "Photoshop"],
+      capa: "imagens/projetos/ghosts-squeezed/lapide-menu.jpg",
+      blocos: [
+        {
+          titulo: "O desafio",
+          texto: [
+            "Interface para um jogo em que derrubar totens derrota fantasmas. Todo elemento precisava caber num mesmo mundo visual — lápide, pedra rachada, tinta arroxeada — sem virar ruído em cima da cena do jogo.",
+            "ESCREVA AQUI o contexto do projeto: quando foi feito, com quem, e qual era o estado do jogo quando você entrou.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/ghosts-squeezed/logo.jpg", formato: "dupla",
+              legenda: "Marca do jogo, com contorno e brilho para sobreviver a qualquer fundo." },
+            { src: "imagens/projetos/ghosts-squeezed/lapide-menu.jpg", formato: "dupla",
+              legenda: "Lápide do menu principal, com o unicórnio do estúdio gravado na base." },
+          ],
+        },
+        {
+          titulo: "Estados de botão",
+          texto: [
+            "Cada botão foi entregue em três estados. É o tipo de coisa que não aparece em portfólio, mas que decide se o jogo responde ao toque ou parece travado.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/ghosts-squeezed/botao-play.jpg", formato: "dupla",
+              legenda: "Play: repouso, foco e pressionado." },
+            { src: "imagens/projetos/ghosts-squeezed/botao-creditos.jpg", formato: "dupla",
+              legenda: "Créditos, na mesma lógica de estados." },
+          ],
+        },
+        {
+          titulo: "Diálogos e tutorial",
+          texto: [
+            "O aviso de perda de progresso usa contraste de cor para separar as ações: confirmar em verde, cancelar em vermelho, com o texto acima de tudo.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/ghosts-squeezed/aviso-erro.jpg", formato: "dupla",
+              legenda: "Aviso de perda de progresso." },
+            { src: "imagens/projetos/ghosts-squeezed/tutorial.jpg", formato: "dupla",
+              legenda: "Painel de tutorial, com a regra central do jogo." },
+            { src: "imagens/projetos/ghosts-squeezed/creditos.jpg", formato: "dupla",
+              legenda: "Tela de créditos, na mesma lápide do menu." },
+          ],
+        },
       ],
-      capa: "",
-      imagens: [],
       destaque: false,
     },
 
@@ -465,14 +669,29 @@ const CONTEUDO = {
       eixo: "social",
       ano: "2024",
       cliente: "Instituto Acariquara",
+      papel: "Social media design",
       resumo: "Conteúdo visual sobre sustentabilidade e ciências ambientais na Amazônia.",
       ferramentas: ["Illustrator", "Photoshop"],
       descricao: [
         "Grande parte das postagens do Instituto Acariquara eram datas comemorativas ligadas a desenvolvimento sustentável, ciências ambientais e sustentabilidade na Amazônia.",
-        "Além do Instituto, eu também desenvolvia peças gráficas on e off para a Feira da Produção Familiar — AGROUFAM.",
+        "Além do Instituto, eu também desenvolvia peças gráficas on e off para a Feira da Produção Familiar — AGROUFAM, que pede um tom mais comercial e direto.",
       ],
-      capa: "imagens/projetos/acariquara-01.jpg",
-      imagens: ["imagens/projetos/acariquara-01.jpg"],
+      capa: "imagens/projetos/acariquara/dia-dos-povos-indigenas.jpg",
+      capaFoco: "top",
+      imagens: [
+        { src: "imagens/projetos/acariquara/dia-dos-povos-indigenas.jpg", formato: "post",
+          legenda: "Dia Nacional de Luta dos Povos Indígenas." },
+        { src: "imagens/projetos/acariquara/suframa.jpg", formato: "post",
+          legenda: "57 anos da Suframa." },
+        { src: "imagens/projetos/acariquara/mulheres-sementes.jpg", formato: "post",
+          legenda: "Mulheres sementes: post de pergunta, para puxar comentário." },
+        { src: "imagens/projetos/acariquara/dia-das-maes-1.jpg", formato: "post",
+          legenda: "AGROUFAM, Dia das Mães: oficina com material reciclado." },
+        { src: "imagens/projetos/acariquara/dia-das-maes-2.jpg", formato: "post",
+          legenda: "AGROUFAM: peça de data e horário da feira." },
+        { src: "imagens/projetos/acariquara/dia-das-maes-3.jpg", formato: "post",
+          legenda: "AGROUFAM: peça com apelo de presente." },
+      ],
       destaque: false,
     },
 
@@ -482,14 +701,43 @@ const CONTEUDO = {
       eixo: "social",
       ano: "2023",
       cliente: "Academia STEM",
+      papel: "Social media design",
       resumo: "Mídia digital para divulgação científica voltada a jovens do ensino médio.",
       ferramentas: ["Illustrator", "Photoshop"],
       descricao: [
         "Criação de mídia digital para os canais @manostem e @academiastem, com desenvolvimento de conceitos visuais, marketing e branding para o perfil de divulgação STEM.",
-        "Posts atrelados a notícias ou comemorações pediam um aspecto mais sério; os carrosséis mais detalhados do perfil eram confeccionados no Illustrator e no Photoshop.",
+        "Posts atrelados a notícias ou comemorações pediam um aspecto mais sério; os carrosséis mais detalhados eram confeccionados no Illustrator e no Photoshop, com liberdade maior de linguagem.",
       ],
-      capa: "imagens/projetos/stem-01.jpg",
-      imagens: ["imagens/projetos/stem-01.jpg"],
+      capa: "imagens/projetos/academia-stem/post-dia-das-mulheres.jpg",
+      capaFoco: "top",
+      imagens: [
+        { src: "imagens/projetos/academia-stem/post-dia-das-mulheres.jpg", formato: "post",
+          legenda: "8 de março." },
+        { src: "imagens/projetos/academia-stem/post-setembro-amarelo.jpg", formato: "post",
+          legenda: "Setembro Amarelo." },
+        { src: "imagens/projetos/academia-stem/post-leviata.jpg", formato: "post",
+          legenda: "Post de divulgação científica." },
+        { src: "imagens/projetos/academia-stem/post-atencao.jpg", formato: "post",
+          legenda: "Peça de alerta." },
+        { src: "imagens/projetos/academia-stem/carrossel-tlous-1.jpg", formato: "post",
+          legenda: "Carrossel sobre The Last of Us: capa." },
+        { src: "imagens/projetos/academia-stem/carrossel-tlous-2.jpg", formato: "post",
+          legenda: "Carrossel: aviso de spoiler." },
+        { src: "imagens/projetos/academia-stem/carrossel-tlous-3.jpg", formato: "post",
+          legenda: "Carrossel: acredite na ciência." },
+        { src: "imagens/projetos/academia-stem/carrossel-tlous-4.jpg", formato: "post",
+          legenda: "Carrossel: você não é seus erros." },
+        { src: "imagens/projetos/academia-stem/carrossel-tlous-5.jpg", formato: "post",
+          legenda: "Carrossel: não nascemos sozinhos." },
+        { src: "imagens/projetos/academia-stem/carrossel-tlous-6.jpg", formato: "post",
+          legenda: "Carrossel: chamada final de engajamento." },
+        { src: "imagens/projetos/academia-stem/capa-reels.jpg", formato: "retrato",
+          legenda: "Capa de reels." },
+        { src: "imagens/projetos/academia-stem/capa-reels-2.jpg", formato: "retrato",
+          legenda: "Capa de reels." },
+        { src: "imagens/projetos/academia-stem/capa-reels-3.jpg", formato: "retrato",
+          legenda: "Capa de reels." },
+      ],
       destaque: false,
     },
 
@@ -499,14 +747,18 @@ const CONTEUDO = {
       eixo: "outros",
       ano: "2025",
       cliente: "Projeto pessoal",
+      papel: "Manipulação digital",
       resumo: "Manipulação digital com a cesta de alimentos no centro da composição.",
       ferramentas: ["Photoshop"],
       descricao: [
         "Post feito para treinar manipulação digital, baseado no meu antigo trabalho com a AGROUFAM, a Feira da Produção Familiar. A cesta de alimentos entra como foco da imagem e a composição visual se organiza a partir dela.",
         "A intenção era colocar em foco a comida feita por produtores familiares regionais. Não há nada feito com inteligência artificial na imagem.",
       ],
-      capa: "imagens/projetos/agricultura-01.jpg",
-      imagens: ["imagens/projetos/agricultura-01.jpg"],
+      capa: "imagens/projetos/agricultura-familiar/post-agroufam.jpg",
+      imagens: [
+        { src: "imagens/projetos/agricultura-familiar/post-agroufam.jpg", formato: "retrato",
+          legenda: "Composição final, montada a partir de fotografias avulsas." },
+      ],
       destaque: false,
     },
 
@@ -516,14 +768,18 @@ const CONTEUDO = {
       eixo: "outros",
       ano: "2025",
       cliente: "Projeto pessoal",
+      papel: "Manipulação digital",
       resumo: "Pôster do Morro dos Ventos Uivantes a partir de cinco imagens mescladas.",
       ferramentas: ["Photoshop"],
       descricao: [
         "Pôster feito para treino em Photoshop, com destaque para a cena mais famosa do livro: a protagonista tentando entrar pela janela.",
         "Para chegar na imagem final, mesclei cinco fotografias diferentes e construí a composição visual. Não há nada feito com inteligência artificial na imagem.",
       ],
-      capa: "imagens/projetos/wuthering-01.jpg",
-      imagens: ["imagens/projetos/wuthering-01.jpg"],
+      capa: "imagens/projetos/wuthering-heights/poster-wh.jpg",
+      imagens: [
+        { src: "imagens/projetos/wuthering-heights/poster-wh.jpg", formato: "retrato",
+          legenda: "Pôster final." },
+      ],
       destaque: false,
     },
 
@@ -531,9 +787,12 @@ const CONTEUDO = {
 
   /* ---- Currículo -------------------------------------------------------- */
   curriculo: {
-    /* Nome e cargo que aparecem SÓ nos dois currículos. */
+    /* Nome e cargo que aparecem SÓ nos dois currículos.                    */
+    /* O site continua usando o que está em "marca", mais acima.            */
+    /* Se apagar estas duas linhas, o currículo volta a usar o nome da marca. */
     nome: "Giovanna Pinheiro Ribeiro",
     cargo: "Visual Designer",
+
     resumo: "Designer gráfica, designer de informação e UX/UI designer com seis anos de experiência e formada em Design pela Universidade Federal do Amazonas. Atuo da identidade visual à interface, com foco em criar soluções visuais que atendam públicos diversos.",
     experiencias: [
       {
@@ -1000,6 +1259,45 @@ section{padding:96px 0; position:relative}
 }
 .proximo a:hover{color:var(--ac)}
 
+/* ---- Etapas de metodologia (HTML, não imagem) --------------------------- */
+.etapas{
+  list-style:none; margin:30px 0 0; padding:0; display:grid; gap:18px;
+  grid-template-columns:repeat(auto-fit, minmax(160px,1fr));
+}
+.etapa{display:grid; gap:12px; align-content:start}
+.etapa-disco{
+  aspect-ratio:1; border-radius:50%; display:grid; place-content:center; text-align:center;
+  padding:12px; transition:transform .35s cubic-bezier(.34,1.56,.64,1);
+}
+.etapa:hover .etapa-disco{transform:scale(1.05)}
+.etapa-num{display:block; font-size:12px; letter-spacing:.14em; opacity:.7; font-weight:700}
+.etapa-nome{
+  display:block; font-family:Quicksand,sans-serif; font-weight:700;
+  font-size:clamp(15px,1.7vw,19px); line-height:1.15; margin-top:4px;
+}
+.etapa-txt{font-size:14.5px; color:var(--suave); margin:0; line-height:1.5; max-width:none}
+
+/* ---- Fluxo de telas ----------------------------------------------------- */
+.fluxo{
+  display:grid; gap:18px; margin-top:30px;
+  grid-template-columns:repeat(auto-fit, minmax(190px,1fr));
+}
+.fluxo-col{
+  background:var(--sup); border-radius:var(--raio); padding:20px;
+  border:1px solid color-mix(in srgb,var(--tinta) 12%,transparent);
+}
+.fluxo-grupo{
+  font-size:13px; letter-spacing:.13em; color:var(--ac);
+  font-family:Quicksand,sans-serif; margin:0 0 12px;
+}
+.fluxo-passos{list-style:none; margin:0; padding:0; display:grid; gap:9px}
+.fluxo-passos li{
+  font-size:15px; line-height:1.45; padding-left:19px; position:relative;
+}
+.fluxo-passos li::before{
+  content:"→"; position:absolute; left:0; color:var(--ac); font-weight:700;
+}
+
 /* ---- Galeria: grade de 6 colunas, formato por imagem -------------------- */
 .galeria{display:grid; grid-template-columns:repeat(6,1fr); gap:20px; margin-top:30px; align-items:start}
 .gal-item{margin:0; display:grid; gap:9px; grid-column:span 6}
@@ -1013,9 +1311,11 @@ section{padding:96px 0; position:relative}
 .gal-item.f-dupla{grid-column:span 3}
 .gal-item.f-tripla{grid-column:span 2}
 .gal-item.f-retrato{grid-column:span 2}
+.gal-item.f-post{grid-column:span 2}
 .gal-item.f-dupla img{aspect-ratio:4/3; object-fit:cover}
 .gal-item.f-tripla img{aspect-ratio:1/1; object-fit:cover}
 .gal-item.f-retrato img{aspect-ratio:9/17; object-fit:cover}
+.gal-item.f-post img{aspect-ratio:4/5; object-fit:cover}
 .gal-item.f-sangria{width:100vw; margin-left:calc(50% - 50vw)}
 .gal-item.f-sangria img{border-radius:0}
 .gal-item.f-sangria figcaption{width:min(1180px,92vw); margin-inline:auto}
@@ -1030,6 +1330,8 @@ section{padding:96px 0; position:relative}
 }
 @keyframes aparece{from{opacity:0}to{opacity:1}}
 .lupa-quadro{margin:0; display:grid; gap:12px; justify-items:center; pointer-events:none}
+.lupa.alto{align-content:start; overflow:auto}
+.lupa.alto .lupa-quadro img{max-height:none; max-width:min(760px,92vw)}
 .lupa-quadro img{
   max-width:min(1200px,92vw); max-height:78svh; width:auto; object-fit:contain;
   border-radius:10px; box-shadow:0 30px 80px rgba(0,0,0,.5);
@@ -1198,7 +1500,7 @@ section{padding:96px 0; position:relative}
   .bloco-cab{position:static}
   .blocos{gap:54px}
   .gal-item.f-dupla,.gal-item.f-tripla{grid-column:span 6}
-  .gal-item.f-retrato{grid-column:span 3}
+  .gal-item.f-retrato,.gal-item.f-post{grid-column:span 3}
   .galeria{gap:14px}
   .lupa{padding:80px 3vw}
   .lupa-btn{width:44px; height:44px}
@@ -1608,12 +1910,40 @@ section{padding:96px 0; position:relative}
   }
 
   /* ---- galeria: aceita "caminho.jpg" ou {src, formato, legenda} --------- */
-  const FORMATOS = ["cheia","sangria","dupla","tripla","retrato"];
+  const FORMATOS = ["cheia","sangria","dupla","tripla","retrato","post"];
   function normImg(it){
     const o = (typeof it === "string") ? { src: it } : Object.assign({}, it);
     if (FORMATOS.indexOf(o.formato) < 0) o.formato = "cheia";
     return o;
   }
+  /* ---- etapas: metodologia em HTML, responsiva e editável --------------- */
+  function claroEscuro(hex){
+    const c = (hex || "#888").replace("#","");
+    const v = c.length === 3 ? c.split("").map(x => x + x).join("") : c;
+    const n = [0,2,4].map(i => parseInt(v.slice(i,i+2),16) / 255)
+      .map(x => x <= .03928 ? x/12.92 : Math.pow((x+.055)/1.055, 2.4));
+    return (.2126*n[0] + .7152*n[1] + .0722*n[2]) > .42 ? "#330d0d" : "#f2f2f2";
+  }
+  function blocoEtapas(b){
+    return `<ol class="etapas">${b.etapas.map((et,i) => `
+      <li class="etapa">
+        <div class="etapa-disco" style="background:${esc(et.cor || "#a82051")}; color:${claroEscuro(et.cor)}">
+          <span class="etapa-num">${String(i+1).padStart(2,"0")}</span>
+          <span class="etapa-nome">${esc(et.nome)}</span>
+        </div>
+        ${et.texto ? `<p class="etapa-txt">${esc(et.texto)}</p>` : ""}
+      </li>`).join("")}</ol>`;
+  }
+
+  /* ---- fluxo: mapa de telas, responsivo e editável ---------------------- */
+  function blocoFluxo(b){
+    return `<div class="fluxo">${b.fluxo.map(g => `
+      <div class="fluxo-col">
+        <h3 class="fluxo-grupo">${esc(g.grupo)}</h3>
+        <ul class="fluxo-passos">${g.passos.map(pa => `<li>${esc(pa)}</li>`).join("")}</ul>
+      </div>`).join("")}</div>`;
+  }
+
   function galeria(lista, alt){
     const itens = (lista || []).map(normImg).filter(i => i.src);
     if (!itens.length) return "";
@@ -1658,6 +1988,8 @@ section{padding:96px 0; position:relative}
           <div class="bloco-corpo">
             ${(b.texto || []).map(t => `<p>${esc(t)}</p>`).join("")}
             ${(b.lista && b.lista.length) ? `<ul class="bloco-lista">${b.lista.map(l => `<li>${esc(l)}</li>`).join("")}</ul>` : ""}
+            ${(b.etapas && b.etapas.length) ? blocoEtapas(b) : ""}
+            ${(b.fluxo && b.fluxo.length) ? blocoFluxo(b) : ""}
             ${galeria(b.imagens, p.titulo + " — " + b.titulo)}
           </div>
         </section>`).join("")}</div>`;
@@ -1725,14 +2057,17 @@ section{padding:96px 0; position:relative}
   function paginaCurriculo(modelo){
     const cv = C.curriculo, c = C.contato;
     const criativo = modelo !== "ats";
+    /* nome do currículo: usa o do bloco curriculo se existir, senão o da marca */
+    const nomeCV = cv.nome || C.marca.nome;
+    const cargoCV = cv.cargo || C.marca.cargo;
     const contatoLinha = [c.email, c.telefone, c.cidade].filter(Boolean).join("  ·  ");
     const links = c.redes.map(r => r.url.replace(/^https?:\/\//,"")).join("  ·  ");
 
     const folha = `
       <div class="cv-folha ${criativo ? "criativo":"ats"}" id="cvFolha">
         ${criativo ? flor("cv-flor") : ""}
-        <h1 class="cv-nome">${esc(C.marca.nome)}</h1>
-        <p class="cv-cargo">${esc(C.marca.cargo)}</p>
+        <h1 class="cv-nome">${esc(nomeCV)}</h1>
+        <p class="cv-cargo">${esc(cargoCV)}</p>
         <p class="cv-contato">${esc(contatoLinha)}<br>${esc(links)}</p>
 
         <div class="cv-secao">
@@ -1795,7 +2130,13 @@ section{padding:96px 0; position:relative}
       const b = e.target.closest("button"); if (!b) return;
       location.hash = "#/curriculo/" + b.dataset.modelo;
     });
-    document.getElementById("btnImprimir").addEventListener("click", () => window.print());
+    document.getElementById("btnImprimir").addEventListener("click", () => {
+      /* o navegador sugere o <title> como nome do arquivo ao salvar em PDF */
+      const antes = document.title;
+      document.title = "Curriculo - " + nomeCV + " - " + (criativo ? "Criativo" : "ATS");
+      window.print();
+      setTimeout(() => { document.title = antes; }, 600);
+    });
   }
 
   /* ---- lupa: clique na imagem para ampliar ------------------------------ */
@@ -1808,6 +2149,7 @@ section{padding:96px 0; position:relative}
     atual = (i + lista.length) % lista.length;
     const el = lista[atual];
     lupaImg.src = el.dataset.zoom;
+    lupaImg.onload = () => lupa.classList.toggle("alto", lupaImg.naturalHeight / lupaImg.naturalWidth > 2.2);
     lupaImg.alt = el.alt || "";
     lupaLeg.textContent = el.dataset.leg || "";
     lupaLeg.hidden = !el.dataset.leg;
