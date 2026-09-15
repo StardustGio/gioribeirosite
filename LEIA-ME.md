@@ -310,7 +310,8 @@ As duas podem se misturar na mesma lista.
 | `sangria` | de ponta a ponta da tela | a imagem principal do case, infográficos largos |
 | `dupla` | duas por linha, cortadas em 4:3 | detalhes que se comparam |
 | `tripla` | três por linha, cortadas em quadrado | variações de logo, paleta, ícones |
-| `retrato` | três por linha, cortadas em 9:17 | **telas de celular** |
+| `retrato` | três por linha, cortadas em 9:17 | **telas de celular**, capas de reels |
+| `post` | três por linha, cortadas em 4:5 | **posts de Instagram** |
 
 Se você não escrever `formato`, ele assume `cheia`.
 
@@ -341,3 +342,86 @@ Se o assunto principal da sua imagem não estiver no meio, ajuste o foco:
 capa: "imagens/projetos/deathmare/capa.jpg",
 capaFoco: "top",        // ou "bottom", "left", "right", "50% 20%"
 ```
+
+
+---
+
+## 9. Nome diferente no currículo
+
+O bloco `curriculo` começa com duas linhas que valem só para os dois modelos
+de currículo:
+
+```js
+curriculo: {
+  nome: "Giovanna Pinheiro Ribeiro",
+  cargo: "Visual Designer",
+```
+
+O site continua usando o que está em `marca` — "gio ribeiro" e "visual
+designer" — no hero, no cabeçalho e no rodapé. Se você apagar essas duas
+linhas, o currículo volta a usar o nome da marca.
+
+O PDF salvo também sai com nome decente: `Curriculo - Giovanna Pinheiro
+Ribeiro - ATS.pdf`, em vez do título do site.
+
+---
+
+## 10. Metodologias e fluxos editáveis
+
+As metodologias e os fluxos de tela **não são imagens**. São HTML montado a
+partir do bloco de conteúdo, então reflui em qualquer tela e você edita o texto
+direto no arquivo.
+
+### Etapas (Metodologia E, Design Thinking)
+
+```js
+{
+  titulo: "O caminho",
+  texto: ["Uma frase de introdução."],
+  etapas: [
+    { nome: "Estratégia", cor: "#3b3bd6", texto: "O que acontece nesta etapa." },
+    { nome: "Escopo",     cor: "#1a1a9e", texto: "..." },
+  ],
+},
+```
+
+Os discos coloridos se reorganizam sozinhos conforme a largura da tela: seis em
+linha no monitor, dois ou um no celular. A numeração é automática. A cor do
+texto dentro do disco também — o código calcula a luminância da cor que você
+escolheu e usa claro ou escuro, o que garante contraste mesmo se você trocar
+para um tom inesperado.
+
+### Fluxo de telas
+
+```js
+{
+  titulo: "O mapa de telas",
+  fluxo: [
+    { grupo: "Entrada", passos: ["Tela de início", "Login", "Criar conta"] },
+    { grupo: "Home",    passos: ["Projetos em andamento", "Criar novo projeto"] },
+  ],
+},
+```
+
+Cada grupo vira um cartão, e os passos aparecem com seta. Em vez de um
+fluxograma que vira ilegível no celular, o leitor recebe a arquitetura em
+blocos que empilham.
+
+Os fluxogramas originais continuam nas galerias, em `sangria`, para quem quiser
+ver o desenho completo com os caminhos de erro — é só clicar para ampliar.
+
+---
+
+## 11. O que ainda falta
+
+- [ ] Responder os **ESCREVA AQUI** dos cases de UX. São os achados de
+      pesquisa, os resultados de teste e os aprendizados — a parte que só você
+      sabe, e a que mais pesa numa entrevista
+- [ ] Escrever o contexto do Ghosts Squeezed (quando, com quem, estado do jogo)
+- [ ] Mandar as imagens da sua identidade nova, para fechar o case do rebrand
+      (hoje ele usa as páginas do PDF)
+- [ ] Colocar uma foto sua em `imagens/` e apontar em `sobre.foto`
+- [ ] Trocar a capa do CETAM: hoje é a página do PDF, porque os infográficos
+      são verticais demais para caber num card 16:11
+- [ ] Decidir sobre a licença web da Sofia Pro Soft (seção "Sobre as fontes")
+- [ ] Publicar e ligar o formulário (seções 3 e 7)
