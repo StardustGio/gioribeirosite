@@ -43,20 +43,34 @@ cole logo abaixo e troque o conteúdo:
   eixo: "identidade",              // identidade | diagramacao | outros | uxui | social
   ano: "2026",
   cliente: "Nome do cliente",
-  resumo: "Uma frase que aparece no card.",
+  papel: "O que você fez",
+  duracao: "4 semanas",            // opcional
+  resumo: "Uma frase que aparece no card e no topo da página.",
   ferramentas: ["Illustrator", "Photoshop"],
-  descricao: [
-    "Primeiro parágrafo da página do projeto.",
-    "Segundo parágrafo.",
+  capa: "imagens/projetos/meu-projeto/capa.jpg",          // card: 1600 × 1100
+  abertura: "imagens/projetos/meu-projeto/abertura.jpg",  // topo: 2400 × 1350
+  introducao: [
+    "O contexto do projeto. Aparece ao lado da ficha técnica.",
   ],
-  capa: "imagens/meu-projeto/capa.jpg",
-  imagens: [
-    "imagens/meu-projeto/01.jpg",
-    "imagens/meu-projeto/02.jpg",
+  secoes: [
+    {
+      titulo: "O desafio",
+      texto: ["Parágrafo da seção."],
+    },
+    {
+      titulo: "Aplicações",
+      texto: ["Parágrafo da seção."],
+      imagens: [
+        { src: "imagens/projetos/meu-projeto/01.jpg", formato: "dupla", legenda: "..." },
+        { src: "imagens/projetos/meu-projeto/02.jpg", formato: "dupla", legenda: "..." },
+      ],
+    },
   ],
   destaque: false,                 // true = o card ocupa a largura inteira
 },
 ```
+
+A página de cada projeto é montada sempre na mesma ordem (veja a seção 12).
 
 ### Imagens
 
@@ -202,9 +216,10 @@ simplesmente não aparece — o resto do site continua de pé.
 
 | Onde | Proporção | O que acontece se fugir |
 |---|---|---|
-| Capa de card normal | 16:11 | recorta pelo centro |
-| Capa de card destaque | 21:9 | recorta pelo centro |
-| Imagens da galeria | livre | entram na largura total, altura natural |
+| Capa de card normal | 16:11 (1600 × 1100) | recorta pelo centro |
+| Capa de card destaque | 21:9 (2100 × 900) | recorta pelo centro |
+| Abertura da página | 16:9 (2400 × 1350) | recorta pelo centro |
+| Imagens das seções | depende do formato | veja a seção 8 |
 
 Ou seja: só a capa precisa de atenção. Escolha uma imagem onde o assunto
 principal esteja no meio, ou exporte uma versão recortada só para a capa.
@@ -302,22 +317,26 @@ imagens: [
 
 As duas podem se misturar na mesma lista.
 
-### Os cinco formatos
+### Os formatos
 
-| formato | Como aparece | Use para |
-|---|---|---|
-| `cheia` | largura do texto, altura natural | o padrão; mockups em paisagem |
-| `sangria` | de ponta a ponta da tela | a imagem principal do case, infográficos largos |
-| `dupla` | duas por linha, cortadas em 4:3 | detalhes que se comparam |
-| `tripla` | três por linha, cortadas em quadrado | variações de logo, paleta, ícones |
-| `retrato` | três por linha, cortadas em 9:17 | **telas de celular**, capas de reels |
-| `post` | três por linha, cortadas em 4:5 | **posts de Instagram** |
+| formato | Como aparece | Exportar em | Use para |
+|---|---|---|---|
+| `cheia` | largura do texto, altura natural (no máximo a altura da tela) | 2000 px de largura | o padrão; mockups em paisagem |
+| `sangria` | de ponta a ponta da tela | 2400 px de largura | imagens largas de impacto |
+| `dupla` | duas por linha, cortadas em 4:3 | 1200 × 900 | detalhes que se comparam |
+| `tripla` | três por linha, cortadas em quadrado | 1000 × 1000 | produtos, variações de logo |
+| `retrato` | três por linha, cortadas em 9:17 | 720 × 1360 | **telas de celular**, capas de reels, infográficos longos |
+| `post` | três por linha, cortadas em 4:5 | 1080 × 1350 | **posts de Instagram** |
 
 Se você não escrever `formato`, ele assume `cheia`.
 
-No celular, `dupla` e `tripla` viram largura cheia automaticamente. O `retrato`
-continua com duas por linha, porque tela de celular lado a lado funciona bem em
-qualquer largura.
+Imagens seguidas com o mesmo formato viram um grupo, e o número de colunas se
+ajusta sozinho à quantidade: quatro posts ficam quatro por linha, cinco ficam
+três em cima e dois centralizados embaixo, um fica sozinho no centro. Nenhuma
+fica órfã num canto.
+
+No celular, `dupla` vira uma por linha; `tripla`, `retrato` e `post` ficam
+duas por linha.
 
 ### Legendas
 
@@ -333,14 +352,17 @@ navegar pelas outras imagens da mesma galeria com as setas do teclado, e fechar
 com Esc. Isso importa principalmente nos infográficos do CETAM, que são densos
 demais para ler no tamanho da página.
 
-### Corte da capa
+### Corte da capa e da abertura
 
-A capa do card é cortada em 16:11 (ou 21:9 nos destaques), sempre pelo centro.
-Se o assunto principal da sua imagem não estiver no meio, ajuste o foco:
+A capa do card é cortada em 16:11 (ou 21:9 nos destaques), e a abertura em
+16:9, sempre pelo centro. Se o assunto principal não estiver no meio, ajuste o
+foco:
 
 ```js
 capa: "imagens/projetos/deathmare/capa.jpg",
 capaFoco: "top",        // ou "bottom", "left", "right", "50% 20%"
+abertura: "imagens/projetos/deathmare/abertura.jpg",
+aberturaFoco: "center",
 ```
 
 
@@ -371,6 +393,9 @@ Ribeiro - ATS.pdf`, em vez do título do site.
 As metodologias e os fluxos de tela **não são imagens**. São HTML montado a
 partir do bloco de conteúdo, então reflui em qualquer tela e você edita o texto
 direto no arquivo.
+
+Etapas e fluxos entram dentro de uma seção, no mesmo nível de `texto` e
+`imagens`.
 
 ### Etapas (Metodologia E, Design Thinking)
 
@@ -414,9 +439,11 @@ ver o desenho completo com os caminhos de erro — é só clicar para ampliar.
 
 ## 11. O que ainda falta
 
-- [ ] Responder os **ESCREVA AQUI** dos cases de UX. São os achados de
+- [ ] Responder os **ESCREVA AQUI** (busque com Ctrl+F). São os achados de
       pesquisa, os resultados de teste e os aprendizados — a parte que só você
       sabe, e a que mais pesa numa entrevista
+- [ ] Exportar a **abertura** de cada projeto em 2400 × 1350 e preencher o
+      campo `abertura`
 - [ ] Escrever o contexto do Ghosts Squeezed (quando, com quem, estado do jogo)
 - [ ] Mandar as imagens da sua identidade nova, para fechar o case do rebrand
       (hoje ele usa as páginas do PDF)
@@ -425,3 +452,64 @@ ver o desenho completo com os caminhos de erro — é só clicar para ampliar.
       são verticais demais para caber num card 16:11
 - [ ] Decidir sobre a licença web da Sofia Pro Soft (seção "Sobre as fontes")
 - [ ] Publicar e ligar o formulário (seções 3 e 7)
+
+
+---
+
+## 12. Como a página de um projeto é montada
+
+Toda página segue a mesma ordem, em todos os projetos:
+
+1. **Topo** — eixo, ano, título e resumo
+2. **Abertura** — uma imagem 16:9 de ponta a ponta da tela
+3. **Introdução e ficha técnica** — o texto de `introducao` à esquerda;
+   cliente, papel, ano, duração, equipe e ferramentas à direita. As `metricas`,
+   quando existem, entram logo abaixo
+4. **Índice** — quando o projeto tem três seções ou mais, aparece uma barra
+   fixa com o nome de cada uma. Ela acompanha a leitura e leva direto à seção
+   clicada
+5. **Seções** — cada uma com número, título, texto e as imagens dela logo
+   abaixo. O fundo alterna sozinho entre a cor base, a faixa rosa e a faixa
+   escura
+6. **O que eu levei desse projeto** — a lista `aprendizados`, se existir
+7. **Próximo projeto** — um card com a capa do próximo projeto do mesmo eixo
+
+### Enquanto a abertura não existe
+
+Se o campo `abertura` estiver vazio, o site usa a capa no lugar. Se a capa for
+vertical, ela aparece inteira e centralizada sobre um fundo claro, em vez de
+ser cortada. Funciona, mas é provisório: a página só fica padronizada quando
+todos os projetos tiverem a abertura própria em 16:9.
+
+### Roteiros sugeridos de seções
+
+- **Identidade e diagramação:** O desafio → O conceito → A marca → Aplicações → Resultado
+- **UX/UI:** O problema → Pesquisa → Definição → Solução → Testes → Aprendizados
+- **Social e autorais:** uma ou duas seções de peças
+
+São pontos de partida. Uma seção pode ter só título e imagens, sem texto.
+
+### Antes e depois
+
+Qualquer seção pode ter um comparador. Em vez de `imagens`, use `antes` e
+`depois`:
+
+```js
+{
+  titulo: "Da estrela à flor",
+  texto: ["..."],
+  antes: ["imagens/projetos/gio-antes-01.jpg"],
+  depois: ["imagens/projetos/gio-depois-01.jpg"],
+},
+```
+
+### Os "ESCREVA AQUI"
+
+Todo texto que começa com `ESCREVA AQUI` **não aparece no site publicado**.
+Quando você abre o `index.html` direto do seu computador, ele aparece com uma
+borda tracejada, para você ver o que ainda falta. Se uma seção ficar sem
+nenhum conteúdo, ela some inteira, e o índice se ajusta.
+
+Para ver o site como ficaria publicado mesmo abrindo do computador, é só
+tirar os ESCREVA AQUI; para ver os pendentes num site já publicado, acrescente
+`?rascunho` ao endereço, antes do `#`.
