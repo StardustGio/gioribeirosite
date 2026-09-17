@@ -228,6 +228,11 @@ principal esteja no meio, ou exporte uma versão recortada só para a capa.
 
 ## 6. Acessibilidade
 
+A cada versão, o site passa por uma verificação automática de contraste: todo
+texto visível, nos cinco temas, na página inicial, nas páginas de projeto e
+nos dois currículos, medido contra o mínimo da WCAG 2.1 AA (4.5:1 para texto
+normal, 3:1 para texto grande).
+
 Os cinco temas de cor foram medidos contra o WCAG 2.1 e todos os pares de texto
 passam no nível AA (contraste mínimo de 4.5:1). Se você trocar alguma cor no
 bloco `[data-tema=...]` do CSS, vale conferir em webaim.org/resources/contrastchecker
@@ -321,14 +326,21 @@ As duas podem se misturar na mesma lista.
 
 | formato | Como aparece | Exportar em | Use para |
 |---|---|---|---|
-| `cheia` | largura do texto, altura natural (no máximo a altura da tela) | 2000 px de largura | o padrão; mockups em paisagem |
-| `sangria` | de ponta a ponta da tela | 2400 px de largura | imagens largas de impacto |
+| `cheia` | largura do conteúdo, proporção preservada (no máximo a altura da tela) | 2000 px de largura | o padrão; mockups em paisagem, **fluxogramas, wireframes e painéis de telas** |
+| `sangria` | de ponta a ponta da tela, proporção preservada | 2400 px de largura | só fotos de impacto exportadas em 2400 px |
 | `dupla` | duas por linha, cortadas em 4:3 | 1200 × 900 | detalhes que se comparam |
 | `tripla` | três por linha, cortadas em quadrado | 1000 × 1000 | produtos, variações de logo |
 | `retrato` | três por linha, cortadas em 9:17 | 720 × 1360 | **telas de celular**, capas de reels, infográficos longos |
 | `post` | três por linha, cortadas em 4:5 | 1080 × 1350 | **posts de Instagram** |
 
 Se você não escrever `formato`, ele assume `cheia`.
+
+**Nenhum formato corta imagem de conteúdo.** `cheia` e `sangria` sempre
+mostram a imagem inteira. Os que cortam (`dupla`, `tripla`, `retrato`, `post`)
+são para peças soltas; fluxogramas e painéis com várias telas vão sempre em
+`cheia`, e quem quiser ler o detalhe clica para ampliar. Evite `sangria` em
+imagens com menos de 2400 px de largura: numa tela grande elas ficam
+esticadas e borradas.
 
 Imagens seguidas com o mesmo formato viram um grupo, e o número de colunas se
 ajusta sozinho à quantidade: quatro posts ficam quatro por linha, cinco ficam
@@ -412,9 +424,11 @@ Etapas e fluxos entram dentro de uma seção, no mesmo nível de `texto` e
 
 Os discos coloridos se reorganizam sozinhos conforme a largura da tela: seis em
 linha no monitor, dois ou um no celular. A numeração é automática. A cor do
-texto dentro do disco também — o código calcula a luminância da cor que você
-escolheu e usa claro ou escuro, o que garante contraste mesmo se você trocar
-para um tom inesperado.
+texto dentro do disco também: o código testa o texto claro e o escuro e usa o
+que der mais contraste com a cor escolhida. Se nenhum dos dois chegar a 4.5:1
+(o mínimo da WCAG), ele escurece ou clareia a cor do disco aos poucos, mantendo
+o tom, até passar. Por isso alguns discos podem sair um pouco mais fechados do
+que o hexadecimal que você escreveu.
 
 ### Fluxo de telas
 

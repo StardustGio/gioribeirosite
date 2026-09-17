@@ -212,7 +212,7 @@ const CONTEUDO = {
         {
           titulo: "Papelaria",
           imagens: [
-            { src: "imagens/projetos/clube-rejeitados/papelaria-mockup.jpg", formato: "sangria",
+            { src: "imagens/projetos/clube-rejeitados/papelaria-mockup.jpg",
               legenda: "Papelaria completa: papel timbrado, cartão de visita e padronagem de apoio." },
             { src: "imagens/projetos/clube-rejeitados/cartaovisita-mockup.jpg", formato: "dupla",
               legenda: "Cartão de visita da presidência." },
@@ -540,7 +540,7 @@ const CONTEUDO = {
             { nome: "Testar", cor: "#3b3bd6", texto: "Teste com 11 usuários via Maze.Co e documento de recomendações de UX/UI." },
           ],
           imagens: [
-            { src: "imagens/projetos/supi/wireframes.jpg", formato: "sangria",
+            { src: "imagens/projetos/supi/wireframes.jpg",
               legenda: "Fluxo de telas montado no Excalidraw, do cadastro ao orçamento." },
           ],
         },
@@ -632,7 +632,7 @@ const CONTEUDO = {
             { grupo: "Navegação", passos: ["Perfil", "Buscar", "Favoritos", "Carrinho"] },
           ],
           imagens: [
-            { src: "imagens/projetos/cafe-litteralis/jornada-usuario.jpg", formato: "sangria",
+            { src: "imagens/projetos/cafe-litteralis/jornada-usuario.jpg",
               legenda: "O fluxograma original da jornada, com os caminhos de erro e retorno." },
           ],
         },
@@ -645,7 +645,7 @@ const CONTEUDO = {
           imagens: [
             { src: "imagens/projetos/cafe-litteralis/design-system.jpg",
               legenda: "Paleta nomeada pelos tipos de café e escala tipográfica." },
-            { src: "imagens/projetos/cafe-litteralis/telas.jpg", formato: "sangria",
+            { src: "imagens/projetos/cafe-litteralis/telas.jpg",
               legenda: "Protótipo navegável completo." },
           ],
         },
@@ -689,7 +689,7 @@ const CONTEUDO = {
             { grupo: "Conta", passos: ["Informações pessoais", "Equipes", "Segurança", "Acessibilidade"] },
           ],
           imagens: [
-            { src: "imagens/projetos/taskin/fluxo-taskin.jpg", formato: "sangria",
+            { src: "imagens/projetos/taskin/fluxo-taskin.jpg",
               legenda: "O fluxograma original, feito no Canva." },
           ],
         },
@@ -699,7 +699,7 @@ const CONTEUDO = {
             "Os wireframes começaram em esboço no papel e foram transferidos para o Figma. A escolha de cores e estilo priorizou a leitura: minimalista, com hierarquia clara entre projeto, tarefa e responsável.",
           ],
           imagens: [
-            { src: "imagens/projetos/taskin/telas-taskin.jpg", formato: "sangria",
+            { src: "imagens/projetos/taskin/telas-taskin.jpg",
               legenda: "Fluxo completo em alta fidelidade, do login ao projeto salvo." },
           ],
         },
@@ -1480,7 +1480,7 @@ section{padding:96px 0; position:relative}
   padding:12px; transition:transform .35s cubic-bezier(.34,1.56,.64,1);
 }
 .etapa:hover .etapa-disco{transform:scale(1.05)}
-.etapa-num{display:block; font-size:12px; letter-spacing:.14em; opacity:.7; font-weight:700}
+.etapa-num{display:block; font-size:12px; letter-spacing:.14em; font-weight:700}
 .etapa-nome{
   display:block; font-family:Quicksand,sans-serif; font-weight:700;
   font-size:clamp(15px,1.7vw,19px); line-height:1.15; margin-top:4px;
@@ -1528,7 +1528,7 @@ section{padding:96px 0; position:relative}
 .f-retrato .gal-item img{aspect-ratio:9/17; object-fit:cover}
 .f-post .gal-item img{aspect-ratio:4/5; object-fit:cover}
 .gal-grupo.f-sangria{width:100vw; margin-left:calc(50% - 50vw); gap:26px}
-.f-sangria .gal-item img{border-radius:0; max-height:92vh; object-fit:cover}
+.f-sangria .gal-item img{border-radius:0; width:auto; max-width:100%; max-height:92vh; margin-inline:auto}
 .f-sangria .gal-item figcaption{width:min(1180px,92vw); margin-inline:auto}
 
 /* ---- Lupa --------------------------------------------------------------- */
@@ -1670,8 +1670,8 @@ section{padding:96px 0; position:relative}
   opacity:0; pointer-events:none; transition:opacity .22s;
 }
 .tema:hover .tema-dica,.tema:focus-visible .tema-dica,.tema.mostra .tema-dica{opacity:1}
-.chip .cont{opacity:.65; font-variant-numeric:tabular-nums}
-.chip[aria-pressed="true"] .cont{opacity:.8}
+.chip .cont{opacity:.9; font-variant-numeric:tabular-nums}
+.chip[aria-pressed="true"] .cont{opacity:1}
 .cartao{border:1px solid color-mix(in srgb, var(--tinta) 10%, transparent)}
 
 /* ---- Adesivos da marca ------------------------------------------------ */
@@ -2150,17 +2150,40 @@ section{padding:96px 0; position:relative}
     return o;
   }
   /* ---- etapas: metodologia em HTML, responsiva e editável --------------- */
-  function claroEscuro(hex){
+  /* Contraste WCAG: escolhe o texto (claro ou escuro) que dá mais contraste
+     com a cor do disco. Se nem assim chega a 4.5:1, escurece ou clareia a
+     cor do disco aos poucos, mantendo o tom, até passar. */
+  const TXT_CLARO = "#f2f2f2", TXT_ESCURO = "#330d0d";
+  function rgbDe(hex){
     const c = (hex || "#888").replace("#","");
     const v = c.length === 3 ? c.split("").map(x => x + x).join("") : c;
-    const n = [0,2,4].map(i => parseInt(v.slice(i,i+2),16) / 255)
-      .map(x => x <= .03928 ? x/12.92 : Math.pow((x+.055)/1.055, 2.4));
-    return (.2126*n[0] + .7152*n[1] + .0722*n[2]) > .42 ? "#330d0d" : "#f2f2f2";
+    return [0,2,4].map(i => parseInt(v.slice(i,i+2),16));
+  }
+  function luminancia(rgb){
+    const n = rgb.map(x => x / 255).map(x => x <= .03928 ? x/12.92 : Math.pow((x+.055)/1.055, 2.4));
+    return .2126*n[0] + .7152*n[1] + .0722*n[2];
+  }
+  function contraste(a, b){
+    const la = luminancia(a), lb = luminancia(b);
+    return (Math.max(la,lb) + .05) / (Math.min(la,lb) + .05);
+  }
+  function hexDe(rgb){ return "#" + rgb.map(x => Math.round(x).toString(16).padStart(2,"0")).join(""); }
+  function corAcessivel(hex){
+    let rgb = rgbDe(hex);
+    const claro = rgbDe(TXT_CLARO), escuro = rgbDe(TXT_ESCURO);
+    const usarClaro = contraste(rgb, claro) >= contraste(rgb, escuro);
+    const txt = usarClaro ? claro : escuro;
+    let passos = 0;
+    while (contraste(rgb, txt) < 4.5 && passos < 40) {
+      rgb = usarClaro ? rgb.map(x => x * .95) : rgb.map(x => x + (255 - x) * .08);
+      passos++;
+    }
+    return { fundo: hexDe(rgb), texto: usarClaro ? TXT_CLARO : TXT_ESCURO };
   }
   function blocoEtapas(b){
     return `<ol class="etapas">${b.etapas.map((et,i) => `
       <li class="etapa">
-        <div class="etapa-disco" style="background:${esc(et.cor || "#a82051")}; color:${claroEscuro(et.cor)}">
+        <div class="etapa-disco" style="background:${corAcessivel(et.cor || "#a82051").fundo}; color:${corAcessivel(et.cor || "#a82051").texto}">
           <span class="etapa-num">${String(i+1).padStart(2,"0")}</span>
           <span class="etapa-nome">${esc(et.nome)}</span>
         </div>
