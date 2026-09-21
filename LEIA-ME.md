@@ -40,7 +40,7 @@ cole logo abaixo e troque o conteúdo:
 {
   id: "nome-curto-sem-espaco",     // precisa ser único
   titulo: "Nome do projeto",
-  eixo: "identidade",              // identidade | diagramacao | outros | uxui | social
+  eixo: "identidade",              // identidade | diagramacao | outros | uxui | social | jogos
   ano: "2026",
   cliente: "Nome do cliente",
   papel: "O que você fez",
@@ -104,6 +104,12 @@ janela de impressão escolha **Salvar como PDF** no campo de destino.
 
 Deixe a opção "Gráficos de plano de fundo" **ligada** no modelo criativo (é o
 que imprime a faixa de cor) e **desligada** no ATS.
+
+O site zera a margem da página na impressão, o que impede o navegador de
+imprimir o endereço do site, a data e o título no rodapé e no cabeçalho. Se
+mesmo assim aparecer alguma dessas informações, em "Mais configurações",
+desmarque **Cabeçalhos e rodapés** e confira se **Margens** está em
+"Padrão".
 
 **Por que dois modelos:** portais de vaga grandes passam o currículo por um
 robô de triagem antes de qualquer humano ver. Esse robô lê texto corrido e se
@@ -459,6 +465,8 @@ ver o desenho completo com os caminhos de erro — é só clicar para ampliar.
 - [ ] Exportar a **abertura** de cada projeto em 2400 × 1350 e preencher o
       campo `abertura`
 - [ ] Escrever o contexto do Ghosts Squeezed (quando, com quem, estado do jogo)
+- [ ] Decidir se o TaskIn volta: o bloco dele saiu do arquivo, mas as imagens
+      seguem em `imagens/projetos/taskin/`
 - [ ] Mandar as imagens da sua identidade nova, para fechar o case do rebrand
       (hoje ele usa as páginas do PDF)
 - [ ] Colocar uma foto sua em `imagens/` e apontar em `sobre.foto`

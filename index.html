@@ -76,6 +76,7 @@ const CONTEUDO = {
     { id: "outros",      nome: "Autorais",          grupo: "Design gráfico" },
     { id: "uxui",        nome: "UX/UI design",      grupo: "" },
     { id: "social",      nome: "Social media",      grupo: "" },
+    { id: "jogos",       nome: "Interface de jogo", grupo: "" },
   ],
 
   /* ---- Projetos --------------------------------------------------------- */
@@ -657,70 +658,9 @@ const CONTEUDO = {
     },
 
     {
-      id: "taskin",
-      titulo: "TaskIn",
-      eixo: "uxui",
-      ano: "2023",
-      cliente: "Avaliação técnica — processo seletivo",
-      papel: "UX/UI",
-      equipe: "Individual",
-      resumo: "App de gerenciamento de projetos e tarefas, projetado sob prazo apertado.",
-      ferramentas: ["Figma", "Illustrator", "Photoshop"],
-      capa: "imagens/projetos/taskin/mockup-taskin.jpg",
-      abertura: "",
-      secoes: [
-        {
-          titulo: "O desafio",
-          texto: [
-            "TaskIn saiu de um processo seletivo para vaga de estágio em UX/UI. A avaliação técnica pedia um aplicativo de gerenciamento de projetos e tarefas por trabalhadores.",
-          ],
-          imagens: [
-            { src: "imagens/projetos/taskin/mockup-taskin.jpg", formato: "dupla",
-              legenda: "Tela de entrada com login social." },
-          ],
-        },
-        {
-          titulo: "O mapa de telas",
-          texto: ["O fluxo foi desenhado antes de qualquer interface, para garantir que criar um projeto e atribuir tarefas fosse o caminho mais curto do app."],
-          fluxo: [
-            { grupo: "Entrada", passos: ["Tela de início", "Login", "Criar conta", "Confirmação por e-mail", "Esqueceu a senha"] },
-            { grupo: "Home", passos: ["Projetos em andamento", "Projetos finalizados", "Criar novo projeto"] },
-            { grupo: "Novo projeto", passos: ["Nome e descrição", "Adicionar tarefas", "Atribuir tarefas às pessoas", "Definir prazo"] },
-            { grupo: "Conta", passos: ["Informações pessoais", "Equipes", "Segurança", "Acessibilidade"] },
-          ],
-          imagens: [
-            { src: "imagens/projetos/taskin/fluxo-taskin.jpg",
-              legenda: "O fluxograma original, feito no Canva." },
-          ],
-        },
-        {
-          titulo: "Telas de alta fidelidade",
-          texto: [
-            "Os wireframes começaram em esboço no papel e foram transferidos para o Figma. A escolha de cores e estilo priorizou a leitura: minimalista, com hierarquia clara entre projeto, tarefa e responsável.",
-          ],
-          imagens: [
-            { src: "imagens/projetos/taskin/telas-taskin.jpg",
-              legenda: "Fluxo completo em alta fidelidade, do login ao projeto salvo." },
-          ],
-        },
-        {
-          titulo: "O que ficou de fora",
-          texto: [
-            "Com o prazo curto, não houve tempo de validar o app com usuários nem de coletar informações próprias — ele foi construído a partir de similares do mercado. As ilustrações e os ícones vieram do Flaticon e do Freepik Storyset, e não são autorais.",
-            "Digo isso no case de propósito. Um projeto de avaliação técnica com prazo de dias tem limites reais, e apresentá-los como se não existissem é o tipo de coisa que um entrevistador descobre na primeira pergunta.",
-          ],
-        },
-      ],
-      aprendizados: [
-        "ESCREVA AQUI o que você tiraria desse processo seletivo — inclusive se conseguiu ou não a vaga, e o que ouviu de retorno.",
-      ],
-      destaque: false,
-    },
-
-    {
       id: "ghosts-squeezed",
       titulo: "Ghosts Squeezed",
-      eixo: "uxui",
+      eixo: "jogos",
       ano: "2025",
       cliente: "Deathmare Studios",
       papel: "Interface e elementos de jogo",
@@ -1212,7 +1152,7 @@ body.menu-on .gaveta a:nth-child(4){transition-delay:.38s}
 }
 .capa-frase{font-size:clamp(17px,2vw,21px); color:var(--suave); max-width:46ch; margin-bottom:0}
 .capa-cta{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:34px}
-.capa-dica{font-size:14px; color:var(--suave); margin:20px 0 0; opacity:.75}
+.capa-dica{font-size:14px; color:var(--suave); margin:0 0 22px}
 
 /* animação de abertura */
 .anim-flor{transform-origin:50% 50%; animation:desabrochar 1.3s cubic-bezier(.22,1,.36,1) both}
@@ -1690,11 +1630,15 @@ section{padding:96px 0; position:relative}
 .comp-modos + .proj-galeria{margin-top:20px}
 
 /* ---- Impressão -------------------------------------------------------- */
-@page{size:A4; margin:14mm}
+/* Margem da página zerada: sem espaço na margem, o navegador não imprime
+   URL, data e título no cabeçalho e no rodapé. A margem real vai para dentro
+   da folha e se repete em cada página. */
+@page{size:A4; margin:0}
 @media print{
   body{background:#fff}
   .topo,.gaveta,.tema,.lupa,.cv-barra,.cv-aviso,.rodape,.cortina{display:none !important}
-  .cv-folha{box-shadow:none; border:none; margin:0; padding:0; width:100%; border-radius:0}
+  .cv-folha{box-shadow:none; border:none; margin:0; padding:14mm; width:100%; border-radius:0;
+    -webkit-box-decoration-break:clone; box-decoration-break:clone}
   .cv-folha.criativo{border-top:10px solid var(--vinho-base)}
   .cv-item{page-break-inside:avoid}
 }
@@ -1944,15 +1888,14 @@ section{padding:96px 0; position:relative}
     <section class="capa">
       <div class="capa-ades" aria-hidden="true">${ad}</div>
       <div class="env capa-centro">
+        <p class="capa-dica subir">Pegue os adesivos e arraste onde quiser</p>
         <div class="capa-flor anim-flor">${flor("marca-svg")}</div>
         <h1 class="subir d1">${esc(C.marca.nome)}</h1>
         <p class="capa-cargo subir d2">${esc(C.marca.cargo)}</p>
-        <p class="capa-frase subir d3">${esc(C.marca.frase)}</p>
-        <div class="capa-cta subir d4">
+        <div class="capa-cta subir d3">
           <a class="btn btn-cheio" href="#/#trabalhos">Ver os trabalhos</a>
           <a class="btn btn-vazio" href="#/#contato">Falar comigo</a>
         </div>
-        <p class="capa-dica subir d4">Pegue os adesivos e arraste onde quiser</p>
       </div>
       <div class="fita" aria-hidden="true"><div class="fita-fila">${fita}${fita}</div></div>
     </section>`;
@@ -2130,7 +2073,7 @@ section{padding:96px 0; position:relative}
 
   /* ---- páginas --------------------------------------------------------- */
   function paginaInicio(){
-    app.innerHTML = blocoCapa() + blocoTrabalhos() + blocoSobre() + blocoContato() + blocoRodape();
+    app.innerHTML = blocoCapa() + blocoSobre() + blocoTrabalhos() + blocoContato() + blocoRodape();
     ativarArrasto();
     ligarFormulario();
     pintarGrade("todos");
