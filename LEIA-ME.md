@@ -82,15 +82,43 @@ Recomendação de peso: capas com 1600px de largura e no máximo 400KB. Se a
 imagem estiver pesada, o site demora a abrir e o recrutador desiste antes.
 Use o **Squoosh** (squoosh.app) pra comprimir — é gratuito e roda no navegador.
 
-### O PDF do portfólio
+### Os portfólios em PDF
 
-Coloque o arquivo na pasta `arquivos/` e ajuste o nome no bloco de conteúdo:
+São dois, e saem dos mesmos projetos do site, como os currículos: editou um
+projeto, o PDF sai atualizado na próxima vez que você gerar.
+
+- **Design gráfico:** identidade visual, diagramação, social media e autorais
+- **UX/UI:** cases de UX e interface de jogo
+
+Para gerar: menu **Baixar → Portfólio de design gráfico** (ou de UX/UI), botão
+**Baixar em PDF**, e na janela de impressão escolha **Salvar como PDF**. A
+página já sai deitada (A4 paisagem) e as cores de fundo saem mesmo com a
+opção "Gráficos de plano de fundo" desligada.
+
+Cada PDF tem: capa, "Muito prazer!", sumário, uma página de abertura por eixo,
+e para cada projeto uma página com texto, ficha técnica e a imagem de
+abertura (ou a capa), seguida de uma página de imagens. Fecha com os contatos.
+
+Ajustes que você pode fazer no bloco de conteúdo:
 
 ```js
-arquivos: {
-  portfolioPdf: "arquivos/portfolio-gio-ribeiro.pdf",
+portfolios: {
+  grafico: { titulo: "Design gráfico", eixos: ["identidade", "diagramacao", "social", "outros"] },
+  uxui:    { titulo: "UX/UI",          eixos: ["uxui", "jogos"] },
 },
 ```
+
+Dentro de um projeto:
+
+```js
+pdf: false,                                   // o projeto não entra no PDF
+imagensPdf: ["imagens/.../01.jpg", "..."],    // escolhe as imagens da 2ª página
+```
+
+Sem `imagensPdf`, entram as primeiras imagens do projeto: até 4 no de design
+gráfico (3 quando são posts ou telas verticais) e 2 no de UX/UI, que também
+resume as quatro primeiras seções do case. Se a segunda página tiver menos de
+duas imagens, ela não é gerada.
 
 ---
 
