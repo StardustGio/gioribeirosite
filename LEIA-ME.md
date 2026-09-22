@@ -1,5 +1,5 @@
 # Site — gio ribeiro
-API KEY re_DtPSTorp_KicXJ8hqWERpJmKoarjPwMHB
+
 Site de portfólio em arquivo único. Não precisa instalar nada, não precisa
 compilar nada. Abra `index.html` no navegador e ele funciona.
 
