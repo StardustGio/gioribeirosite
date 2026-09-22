@@ -164,6 +164,20 @@ olhar — estúdio, indicação, proposta direta.
 
 ## 3. Como publicar
 
+### Cache das imagens (Vercel)
+
+O arquivo `vercel.json`, na raiz do repositório, diz ao navegador para guardar
+as imagens por uma semana. Na primeira visita nada muda; da segunda em diante o
+site abre quase instantâneo, porque as fotos vêm do próprio computador de quem
+está vendo, sem ida ao servidor. O `index.html` fica de fora dessa regra: ele é
+sempre reconferido, então toda edição de texto aparece assim que você publica.
+
+O efeito colateral é este: se você trocar uma imagem mantendo o mesmo nome de
+arquivo, quem já visitou o site pode continuar vendo a antiga por até uma
+semana. Para forçar a troca, mude o nome do arquivo (por exemplo,
+`fachada.jpg` vira `fachada-2.jpg`) e atualize o caminho no bloco de conteúdo.
+
+
 O site é só uma pasta de arquivos. Qualquer serviço de hospedagem estática
 serve. O caminho mais curto:
 
