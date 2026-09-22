@@ -1676,7 +1676,7 @@ section{padding:96px 0; position:relative}
   width:min(1100px, 100%); aspect-ratio:297/210; border-radius:10px;
   box-shadow:0 20px 50px -26px rgba(0,0,0,.45);
   background:var(--pf-creme); color:var(--pf-marrom);
-  font-family:Karla,system-ui,sans-serif; font-size:calc(1.3cqw * var(--fs,1)); line-height:1.55;
+  font-family:Karla,system-ui,sans-serif; font-size:calc(1.5cqw * var(--fs,1)); line-height:1.5;
   -webkit-print-color-adjust:exact; print-color-adjust:exact;
 }
 .pf-pag h1,.pf-pag h2,.pf-pag h3{font-family:Quicksand,system-ui,sans-serif; margin:0}
@@ -1693,10 +1693,8 @@ section{padding:96px 0; position:relative}
 .pf-capa,.pf-fim{display:grid; grid-template-columns:1.4fr 1fr; align-items:center; padding:0 7cqw;
   border-bottom:2.2cqw solid var(--pf-vinho)}
 .pf-capa{grid-template-columns:1fr}
-.pf-capa-marca-h{width:30cqw; color:var(--pf-vinho); margin-top:4cqw;
-  font-family:Quicksand,sans-serif; font-weight:700; font-size:calc(1.5cqw * var(--fs,1)); letter-spacing:.12em}
-.pf-capa-marca-h span{display:block; margin-top:1.1em}
-.pf-sobre{font-size:calc(1.4cqw * var(--fs,1)); letter-spacing:.1em; color:var(--pf-ac); font-weight:700}
+.pf-capa-marca-h{width:26cqw; color:var(--pf-vinho); margin-top:6.5cqw}
+.pf-sobre{font-size:calc(1.55cqw * var(--fs,1)); letter-spacing:.1em; color:var(--pf-ac); font-weight:700}
 .pf-capa h1{font-size:calc(11cqw * var(--fs,1)); color:var(--pf-vinho); letter-spacing:-.04em; line-height:1; margin:.15em 0 .1em}
 .pf-tipo{font-family:Quicksand,sans-serif; font-weight:700; font-size:calc(3cqw * var(--fs,1)); color:var(--pf-marrom)}
 .pf-inclui{font-size:calc(2.1cqw * var(--fs,1)); color:#6b2333; letter-spacing:.01em}
@@ -1725,7 +1723,7 @@ section{padding:96px 0; position:relative}
 .pf-sum-grade.c3{grid-template-columns:repeat(3,1fr); gap:2.5cqw 4cqw}
 .pf-sum-grade.c4{grid-template-columns:repeat(4,1fr); gap:2.5cqw 3.4cqw}
 .pf-sum-grade h3{font-size:calc(2.3cqw * var(--fs,1)); color:var(--pf-rosa); margin-bottom:.8em; line-height:1.2}
-.pf-sum-grade h3 span{color:var(--pf-creme)}
+.pf-sum-grade h3 span{color:inherit}
 .pf-sum-grade ul{list-style:none; padding:0; margin:0; display:grid; gap:1.3em; align-content:start}
 .pf-sum-grade li strong{display:block; font-family:Quicksand,sans-serif; font-size:calc(1.85cqw * var(--fs,1)); line-height:1.25}
 .pf-sum-grade li span{display:block; font-size:calc(1.35cqw * var(--fs,1)); color:#e2c3cd; margin-top:.2em}
@@ -1737,14 +1735,15 @@ section{padding:96px 0; position:relative}
 /* projeto, página A */
 .pf-proj{display:grid; grid-template-columns:42% 58%; grid-template-rows:minmax(0,1fr); background:var(--pf-marrom); color:var(--pf-creme)}
 .pf-proj-txt{padding:5cqw 4cqw 4cqw 5.5cqw; display:flex; flex-direction:column; min-height:0}
-.pf-meta{font-size:calc(1.1cqw * var(--fs,1)); letter-spacing:.14em; color:var(--pf-rosa); font-weight:700; margin-bottom:1.2em}
-.pf-resumo{font-family:Quicksand,sans-serif; font-weight:600; font-size:calc(1.6cqw * var(--fs,1)); line-height:1.4; color:var(--pf-rosa)}
-.pf-metricas{display:flex; gap:1.2em; margin:.4em 0 1.2em}
-.pf-metricas strong{display:block; font-family:Quicksand,sans-serif; font-size:calc(2.2cqw * var(--fs,1)); color:var(--pf-rosa)}
-.pf-metricas span{font-size:calc(1.05cqw * var(--fs,1)); color:#e2c3cd}
-.pf-fichas{margin-top:auto; display:grid; grid-template-columns:1fr 1fr; gap:.7em 1.4em; font-size:calc(1.15cqw * var(--fs,1));
+.pf-meta{font-size:calc(1.25cqw * var(--fs,1)); letter-spacing:.14em; color:var(--pf-rosa); font-weight:700; margin-bottom:1.2em}
+.pf-resumo{font-family:Quicksand,sans-serif; font-weight:600; font-size:calc(1.75cqw * var(--fs,1)); line-height:1.4; color:var(--pf-rosa)}
+.pf-metricas{display:flex; flex-wrap:wrap; column-gap:1.6em; row-gap:.7em; margin:.4em 0 1.2em}
+.pf-metricas > div{flex:1 1 0; min-width:0}
+.pf-metricas strong{display:block; font-family:Quicksand,sans-serif; font-size:calc(2.2cqw * var(--fs,1)); color:var(--pf-rosa); white-space:nowrap}
+.pf-metricas span{display:block; font-size:calc(1.2cqw * var(--fs,1)); line-height:1.3; margin-top:.3em; color:#e2c3cd}
+.pf-fichas{margin-top:auto; display:grid; grid-template-columns:1fr 1fr; gap:.8em 1.4em; font-size:calc(1.3cqw * var(--fs,1));
   padding-top:1.2em; border-top:1px solid rgba(242,242,242,.25)}
-.pf-fichas span{display:block; font-size:calc(.9cqw * var(--fs,1)); letter-spacing:.12em; color:var(--pf-rosa); font-weight:700}
+.pf-fichas span{display:block; font-size:calc(1.05cqw * var(--fs,1)); letter-spacing:.12em; color:var(--pf-rosa); font-weight:700}
 .pf-proj-img{background:#472323; overflow:hidden; display:grid; place-items:center; padding:3cqw}
 .pf-proj-img img{width:100%; height:100%; object-fit:contain; display:block; border-radius:1cqw}
 
@@ -1767,12 +1766,12 @@ section{padding:96px 0; position:relative}
 .pf-galeria figure{margin:0; display:flex; flex-direction:column; gap:.5em; min-height:0}
 .pf-galeria img{flex:1; min-height:0; width:100%; object-fit:cover; border-radius:1cqw; background:none}
 .pf-galeria figure.inteira img{object-fit:contain; border-radius:0}
-.pf-galeria figcaption{font-size:calc(1.35cqw * var(--fs,1)); color:#6b2333; line-height:1.35}
+.pf-galeria figcaption{font-size:calc(1.45cqw * var(--fs,1)); color:#6b2333; line-height:1.35}
 .pf-ux{display:grid; grid-template-columns:1fr 1fr; gap:4cqw; align-items:stretch}
 .pf-etapas{display:grid; gap:1.4cqw; align-content:start}
-.pf-etapas span{font-family:Quicksand,sans-serif; font-weight:700; color:var(--pf-ac); font-size:calc(1.1cqw * var(--fs,1))}
-.pf-etapas h3{font-size:calc(1.8cqw * var(--fs,1)); color:var(--pf-vinho); margin:.1em 0 .3em}
-.pf-etapas p{font-size:calc(1.25cqw * var(--fs,1)); line-height:1.5; margin:0}
+.pf-etapas span{font-family:Quicksand,sans-serif; font-weight:700; color:var(--pf-ac); font-size:calc(1.25cqw * var(--fs,1))}
+.pf-etapas h3{font-size:calc(1.9cqw * var(--fs,1)); color:var(--pf-vinho); margin:.1em 0 .3em}
+.pf-etapas p{font-size:calc(1.4cqw * var(--fs,1)); line-height:1.5; margin:0}
 .pf-ux-imgs{display:grid; gap:1.6cqw; min-height:0}
 .pf-ux-imgs figure{margin:0; min-height:0; background:#fff; border-radius:1cqw; overflow:hidden; display:grid; place-items:center}
 .pf-ux-imgs img{width:100%; height:100%; object-fit:contain}
@@ -2653,7 +2652,7 @@ section{padding:96px 0; position:relative}
         [...pag.querySelectorAll(blocos)].every(e => folga(e) <= 1);
       let fs = 1;
       pag.style.removeProperty("--fs");
-      while (fs > 0.6 && !cabe()){ fs -= 0.04; pag.style.setProperty("--fs", fs.toFixed(2)); }
+      while (fs > 0.75 && !cabe()){ fs -= 0.04; pag.style.setProperty("--fs", fs.toFixed(2)); }
     });
   }
 
@@ -2678,11 +2677,11 @@ section{padding:96px 0; position:relative}
     /* 1. capa */
     const capa = pag("pf-capa", `
       <div class="pf-capa-txt">
-        <span class="pf-sobre">${esc(C.marca.nome)} · ${esc(C.marca.cargo)}</span>
+        <span class="pf-sobre">${esc(C.marca.nome)} · ${esc(C.marca.cargo)} · ${ano}</span>
         <h1>portfólio</h1>
         <p class="pf-tipo">${esc(cfg.titulo)}</p>
         <p class="pf-inclui">${esc(eixosPF.map(g => g.eixo.nome).join(" · "))}</p>
-        <div class="pf-capa-marca-h">${logoH}<span>${ano}</span></div>
+        <div class="pf-capa-marca-h">${logoH}</div>
       </div>`);
 
     /* 2. muito prazer */
