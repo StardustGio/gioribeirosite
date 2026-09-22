@@ -378,8 +378,23 @@ esticadas e borradas.
 
 Imagens seguidas com o mesmo formato viram um grupo, e o número de colunas se
 ajusta sozinho à quantidade: quatro posts ficam quatro por linha, cinco ficam
-três em cima e dois centralizados embaixo, um fica sozinho no centro. Nenhuma
+três em cima e dois centralizados embaixo, sete ficam quatro em cima e três
+embaixo, um fica sozinho no centro. Nenhuma
 fica órfã num canto.
+
+### Onde o corte começa
+
+Os formatos que cortam (`dupla`, `tripla`, `retrato`, `post`) cortam pelo
+centro. Para escolher outro ponto, acrescente `foco` na imagem:
+
+```js
+{ src: "imagens/projetos/cetam/info-ingles.jpg", formato: "retrato", foco: "top",
+  legenda: "..." },
+```
+
+Aceita `"top"`, `"bottom"`, `"left"`, `"right"` ou uma posição como
+`"50% 20%"`. Os infográficos do CETAM usam `foco: "top"`, então a miniatura
+mostra sempre o título de cada um; o infográfico inteiro continua no zoom.
 
 No celular, `dupla` vira uma por linha; `tripla`, `retrato` e `post` ficam
 duas por linha.
@@ -487,19 +502,18 @@ ver o desenho completo com os caminhos de erro — é só clicar para ampliar.
 
 ## 11. O que ainda falta
 
-- [ ] Responder os **ESCREVA AQUI** (busque com Ctrl+F). São os achados de
+- [x] Responder os **ESCREVA AQUI** (busque com Ctrl+F). São os achados de
       pesquisa, os resultados de teste e os aprendizados — a parte que só você
       sabe, e a que mais pesa numa entrevista
-- [ ] Exportar a **abertura** de cada projeto em 2400 × 1350 e preencher o
+- [x] Exportar a **abertura** de cada projeto em 2400 × 1350 e preencher o
       campo `abertura`
-- [ ] Escrever o contexto do Ghosts Squeezed (quando, com quem, estado do jogo)
+- [x] Escrever o contexto do Ghosts Squeezed (quando, com quem, estado do jogo)
 - [ ] Decidir se o TaskIn volta: o bloco dele saiu do arquivo, mas as imagens
       seguem em `imagens/projetos/taskin/`
-- [ ] Mandar as imagens da sua identidade nova, para fechar o case do rebrand
-      (hoje ele usa as páginas do PDF)
+- [ ] Mockups do "depois" do rebrand (capa e abertura já estão em
+      `imagens/projetos/gio/`; a galeria ainda usa as páginas do PDF)
 - [ ] Colocar uma foto sua em `imagens/` e apontar em `sobre.foto`
-- [ ] Trocar a capa do CETAM: hoje é a página do PDF, porque os infográficos
-      são verticais demais para caber num card 16:11
+- [x] Trocar a capa do CETAM
 - [ ] Decidir sobre a licença web da Sofia Pro Soft (seção "Sobre as fontes")
 - [ ] Publicar e ligar o formulário (seções 3 e 7)
 
