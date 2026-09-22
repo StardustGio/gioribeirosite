@@ -120,6 +120,21 @@ gráfico (3 quando são posts ou telas verticais) e 2 no de UX/UI, que também
 resume as quatro primeiras seções do case. Se a segunda página tiver menos de
 duas imagens, ela não é gerada.
 
+Três coisas o PDF resolve sozinho, para nada sair cortado:
+
+- **O texto se ajusta à folha.** Cada página é uma folha A4 fechada. Se o texto
+  de um projeto crescer e passar da altura, a tipografia daquela página encolhe
+  em degraus (até 60% do tamanho) em vez de vazar para fora. Se uma página sair
+  com a letra visivelmente menor que as outras, é sinal de que aquele texto
+  está longo demais: corte umas linhas e ele volta ao tamanho cheio.
+- **A imagem de abertura entra inteira.** Na página de texto do projeto, ela é
+  encaixada dentro do painel, sem corte. Logotipos largos, como o do
+  LabRattack, aparecem por completo.
+- **Peças em pé aparecem inteiras.** Posts e telas de celular entram no tamanho
+  natural, lado a lado. A exceção é a imagem que tem `foco` definido (os
+  infográficos do CETAM, por exemplo): essa é cortada, alinhada pelo topo, e
+  ocupa a altura toda da folha, igual ao site.
+
 ---
 
 ## 2. Os currículos
