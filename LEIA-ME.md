@@ -1,5 +1,5 @@
 # Site — gio ribeiro
-
+API KEY re_DtPSTorp_KicXJ8hqWERpJmKoarjPwMHB
 Site de portfólio em arquivo único. Não precisa instalar nada, não precisa
 compilar nada. Abra `index.html` no navegador e ele funciona.
 
@@ -312,9 +312,40 @@ Email notification*.
 O plano gratuito aceita 100 mensagens por mês, o que é bastante para um
 portfólio.
 
-### Em qualquer outra hospedagem
+### Se hospedar na Vercel, publicando pelo GitHub
 
-Use o **Formspree**:
+É o que o site já vem configurado para usar. O arquivo `api/contato.js`, na
+raiz do repositório (ao lado do `index.html`), é uma função que a Vercel sobe
+sozinha e que responde no endereço `/api/contato`. Ela recebe a mensagem do
+formulário e manda por e-mail usando o **Resend**.
+
+O que fazer, uma vez só:
+
+1. Crie conta em resend.com com o e-mail onde você quer receber as mensagens
+2. Em *API Keys*, crie uma chave e copie
+3. Na Vercel, em *Settings → Environment Variables* do projeto, crie duas:
+   - `RESEND_API_KEY` com a chave que você copiou
+   - `CONTATO_PARA` com o seu e-mail
+4. Suba o `api/contato.js` para o repositório e publique
+
+A cada mensagem você recebe um e-mail com nome, endereço e texto. O campo
+**responder** já vem com o e-mail de quem escreveu, então é só apertar
+responder.
+
+Enquanto você não tiver um domínio verificado no Resend, o remetente é
+`onboarding@resend.dev` e ele só entrega para o e-mail da sua própria conta
+Resend, que é justamente o `CONTATO_PARA`. Se um dia você verificar um domínio
+seu lá, crie também a variável `CONTATO_DE` no formato
+`Portfólio <contato@seudominio.com>`. O plano gratuito aceita 3.000 e-mails por
+mês, 100 por dia.
+
+Três detalhes que já estão resolvidos na função: o campo-isca contra robô, o
+limite de tamanho dos campos, e a checagem de nome, e-mail e mensagem antes de
+enviar.
+
+### Sem função, em qualquer hospedagem
+
+Se preferir não manter a função, use o **Formspree**:
 
 1. Crie conta em formspree.io e adicione um novo form
 2. Ele te dá uma URL no formato `https://formspree.io/f/xxxxxxxx`
@@ -324,7 +355,8 @@ Use o **Formspree**:
 formulario: { destino: "https://formspree.io/f/xxxxxxxx" },
 ```
 
-Pronto. O plano gratuito aceita 50 mensagens por mês.
+Pronto, e aí o `api/contato.js` pode sair do repositório. O plano gratuito
+aceita 50 mensagens por mês.
 
 ### Testando
 

@@ -83,7 +83,7 @@ const CONTEUDO = {
     /* Para onde vai a mensagem do formulário. Veja a seção 7 do LEIA-ME.   */
     /* "netlify" funciona sozinho se o site estiver hospedado na Netlify.   */
     /* Em qualquer outra hospedagem, cole aqui a URL do Formspree.          */
-    formulario: { destino: "netlify" },
+    formulario: { destino: "/api/contato" },   // função em api/contato.js (Vercel)
   },
 
   /* ---- Os cinco eixos de trabalho -------------------------------------- */
@@ -2204,8 +2204,11 @@ section{padding:96px 0; position:relative}
         aviso.textContent = "Nome, e-mail e mensagem são obrigatórios.";
         f.reportValidity(); return;
       }
+      /* "netlify" usa a detecção automática da Netlify; qualquer outro valor é um
+         endereço que recebe a mensagem em JSON — um serviço externo
+         (https://formspree.io/f/...) ou uma função do próprio site (/api/contato). */
       const destino = (C.contato.formulario && C.contato.formulario.destino) || "netlify";
-      const externo = /^https?:/.test(destino);
+      const netlify = destino === "netlify";
       const dados = {
         "form-name": "contato", nome: f.nome.value, email: f.email.value,
         mensagem: f.mensagem.value, "bot-field": f["bot-field"].value,
@@ -2214,9 +2217,9 @@ section{padding:96px 0; position:relative}
       aviso.className = "form-aviso";
       aviso.textContent = "Enviando…";
       try {
-        const r = await fetch(externo ? destino : "/", externo
-          ? { method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body: JSON.stringify(dados) }
-          : { method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body: new URLSearchParams(dados).toString() });
+        const r = await fetch(netlify ? "/" : destino, netlify
+          ? { method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body: new URLSearchParams(dados).toString() }
+          : { method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body: JSON.stringify(dados) });
         if (!r.ok) throw new Error(r.status);
         f.reset();
         aviso.className = "form-aviso ok";
