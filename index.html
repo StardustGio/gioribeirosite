@@ -80,7 +80,7 @@ const CONTEUDO = {
       { nome: "Behance",   selo: "Bē", url: "https://behance.net/gioribeiro2" },
       { nome: "LinkedIn",  selo: "in", url: "https://linkedin.com/in/giovannapribeiro/" },
     ],
-    /* Para onde vai a mensagem do formulário. Veja a seção 7 do LEIA-ME.   */
+    /* Para onde vai a mensagem do formulário. Veja a seção 8 do LEIA-ME.   */
     /* "netlify" funciona sozinho se o site estiver hospedado na Netlify.   */
     /* Em qualquer outra hospedagem, cole aqui a URL do Formspree.          */
     formulario: { destino: "/api/contato" },   // função em api/contato.js (Vercel)
@@ -1000,6 +1000,989 @@ const CONTEUDO = {
   },
 
 };
+/* =======================================================================
+   VERSÃO EM INGLÊS
+   Mesma estrutura do bloco acima, campo por campo. Quem escolhe qual dos
+   dois o site usa é o botão de idioma, ao lado do "Baixar".
+   Para editar: ache o mesmo campo no bloco de cima e traduza aqui.
+   Caminhos de imagem, cores e ids são iguais nos dois: só o texto muda.
+   ======================================================================= */
+const CONTEUDO_EN = {
+
+  /* ---- Dados da marca ------------------------------------------------- */
+  marca: {
+    nome: "gio ribeiro",
+    cargo: "visual designer",
+    frase: "Graphic, information and UX/UI designer. Six years creating visual solutions for different audiences, from brand identity to app interface.",
+  },
+
+  /* ---- Botões de download --------------------------------------------- */
+  /* ---- Portfólios em PDF -------------------------------------------- */
+  /* Cada um junta os eixos listados. Um projeto com  pdf: false  não     */
+  /* entra. Para escolher as imagens da segunda página de um projeto, use */
+  /* imagensPdf: ["caminho1.jpg", "caminho2.jpg"]  dentro dele.           */
+  portfolios: {
+    grafico: {
+      titulo: "Graphic design",
+      eixos: ["identidade", "diagramacao", "social", "outros"],
+      aviso: "Brand identity, editorial design, social media and digital imaging.",
+    },
+    uxui: {
+      titulo: "UX/UI",
+      eixos: ["uxui", "jogos"],
+      aviso: "UX cases and interface design.",
+    },
+  },
+
+  arquivos: {
+    portfolioPdf: "arquivos/GiovannaRibeiro_Portfolio_2026.pdf",
+  },
+
+  /* ---- Sobre ----------------------------------------------------------- */
+  sobre: {
+    titulo: "Nice to meet you!",
+    paragrafos: [
+      "I'm Giovanna Ribeiro, a designer from Manaus, Brazil, with a design degree from the Federal University of Amazonas. I have worked with design since 2020, when I started college.",
+      "My professional purpose is to take responsibility and commitment for creating visual solutions that serve different audiences. I like to experiment with styles and colours until I reach something that could only belong to that project.",
+    ],
+    foto: "imagens/gio-sobre.png",   // retrato em meio-tom, fundo transparente
+    servicos: [
+      "Brand identity and branding",
+      "Editorial and layout design",
+      "UX/UI and prototyping",
+      "Social media and digital content",
+    ],
+  },
+
+  /* ---- Contato --------------------------------------------------------- */
+  contato: {
+    email: "giovannaribeiro2720@gmail.com",
+    telefone: "(92) 98429-5676",
+    cidade: "Manaus, Brazil",
+    redes: [
+      { nome: "Behance",   selo: "Bē", url: "https://behance.net/gioribeiro2" },
+      { nome: "LinkedIn",  selo: "in", url: "https://linkedin.com/in/giovannapribeiro/" },
+    ],
+    /* Para onde vai a mensagem do formulário. Veja a seção 8 do LEIA-ME.   */
+    /* "netlify" funciona sozinho se o site estiver hospedado na Netlify.   */
+    /* Em qualquer outra hospedagem, cole aqui a URL do Formspree.          */
+    formulario: { destino: "/api/contato" },   // função em api/contato.js (Vercel)
+  },
+
+  /* ---- Os cinco eixos de trabalho -------------------------------------- */
+  eixos: [
+    { id: "identidade",  nome: "Brand identity", grupo: "Graphic design" },
+    { id: "diagramacao", nome: "Editorial design",       grupo: "Graphic design" },
+    { id: "outros",      nome: "Personal work",          grupo: "Graphic design" },
+    { id: "uxui",        nome: "UX/UI design",      grupo: "Research and interface" },
+    { id: "social",      nome: "Social media",      grupo: "Graphic design" },
+    { id: "jogos",       nome: "Game interface", grupo: "UX/UI design" },
+  ],
+
+  /* ---- Projetos --------------------------------------------------------- */
+  projetos: [
+
+    {
+      id: "rebrand-gio",
+      titulo: "Personal rebrand",
+      eixo: "identidade",
+      ano: "2026",
+      cliente: "Personal project",
+      papel: "Full brand identity",
+      resumo: "From star to flower: the redesign of my own brand, two years after the first version.",
+      ferramentas: ["Illustrator", "Photoshop"],
+      capa: "imagens/projetos/gio/capa.jpg",
+      abertura: "imagens/projetos/gio/abertura.jpg",
+      introducao: [
+        "When I created the first identity, the question that stopped me was: how do you translate your personality into something visual? Back then I was still finding out who I was, and the symbol came from a star: vivid colours, loose strokes, maximum expression.",
+      ],
+      secoes: [
+        {
+          titulo: "From star to flower",
+          texto: [
+            "The brand did its job, but the designer changed. The new system swaps the star for a flower and the brush stroke for a closed curve: the same urge to express, now with more control. The symbol holds my initial inside the petals, and the identity was built in colourways (wine, pink, blue, brown, black and white) so it adapts to any application without losing recognition.",
+          ],
+          antes: [
+            { src: "imagens/projetos/gio/antes-papelaria.jpg",
+              legenda: "Stationery from the first identity." },
+            { src: "imagens/projetos/gio/antes-copo-mousepad.jpg",
+              legenda: "Cup and mousepad with the old brand." },
+            { src: "imagens/projetos/gio/antes-padroes.jpg",
+              legenda: "Brand and patterns from the previous version." },
+          ],
+          depois: [
+            { src: "imagens/projetos/gio/depois-papelaria.jpg",
+              legenda: "The new brand on stationery and merchandise." },
+            { src: "imagens/projetos/gio/depois-tecido.jpg", formato: "dupla",
+              legenda: "Business card on the pattern, tone on tone." },
+            { src: "imagens/projetos/gio/depois-caneca.jpg", formato: "dupla",
+              legenda: "Mug with the new brand." },
+            { src: "imagens/projetos/gio/depois-adesivo.jpg",
+              legenda: "Sticker with the motto create, inspire, bloom." },
+          ],
+        },
+        {
+          titulo: "Patterns and stickers",
+          texto: [
+            "The patterns and stickers complete the system, from wrapping paper to social media.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/gio-depois-03.jpg", formato: "dupla",
+              legenda: "Sticker sheet." },
+            { src: "imagens/projetos/gio-depois-04.jpg", formato: "dupla",
+              legenda: "Pattern built from the symbol." },
+          ],
+        },
+      ],
+      destaque: true,
+    },
+
+    {
+      id: "deathmare",
+      titulo: "Deathmare Studios",
+      eixo: "identidade",
+      ano: "2025",
+      cliente: "Deathmare Studios",
+      papel: "Brand redesign and applications",
+      duracao: "5 weeks",
+      resumo: "Brand redesign for an indie game studio in Manaus, Brazil.",
+      ferramentas: ["Illustrator", "Photoshop"],
+      capa: "imagens/projetos/deathmare/capa.jpg",
+      abertura: "imagens/projetos/deathmare/abertura.jpg",
+      introducao: [
+        "Deathmare Studios is an indie game studio founded in Manaus in 2023. The first identity was mine as well, but the redesign was needed to put the studio on a par with the regional, national and international market.",
+      ],
+      secoes: [
+        {
+          titulo: "The challenge",
+          texto: [
+            "The concrete problem was application: the previous logo had too many colours and did not fit any material. It was also dated, and it did not really read as a unicorn.",
+          ],
+        },
+        {
+          titulo: "The brand",
+          texto: [
+            "The process was briefing, sketching alternatives and vectorising.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/deathmare/apresentacao-logo.jpg", formato: "dupla",
+              legenda: "Main logo over the studio pattern." },
+            { src: "imagens/projetos/deathmare/estamparia.jpg", formato: "dupla",
+              legenda: "Single-colour pattern built from the symbol." },
+          ],
+        },
+        {
+          titulo: "Applications",
+          texto: [
+            "With the redesign, the brand gained variants, including a single-colour one, and that unlocked its use on stationery, products and event materials.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/deathmare/business-card.jpg", formato: "dupla",
+              legenda: "Business card with a QR code to the studio's itch.io page." },
+            { src: "imagens/projetos/deathmare/card-front.jpg", formato: "dupla",
+              legenda: "Back of the card." },
+            { src: "imagens/projetos/deathmare/caderno.jpg", formato: "tripla",
+              legenda: "Notebook." },
+            { src: "imagens/projetos/deathmare/copo.jpg", formato: "tripla",
+              legenda: "Travel mug." },
+            { src: "imagens/projetos/deathmare/cracha.jpg", formato: "tripla",
+              legenda: "Event badge." },
+            { src: "imagens/projetos/deathmare/card-jogo.jpg", formato: "tripla",
+              legenda: "Commemorative cartridge: the brand applied to a product." },
+          ],
+        },
+      ],
+      destaque: false,
+    },
+
+    {
+      id: "clube-rejeitados",
+      titulo: "Os Rejeitados Book Club",
+      eixo: "identidade",
+      ano: "2025",
+      cliente: "Os Rejeitados Book Club",
+      papel: "Brand identity and applications",
+      duracao: "4 weeks",
+      resumo: "Identity for a book club in Manaus that grew and needed to look the part.",
+      ferramentas: ["Illustrator", "Photoshop"],
+      capa: "imagens/projetos/clube-rejeitados/capa.jpg",
+      abertura: "imagens/projetos/clube-rejeitados/abertura.jpg",
+      introducao: [
+        "Os Rejeitados Book Club holds monthly meetings and author talks, focused on Brazilian and regional literature. The visual identity came from the urge to professionalise the club, given the reach it had already built.",
+      ],
+      secoes: [
+        {
+          titulo: "The concept",
+          texto: [
+            "The name comes from the film The Holdovers, an Oscar nominee in 2024, and was reframed to show how much effort it takes to hold literary events in the region. The empty chairs in the symbol carry that idea of a gathering that insists on happening.",
+          ],
+        },
+        {
+          titulo: "Stationery",
+          imagens: [
+            { src: "imagens/projetos/clube-rejeitados/papelaria-mockup.jpg",
+              legenda: "Full stationery: letterhead, business card and supporting pattern." },
+            { src: "imagens/projetos/clube-rejeitados/cartaovisita-mockup.jpg", formato: "dupla",
+              legenda: "Business card for the club president." },
+            { src: "imagens/projetos/clube-rejeitados/cadernoleitura-mockup.jpg", formato: "dupla",
+              legenda: "2026 reading notebook." },
+            { src: "imagens/projetos/clube-rejeitados/bookmark-mockup.jpg", formato: "dupla",
+              legenda: "Bookmark." },
+            { src: "imagens/projetos/clube-rejeitados/copocafe-mockup.jpg", formato: "dupla",
+              legenda: "Coffee cup used at the meetings." },
+          ],
+        },
+        {
+          titulo: "Products",
+          imagens: [
+            { src: "imagens/projetos/clube-rejeitados/pin1black.jpg", formato: "tripla",
+              legenda: "Pin in black." },
+            { src: "imagens/projetos/clube-rejeitados/pin2blue.jpg", formato: "tripla",
+              legenda: "Pin in blue." },
+            { src: "imagens/projetos/clube-rejeitados/pin3red.jpg", formato: "tripla",
+              legenda: "Pin in red." },
+            { src: "imagens/projetos/clube-rejeitados/buckethat-mockup.jpg", formato: "tripla",
+              legenda: "Bucket hat with the club motto." },
+            { src: "imagens/projetos/clube-rejeitados/bone-mockup.jpg", formato: "tripla",
+              legenda: "Cap." },
+            { src: "imagens/projetos/clube-rejeitados/blusafrente-mockup.jpg", formato: "tripla",
+              legenda: "T-shirt, front." },
+            { src: "imagens/projetos/clube-rejeitados/blusatras-mockup.jpg", formato: "tripla",
+              legenda: "T-shirt, back." },
+            { src: "imagens/projetos/clube-rejeitados/ecobag1-mockup.jpg", formato: "dupla",
+              legenda: "Tote bag in two versions." },
+            { src: "imagens/projetos/clube-rejeitados/ecobag2-mockup.jpg", formato: "dupla",
+              legenda: "Tote bag, second version." },
+          ],
+        },
+        {
+          titulo: "Social media",
+          imagens: [
+            { src: "imagens/projetos/clube-rejeitados/post-1-instagram.jpg", formato: "post",
+              legenda: "Post announcing the meetings." },
+            { src: "imagens/projetos/clube-rejeitados/post-2-instagram.jpg", formato: "post",
+              legenda: "Second post in the editorial line." },
+          ],
+        },
+      ],
+      destaque: true,
+    },
+
+    {
+      id: "labrattack",
+      titulo: "LabRattack",
+      eixo: "identidade",
+      ano: "2025",
+      cliente: "Deathmare Studios",
+      papel: "Brand redesign",
+      resumo: "Brand redesign for a game, following the studio's own redesign.",
+      ferramentas: ["Illustrator", "Photoshop"],
+      capa: "imagens/projetos/labrattack/capa.jpg",
+      abertura: "imagens/projetos/labrattack/abertura.jpg",
+      introducao: [
+        "LabRattack is a Deathmare Studios game. Like the studio, its brand needed a redesign that reflected the new updates to the game.",
+      ],
+      secoes: [
+        {
+          titulo: "From sketch to logo",
+          texto: [
+            "With the halftone logo, the result is more modern and easier to apply across print materials, thanks to the monochrome variants.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/labrattack/esboco-logo.jpg",
+              legenda: "Sketched alternatives: the starting point of the redesign." },
+          ],
+        },
+        {
+          titulo: "Applications",
+          imagens: [
+            { src: "imagens/projetos/labrattack/mockup-card-game.jpg", formato: "dupla",
+              legenda: "Game cartridge." },
+            { src: "imagens/projetos/labrattack/mockup-notebook.jpg", formato: "dupla",
+              legenda: "Notebook with the monochrome variant." },
+            { src: "imagens/projetos/labrattack/caneca.jpg", formato: "tripla",
+              legenda: "Mug." },
+            { src: "imagens/projetos/labrattack/hood.jpg", formato: "tripla",
+              legenda: "Hoodie." },
+            { src: "imagens/projetos/labrattack/ecobag.jpg", formato: "tripla",
+              legenda: "Tote bag." },
+          ],
+        },
+      ],
+      destaque: false,
+    },
+
+    {
+      id: "stardust-sun",
+      titulo: "Stardust Sun",
+      eixo: "identidade",
+      ano: "2024",
+      cliente: "Fictional project",
+      papel: "Rebranding",
+      resumo: "Identity for an accessories shop, with a symbol born from the astrolabe.",
+      ferramentas: ["Illustrator", "Photoshop"],
+      capa: "imagens/projetos/stardust-sun/capa.jpg",
+      abertura: "imagens/projetos/stardust-sun/abertura.jpg",
+      introducao: [
+        "Rebranding of a fictional visual identity for an accessories shop. It was redone because the original version did not do justice to a creative stationery brand.",
+      ],
+      secoes: [
+        {
+          titulo: "The concept",
+          texto: [
+            "The symbol comes from the astrolabe, and the slogan closes the concept: make moments last and wake up the magic.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/stardust-sun/behance-stardust-sun-portfolio-05.jpg",
+              legenda: "Full system: logo, palette and applications." },
+          ],
+        },
+        {
+          titulo: "Applications",
+          imagens: [
+            { src: "imagens/projetos/stardust-sun/fachada.jpg", formato: "dupla",
+              legenda: "Shop front." },
+            { src: "imagens/projetos/stardust-sun/leather-drawstring-pouch-mockup.jpg", formato: "dupla",
+              legenda: "Velvet pouch for the pieces." },
+            { src: "imagens/projetos/stardust-sun/campanha.jpg", formato: "retrato",
+              legenda: "Campaign piece." },
+          ],
+        },
+      ],
+      destaque: false,
+    },
+
+    {
+      id: "cetam",
+      titulo: "CETAM",
+      eixo: "diagramacao",
+      ano: "2026",
+      cliente: "CETAM, Amazonas Center for Technological Education",
+      papel: "Editorial and information design",
+      resumo: "Infographics for the courses on the distance learning platform.",
+      ferramentas: ["InDesign", "Illustrator", "Photoshop"],
+      capa: "imagens/projetos/cetam/capa.jpg",
+      abertura: "imagens/projetos/cetam/abertura.jpg",
+      introducao: [
+        "At CETAM I handle the graphic material for technical and vocational distance learning courses: e-book layout, mind maps, thumbnails and banners. This project brings together the infographics.",
+      ],
+      secoes: [
+        {
+          titulo: "Infographics",
+          texto: [
+            "The infographics are supporting material and work as a summary of the topics and data covered in the classes and e-books. Some are composed as scenes, others as flowcharts. The choice depends on whether the content is descriptive or sequential.",
+            "Some CETAM material cannot be published, such as the e-books. The infographics shown here are cleared for publication. Click any of them to read in full.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/cetam/info-ingles.jpg", formato: "retrato", foco: "top",
+              legenda: "English for specific purposes: tasks, skills and verb tenses." },
+            { src: "imagens/projetos/cetam/info-turismo-espanhol.jpg", formato: "retrato", foco: "top",
+              legenda: "Spanish for tourism: reading and intercultural communication, composed as a scene." },
+            { src: "imagens/projetos/cetam/info-roteiro-turistico.jpg", formato: "retrato", foco: "top",
+              legenda: "Structural elements of a tour itinerary." },
+            { src: "imagens/projetos/cetam/info-fluxograma.jpg", formato: "retrato", foco: "top",
+              legenda: "Decision making and loops in algorithms, composed as a flowchart." },
+            { src: "imagens/projetos/cetam/info-python.jpg", formato: "retrato", foco: "top",
+              legenda: "Basic structure of a class in Python." },
+          ],
+        },
+      ],
+      destaque: true,
+    },
+
+    {
+      id: "propesp",
+      titulo: "CONIC Journal",
+      eixo: "diagramacao",
+      ano: "2023",
+      cliente: "PROPESP/UFAM",
+      papel: "Graphic design and layout",
+      resumo: "Three cover routes and the inner layout for the undergraduate research journal at UFAM.",
+      ferramentas: ["InDesign", "Illustrator"],
+      capa: "imagens/projetos/propesp/capa.jpg",
+      abertura: "imagens/projetos/propesp/abertura.jpg",
+      introducao: [
+        "Graphic design for the CONIC 2023 undergraduate research journal, developed for PROPESP at UFAM. Three cover routes, all built around the identity the congress presented that year.",
+      ],
+      secoes: [
+        {
+          titulo: "Three cover routes",
+          texto: [
+            "The project did not go ahead. I keep it here because a rejected proposal is still work done, and because the three routes show how one identity takes different readings: one more chromatic, one more solid, one more editorial.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/propesp/capa-livro-2.jpg", formato: "dupla",
+              legenda: "Route 1: full gradient of the congress palette." },
+            { src: "imagens/projetos/propesp/capa-livro-3.jpg", formato: "dupla",
+              legenda: "Route 2: solid block with the year in focus." },
+            { src: "imagens/projetos/propesp/capa-livro-conic.jpg",
+              legenda: "Route 3: light background, a more editorial read." },
+          ],
+        },
+        {
+          titulo: "Inner pages",
+          imagens: [
+            { src: "imagens/projetos/propesp/miolo.jpg",
+              legenda: "Two-column grid for scientific papers." },
+          ],
+        },
+      ],
+      destaque: false,
+    },
+
+    {
+      id: "meudu",
+      titulo: "Meu DU",
+      eixo: "uxui",
+      ano: "2024",
+      cliente: "Undergraduate thesis, UFAM",
+      papel: "Research, UX and UI",
+      duracao: "6 months",
+      equipe: "Solo",
+      resumo: "A campus wayfinding app, born from a problem every design student at UFAM knows.",
+      ferramentas: ["Figma", "Illustrator", "Photoshop"],
+      capa: "imagens/projetos/meudu/capa.jpg",
+      metricas: [
+        { valor: "6 months", rotulo: "from briefing to prototype" },
+        { valor: "6 stages", rotulo: "E Methodology" },
+        { valor: "2 levels", rotulo: "of wireframing" },
+      ],
+      abertura: "imagens/projetos/meudu/abertura.jpg",
+      secoes: [
+        {
+          titulo: "The problem",
+          texto: [
+            "The UFAM campus sits inside an environmental protection area and is full of scattered classroom blocks and facilities. Finding your way around is a common problem for design students and graduates, and that is where my thesis started.",
+            "I confirmed the problem was collective by talking to other students and running a survey with 38 people from the design course. The answers showed it went beyond the course: on top of the sprawling campus, academic information was scattered across several channels.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/meudu/campus.jpg",
+              legenda: "The UFAM campus, inside an environmental protection area." },
+          ],
+        },
+        {
+          titulo: "The path",
+          texto: ["I used the E Methodology, by Meurer and Szabluk, which organises the project into six linked stages."],
+          etapas: [
+            { nome: "Strategy", cor: "#3b3bd6", texto: "Preliminary brief, context, competitor analysis and definition of requirements and parameters." },
+            { nome: "Scope", cor: "#1a1a9e", texto: "System definition, positioning of the visual language and semantic differential panel." },
+            { nome: "Structure", cor: "#f278c0", texto: "Tool selection and screen flowchart." },
+            { nome: "Skeleton", cor: "#e00040", texto: "Wireframing." },
+            { nome: "Aesthetics", cor: "#9e1236", texto: "Visual identity, layout and composition; logo, typography, pictograms and icons." },
+            { nome: "Execution", cor: "#6b0d20", texto: "Clickable prototype, user testing and improvements." },
+          ],
+        },
+        {
+          titulo: "App architecture",
+          texto: ["The system was organised into four fronts, all reachable from the home screen."],
+          fluxo: [
+            { grupo: "Entry", passos: ["Log in with student ID", "e-campus password"] },
+            { grupo: "Home", passos: ["Notices", "Shop", "Contacts", "Social media", "CADe", "Students"] },
+            { grupo: "Campus", passos: ["Opportunities", "Places", "Map"] },
+            { grupo: "Profile", passos: ["Personal details", "Settings", "Help"] },
+          ],
+        },
+        {
+          titulo: "From skeleton to interface",
+          texto: [
+            "Low and high fidelity wireframes were made for the whole flow, and only then came the visual identity layer.",
+            "Some interface decisions I stand by: professor contacts went into the app because students said it was hard to reach them outside Classroom. The map is not the first screen because Meu DU is, above all, an academic information app. Finding a place on campus is one of those pieces of information, not the main one. And the notice board gathers in one place the course information that used to be spread across several channels.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/meudu/wireframes-1.jpg", legenda: "Wireframes: login, home, shop and notices." },
+            { src: "imagens/projetos/meudu/wireframes-2.jpg", legenda: "Wireframes: social media, opportunities, places and map." },
+            { src: "imagens/projetos/meudu/wireframes-3.jpg", legenda: "Wireframes: profile and personal details." },
+            { src: "imagens/projetos/meudu/alta-1.jpg", legenda: "Login, home, shop and notices with the identity applied." },
+            { src: "imagens/projetos/meudu/alta-2.jpg", legenda: "Social media, opportunities, places and map in high fidelity." },
+            { src: "imagens/projetos/meudu/alta-3.jpg", legenda: "Profile and personal details in high fidelity." },
+          ],
+        },
+        {
+          titulo: "Delivery",
+          texto: [
+            "The project closed with an interface design document and a clickable prototype, tested with users and revised from what the tests showed.",
+            "The usability test ran on the clickable prototype with 10 people: 5 design students and 5 non-students. The non-students did not link some icons to their features and found terms such as 'locate' confusing. The students pointed out low contrast on buttons and features and suggested a search bar and photos of the professors. After the test, I reworked the icons that were not recognised, changed the terms that caused doubt and raised the contrast of buttons and features.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/meudu/ddi-capa.jpg", legenda: "Interface design document." },
+            { src: "imagens/projetos/meudu/ddi-impresso.jpg", legenda: "The printed document." },
+          ],
+        },
+      ],
+      aprendizados: [
+        "Following a methodology let me run research and development on a short deadline: it avoided wasted time and gave the design a logical sequence of decisions.",
+      ],
+      destaque: true,
+    },
+
+    {
+      id: "supi",
+      titulo: "Supi",
+      eixo: "uxui",
+      ano: "2025",
+      cliente: "PwC Access Your Potential hackathon",
+      papel: "UX/UI, prototype of the gamified section",
+      equipe: "Hackathon team",
+      resumo: "Third place with an app for money management and gamified learning.",
+      ferramentas: ["Figma", "Illustrator", "Maze.co"],
+      capa: "imagens/projetos/supi/capa.jpg",
+      metricas: [
+        { valor: "3rd place", rotulo: "PwC hackathon" },
+        { valor: "11 users", rotulo: "in the usability test" },
+      ],
+      abertura: "imagens/projetos/supi/abertura.jpg",
+      secoes: [
+        {
+          titulo: "The challenge",
+          texto: [
+            "The hackathon asked for a solution to a problem shared by different places. We chose people's relationship with their own money: Supi is a money management app with gamified learning and AI support.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/supi/mockup-supi.jpg", legenda: "Brand and splash screen." },
+          ],
+        },
+        {
+          titulo: "The process",
+          texto: ["The team followed Design Thinking, from desk research to user testing."],
+          etapas: [
+            { nome: "Empathise", cor: "#7a0d22", texto: "Desk research on money management and financial learning, plus a Google Forms survey." },
+            { nome: "Define", cor: "#a8103a", texto: "Target audience and pain points from the answers; personas built with the PBB Canvas." },
+            { nome: "Ideate", cor: "#e00040", texto: "Product Backlog Building: problems, personas, features, name and visual identity." },
+            { nome: "Prototype", cor: "#f278c0", texto: "Prototype of the gamified section in Figma; working prototype in React with Firebase and Gemini." },
+            { nome: "Test", cor: "#3b3bd6", texto: "Test with 11 users on Maze.Co and a UX/UI recommendations document." },
+          ],
+          imagens: [
+            { src: "imagens/projetos/supi/wireframes.jpg",
+              legenda: "Screen flow built in Excalidraw, from sign-up to budget." },
+          ],
+        },
+        {
+          titulo: "My part: the gamification",
+          texto: [
+            "I was responsible for the prototype of the gamified section: the flashcard screens for financial terms and the level-up from apprentice to pupil. The working prototype was developed by Kauã Moraes in React, with Firebase and Gemini.",
+            "With no time for a style guide, the interface ended up adopting the liquid glass style without us noticing. Recording that matters: it was a choice that happened, not one that was made.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/supi/tela-gami-1.jpg", formato: "retrato", legenda: "Apprentice level." },
+            { src: "imagens/projetos/supi/tela-gami-3.jpg", formato: "retrato", legenda: "Flashcard for a financial term." },
+            { src: "imagens/projetos/supi/tela-gami-5.jpg", formato: "retrato", legenda: "Wrong answer." },
+            { src: "imagens/projetos/supi/tela-gami-6.jpg", formato: "retrato", legenda: "Correct answer." },
+            { src: "imagens/projetos/supi/tela-gami-4.jpg", formato: "retrato", legenda: "Well done: a round with no mistakes." },
+            { src: "imagens/projetos/supi/tela-gami-2.jpg", formato: "retrato", legenda: "Level-up to pupil." },
+            { src: "imagens/projetos/supi/mockup-supi-2.jpg", formato: "retrato", legenda: "Clickable prototype." },
+          ],
+        },
+        {
+          titulo: "Testing and recommendations",
+          texto: [
+            "Test with 11 users on Maze.Co, following a usability script, with questions about the app and the interface at the end.",
+            "The material became a UX/UI recommendations document for the next versions.",
+            "Eleven participants completed the script. Another 21 people dropped out before answering the questions. Navigation was rated clear by 45% of participants, very clear by 27% and neutral by 27%.",
+            "The main recommendations were to improve icon contrast and the visibility of features, following the WCAG guidelines, and to let users adjust font size and contrast themselves. The team also suggested short tutorial videos for first-time users or people new to the subject.",
+          ],
+        },
+      ],
+      aprendizados: [
+        "The short hackathon deadline left no room to finish a design system or implement the gamified section, and the limitation was documented rather than hidden.",
+        "Agree on an agile method, such as Scrum, right at the start to guide the teamwork.",
+        "Assess every tool to be used from the start, with a price and cost matrix.",
+      ],
+      destaque: false,
+    },
+
+    {
+      id: "cafe-litteralis",
+      titulo: "Café Litteralis",
+      eixo: "uxui",
+      ano: "2021",
+      cliente: "Academic project",
+      papel: "UX/UI in a team",
+      equipe: "Group project",
+      resumo: "The experience of a bookshop and a coffee shop at home, as an answer to pandemic isolation.",
+      ferramentas: ["Figma", "Illustrator", "Photoshop"],
+      capa: "imagens/projetos/cafe-litteralis/capa.jpg",
+      metricas: [
+        { valor: "3 personas", rotulo: "one of them outside the target audience" },
+        { valor: "4 screens", rotulo: "in medium fidelity" },
+        { valor: "3 users", rotulo: "in the usability test" },
+      ],
+      abertura: "imagens/projetos/cafe-litteralis/abertura.jpg",
+      secoes: [
+        {
+          titulo: "The challenge",
+          texto: [
+            "The course asked for an app that solved a problem caused by the COVID-19 pandemic. We chose the physical distance between people, and our answer was to bring the experience of a bookshop café home.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/cafe-litteralis/mockup.jpg", formato: "dupla",
+              legenda: "Brand and splash screen of the app." },
+          ],
+        },
+        {
+          titulo: "The process",
+          texto: ["Design Thinking in five stages, from research to the revised prototype."],
+          etapas: [
+            { nome: "Empathise", cor: "#7a0d22", texto: "Desk research on coffee shops and bookshops on the Café/Capes platform, plus a Google Forms survey." },
+            { nome: "Define", cor: "#a8103a", texto: "Debrief of the answers, affinity diagram across service, quality and atmosphere, and three personas." },
+            { nome: "Ideate", cor: "#e00040", texto: "The How might we exercise, requirements, features, user journey and visual identity." },
+            { nome: "Prototype", cor: "#f278c0", texto: "Medium fidelity wireframes across four screens, design system and clickable prototype." },
+            { nome: "Test", cor: "#3b3bd6", texto: "Test with three users following a usability script, then a revision of the interface and the journey." },
+          ],
+        },
+        {
+          titulo: "Definition",
+          texto: [
+            "The affinity diagram organised the answers into three axes: service, service quality and atmosphere.",
+            "Out of that came three personas: two within the target audience and one deliberately outside it, as a design challenge. The off-target persona forces you to test the limits of the solution instead of confirming what you already believe.",
+            "The survey had 120 answers. Cross-referenced with the empathy map and the desk research, they showed that people choose a coffee shop or a bookshop for the atmosphere and the space, and that they look for clean places, good value and good service.",
+          ],
+        },
+        {
+          titulo: "The user journey",
+          texto: ["The flow was designed around event booking, which is what sets the app apart from an ordinary delivery service."],
+          fluxo: [
+            { grupo: "Entry", passos: ["Open the app", "Onboarding", "Log in or sign up"] },
+            { grupo: "Home", passos: ["Event booking", "Deals", "Most ordered"] },
+            { grupo: "Booking", passos: ["Choose an event", "Pick a date on the calendar", "Reminder for guests", "Review the details"] },
+            { grupo: "Payment", passos: ["Confirm payment", "Confirmation pop-up", "Back to the home screen"] },
+            { grupo: "Navigation", passos: ["Profile", "Search", "Favourites", "Cart"] },
+          ],
+          imagens: [
+            { src: "imagens/projetos/cafe-litteralis/jornada-usuario.jpg",
+              legenda: "The original journey flowchart, with the error and return paths." },
+          ],
+        },
+        {
+          titulo: "Design system and screens",
+          texto: [
+            "The palette came from the coffee types themselves (espresso, macchiato, frappuccino, cappuccino and latte), and the type was scaled into nine sizes from Kumbh Sans.",
+            "The usability test ran with three people, aged 19 and 20. Users struggled to find some buttons, and the cart screen did not lead straight to the order review. They also pointed out labels that did not match what was on screen. After the test, the team gave the buttons more prominence, made the cart lead straight to the order review and fixed the labels so they matched the content of each screen.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/cafe-litteralis/design-system.jpg",
+              legenda: "Palette named after coffee types, and the type scale." },
+            { src: "imagens/projetos/cafe-litteralis/telas.jpg",
+              legenda: "The complete clickable prototype." },
+          ],
+        },
+      ],
+      aprendizados: [
+        "Today I would rework the visual identity and adapt event booking to a post-pandemic context.",
+      ],
+      destaque: false,
+    },
+
+    {
+      id: "ghosts-squeezed",
+      titulo: "Ghosts Squeezed",
+      eixo: "jogos",
+      ano: "2025",
+      cliente: "Deathmare Studios",
+      papel: "Interface and game elements",
+      resumo: "Interface for a game of ghosts and totems: menu, buttons, tutorial and dialogs.",
+      ferramentas: ["Illustrator", "Photoshop"],
+      capa: "imagens/projetos/ghosts-squeezed/capa.jpg",
+      abertura: "imagens/projetos/ghosts-squeezed/abertura.jpg",
+      secoes: [
+        {
+          titulo: "The challenge",
+          texto: [
+            "Interface for a game where knocking down totems defeats ghosts. Every element had to fit one visual world, somewhere between gravestone, cracked stone and purple ink, without becoming noise on top of the game scene.",
+            "The game was made in a game jam in 2025. I took part from the start, with the Deathmare Studios team: Lybio Froz, Helio Gomes, Gabriel Luciano and Maria Gabriela.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/ghosts-squeezed/logo.jpg", formato: "dupla",
+              legenda: "Game logo, with outline and glow so it survives any background." },
+            { src: "imagens/projetos/ghosts-squeezed/lapide-menu.jpg", formato: "dupla",
+              legenda: "Main menu gravestone, with the studio unicorn carved into the base." },
+          ],
+        },
+        {
+          titulo: "Button states",
+          texto: [
+            "Every button was delivered in three states. It is the kind of thing that never shows up in a portfolio, but it decides whether the game feels responsive or stuck.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/ghosts-squeezed/botao-play.jpg", formato: "dupla",
+              legenda: "Play: rest, focus and pressed." },
+            { src: "imagens/projetos/ghosts-squeezed/botao-creditos.jpg", formato: "dupla",
+              legenda: "Credits, following the same state logic." },
+          ],
+        },
+        {
+          titulo: "Dialogs and tutorial",
+          texto: [
+            "The dialogs follow the same logic as the buttons: colour separates the actions, confirm in green and cancel in red, and the text always sits above everything.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/ghosts-squeezed/tutorial.jpg", formato: "dupla",
+              legenda: "Tutorial panel, with the core rule of the game." },
+            { src: "imagens/projetos/ghosts-squeezed/creditos.jpg", formato: "dupla",
+              legenda: "Credits screen, on the same gravestone as the menu." },
+          ],
+        },
+      ],
+      destaque: false,
+    },
+
+    {
+      id: "acariquara",
+      titulo: "Acariquara Institute",
+      eixo: "social",
+      ano: "2024",
+      cliente: "Acariquara Institute",
+      papel: "Social media design",
+      resumo: "Visual content about sustainability and environmental science in the Amazon.",
+      ferramentas: ["Illustrator", "Photoshop"],
+      capa: "imagens/projetos/acariquara/capa.jpg",
+      abertura: "imagens/projetos/acariquara/abertura.jpg",
+      introducao: [
+        "Most posts for the Acariquara Institute were awareness dates tied to sustainable development, environmental science and sustainability in the Amazon.",
+      ],
+      secoes: [
+        {
+          titulo: "Acariquara Institute",
+          imagens: [
+            { src: "imagens/projetos/acariquara/dia-dos-povos-indigenas.jpg", formato: "post",
+              legenda: "National Day of Struggle of Indigenous Peoples." },
+            { src: "imagens/projetos/acariquara/suframa.jpg", formato: "post",
+              legenda: "57 years of Suframa." },
+            { src: "imagens/projetos/acariquara/mulheres-sementes.jpg", formato: "post",
+              legenda: "Seed women: a question post, made to draw comments." },
+          ],
+        },
+        {
+          titulo: "AGROUFAM",
+          texto: [
+            "Besides the Institute, I also made online and printed pieces for the Family Farming Fair (AGROUFAM), which asks for a more commercial, direct tone.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/acariquara/dia-das-maes-1.jpg", formato: "post",
+              legenda: "Mother's Day: workshop with recycled material." },
+            { src: "imagens/projetos/acariquara/dia-das-maes-2.jpg", formato: "post",
+              legenda: "Piece with the date and time of the fair." },
+            { src: "imagens/projetos/acariquara/dia-das-maes-3.jpg", formato: "post",
+              legenda: "Piece with a gifting angle." },
+          ],
+        },
+      ],
+      destaque: false,
+    },
+
+    {
+      id: "academia-stem",
+      titulo: "Academia STEM",
+      eixo: "social",
+      ano: "2023",
+      cliente: "Academia STEM",
+      papel: "Social media design",
+      resumo: "Digital media for science communication aimed at high school students.",
+      ferramentas: ["Illustrator", "Photoshop"],
+      capa: "imagens/projetos/academia-stem/capa.jpg",
+      abertura: "imagens/projetos/academia-stem/abertura.jpg",
+      introducao: [
+        "Digital media for the @manostem and @academiastem channels, developing visual concepts, marketing and branding for a STEM communication profile.",
+      ],
+      secoes: [
+        {
+          titulo: "Dates and news",
+          texto: [
+            "Posts tied to news or awareness dates called for a more serious look.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/academia-stem/post-dia-das-mulheres.jpg", formato: "post",
+              legenda: "8 March." },
+            { src: "imagens/projetos/academia-stem/post-setembro-amarelo.jpg", formato: "post",
+              legenda: "Yellow September, the suicide prevention campaign." },
+            { src: "imagens/projetos/academia-stem/post-leviata.jpg", formato: "post",
+              legenda: "Science communication post." },
+            { src: "imagens/projetos/academia-stem/post-atencao.jpg", formato: "post",
+              legenda: "Alert piece." },
+          ],
+        },
+        {
+          titulo: "Carousel: The Last of Us",
+          texto: [
+            "The more detailed carousels were built in Illustrator and Photoshop, with more freedom in the visual language.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/academia-stem/carrossel-tlous-1.jpg", formato: "post",
+              legenda: "Cover." },
+            { src: "imagens/projetos/academia-stem/carrossel-tlous-2.jpg", formato: "post",
+              legenda: "Spoiler warning." },
+            { src: "imagens/projetos/academia-stem/carrossel-tlous-3.jpg", formato: "post",
+              legenda: "Trust science." },
+            { src: "imagens/projetos/academia-stem/carrossel-tlous-4.jpg", formato: "post",
+              legenda: "You are not your mistakes." },
+            { src: "imagens/projetos/academia-stem/carrossel-tlous-5.jpg", formato: "post",
+              legenda: "We are not born alone." },
+            { src: "imagens/projetos/academia-stem/carrossel-tlous-6.jpg", formato: "post",
+              legenda: "Final call to action." },
+          ],
+        },
+        {
+          titulo: "Reels covers",
+          imagens: [
+            { src: "imagens/projetos/academia-stem/capa-reels.jpg", formato: "retrato",
+              legenda: "Reels cover." },
+            { src: "imagens/projetos/academia-stem/capa-reels-2.jpg", formato: "retrato",
+              legenda: "Reels cover." },
+            { src: "imagens/projetos/academia-stem/capa-reels-3.jpg", formato: "retrato",
+              legenda: "Reels cover." },
+          ],
+        },
+      ],
+      destaque: false,
+    },
+
+    {
+      id: "agricultura-familiar",
+      titulo: "Family farming",
+      eixo: "outros",
+      ano: "2025",
+      cliente: "Personal project",
+      papel: "Digital imaging",
+      resumo: "Digital imaging with the food basket at the centre of the composition.",
+      ferramentas: ["Photoshop"],
+      capa: "imagens/projetos/agricultura-familiar/capa.jpg",
+      abertura: "imagens/projetos/agricultura-familiar/abertura.jpg",
+      introducao: [
+        "A post made to practise digital imaging, based on my former work with AGROUFAM, the Family Farming Fair. The food basket is the focus of the image, and the composition is organised around it.",
+      ],
+      secoes: [
+        {
+          titulo: "The composition",
+          texto: [
+            "The aim was to put the food grown by regional family farmers in focus. Nothing in the image was made with artificial intelligence.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/agricultura-familiar/poster-mockup.jpg", formato: "retrato",
+              legenda: "Final composition, assembled from separate photographs." },
+          ],
+        },
+      ],
+      destaque: false,
+    },
+
+    {
+      id: "wuthering-heights",
+      titulo: "Wuthering Heights",
+      eixo: "outros",
+      ano: "2025",
+      cliente: "Personal project",
+      papel: "Digital imaging",
+      resumo: "A Wuthering Heights poster built from five blended images.",
+      ferramentas: ["Photoshop"],
+      capa: "imagens/projetos/wuthering-heights/capa.jpg",
+      capaFoco: "50% 30%",
+      abertura: "imagens/projetos/wuthering-heights/abertura.jpg",
+      introducao: [
+        "A poster made to practise Photoshop, focused on the most famous scene in the book: the heroine trying to come in through the window.",
+      ],
+      secoes: [
+        {
+          titulo: "The composition",
+          texto: [
+            "To reach the final image, I blended five different photographs and built the composition. Nothing in the image was made with artificial intelligence.",
+          ],
+          imagens: [
+            { src: "imagens/projetos/wuthering-heights/poster-mockup.jpg", formato: "retrato",
+              legenda: "Final poster." },
+          ],
+        },
+      ],
+      destaque: false,
+    },
+
+  ],
+
+  /* ---- Currículo -------------------------------------------------------- */
+  curriculo: {
+    /* Nome e cargo que aparecem SÓ nos dois currículos.                    */
+    /* O site continua usando o que está em "marca", mais acima.            */
+    /* Se apagar estas duas linhas, o currículo volta a usar o nome da marca. */
+    nome: "Giovanna Pinheiro Ribeiro",
+    cargo: "Visual Designer",
+
+    resumo: "Graphic, information and UX/UI designer with six years of experience and a design degree from the Federal University of Amazonas. I work from brand identity to interface, focused on visual solutions that serve diverse audiences.",
+    experiencias: [
+      {
+        cargo: "Contributing graphic designer",
+        empresa: "CETAM (Amazonas Center for Technological Education)",
+        periodo: "2026 to present",
+        local: "Manaus, Brazil",
+        itens: [
+          "E-book layout for technical and vocational distance learning courses.",
+          "Infographics, mind maps, thumbnails and banners for the distance learning platform, in Illustrator, Photoshop and InDesign.",
+        ],
+      },
+      {
+        cargo: "Generalist designer",
+        empresa: "Acariquara Institute",
+        periodo: "Jan 2024 to Jul 2024",
+        local: "Manaus, Brazil",
+        itens: [
+          "Graphic pieces for two social media accounts: posts, reels, carousels and stories.",
+          "Profile engagement strategies, copywriting and internal communication.",
+          "Event photography and production of print materials.",
+        ],
+      },
+      {
+        cargo: "Volunteer designer",
+        empresa: "Deathmare Studios",
+        periodo: "Jun 2023 to present",
+        local: "Manaus, Brazil",
+        itens: [
+          "Visual identity for the game LabRattack (2023) and the studio identity redesign (2025).",
+          "Interface and HUD system for the game Suspiro (2024).",
+          "Banners, stickers and flyers for visual communication at events.",
+        ],
+      },
+      {
+        cargo: "Social media designer",
+        empresa: "Academia STEM",
+        periodo: "Jan 2023 to Oct 2023",
+        local: "Manaus, Brazil",
+        itens: [
+          "Visual concepts, marketing and branding for a STEM communication profile aimed at high school students.",
+          "Copywriting, engagement strategies and multiplatform content; card artwork for feed and stories.",
+        ],
+      },
+      {
+        cargo: "Undergraduate research fellow",
+        empresa: "Projeto Super / Samsung",
+        periodo: "Apr 2021 to Dec 2022",
+        local: "Manaus, Brazil",
+        itens: [
+          "UX/UI research with a case study on ColabWeb, the UFAM virtual learning environment.",
+          "Heuristic analysis of the platform based on usability tests, with a report of the problems found and suggested improvements.",
+        ],
+      },
+    ],
+    formacao: [
+      { curso: "Bachelor's degree in Design", instituicao: "Federal University of Amazonas", periodo: "2020 to 2024" },
+    ],
+    cursos: [
+      { nome: "Google UX Design", instituicao: "Coursera", ano: "2025" },
+      { nome: "Build Wireframes and Low-Fidelity Prototypes", instituicao: "Google / Coursera", ano: "Aug 2025" },
+      { nome: "User Experience", instituicao: "FIAP", ano: "Nov 2024" },
+      { nome: "Start the UX Design Process", instituicao: "Google / Coursera", ano: "Oct 2023" },
+      { nome: "Introduction to Interaction Design (UX/UI)", instituicao: "Instituto Eldorado", ano: "Oct 2023" },
+      { nome: "Figma: from collaborative design to responsive prototype", instituicao: "Udemy", ano: "May 2022" },
+    ],
+    habilidades: [
+      "Brand identity", "Editorial layout", "UX/UI", "Information design", "Social media",
+      "Adobe Illustrator (advanced)", "Adobe Photoshop (intermediate)", "Adobe InDesign (intermediate)",
+      "Adobe Premiere (basic)", "Figma (intermediate)", "Canva (advanced)",
+      "MarvelApp (advanced)", "Maze.co (intermediate)",
+    ],
+    idiomas: [
+      { idioma: "Portuguese", nivel: "Native" },
+      { idioma: "English", nivel: "Intermediate, ICBEU certified" },
+    ],
+  },
+
+};
 
 /* ==========================  FIM DO CONTEÚDO  ============================
    Daqui pra baixo é o funcionamento do site. Você pode fechar o arquivo.
@@ -1106,6 +2089,13 @@ button{font:inherit; color:inherit; background:none; border:none; cursor:pointer
 .btn-vazio:hover{border-color:var(--ac)}
 
 /* ---- Botão de download ------------------------------------------------ */
+.idioma{display:inline-flex; align-items:center; gap:7px; padding:11px 15px; font-size:14px}
+.idioma svg{opacity:.85}
+.gaveta-idioma{display:none; align-items:center; gap:10px; background:none; border:0; cursor:pointer;
+  font-family:Quicksand,sans-serif; font-weight:700; color:inherit; padding:6px 0;
+  font-size:clamp(20px,5vw,30px); opacity:0; transform:translateY(18px);
+  transition:opacity .4s, transform .4s; margin-top:10px}
+body.menu-on .gaveta-idioma{opacity:1; transform:none; transition-delay:.44s}
 .baixar{position:relative}
 .baixar-menu{
   position:absolute; right:0; top:calc(100% + 10px); width:270px;
@@ -1806,6 +2796,8 @@ section{padding:96px 0; position:relative}
 /* ---- Telas menores ---------------------------------------------------- */
 @media (max-width:900px){
   .nav-desk{display:none}
+  .idioma{display:none}
+  .gaveta-idioma{display:inline-flex}
   .sanduiche{display:grid}
   .ades:nth-child(5),.ades:nth-child(6),.ades:nth-child(7){display:none}
   .capa{padding:110px 0 70px}
@@ -1860,7 +2852,7 @@ section{padding:96px 0; position:relative}
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="logo-v" viewBox="0 0 188.78 196.39" fill="currentColor"><path d="M0,151.26c0-5.23,3.9-9.21,9.06-9.21,2.71,0,4.95,1.12,6.5,2.92v-2.49h4.04v16.43c0,5.6-3.75,9.28-9.46,9.28-4.73,0-8.34-2.53-9.06-6.46h4.15c.61,1.7,2.56,2.82,4.95,2.82,3.25,0,5.38-2.09,5.38-5.45v-1.59c-1.55,1.84-3.79,2.92-6.5,2.92-5.16,0-9.06-3.94-9.06-9.17ZM15.56,151.26c0-3.03-2.46-5.34-5.7-5.34s-5.7,2.31-5.7,5.34,2.46,5.31,5.7,5.31,5.7-2.27,5.7-5.31Z"/><path d="M23.83,136.97c0-1.48,1.12-2.56,2.56-2.56s2.6,1.08,2.6,2.56-1.12,2.56-2.6,2.56-2.56-1.12-2.56-2.56ZM24.37,142.49h4.04v18.41h-4.04v-18.41Z"/><path d="M32.17,151.7c0-5.49,4.22-9.64,9.86-9.64s9.86,4.15,9.86,9.64-4.26,9.64-9.86,9.64-9.86-4.15-9.86-9.64ZM47.7,151.7c0-3.25-2.42-5.74-5.67-5.74s-5.7,2.49-5.7,5.74,2.46,5.74,5.7,5.74,5.67-2.49,5.67-5.74Z"/><path d="M65.83,145.92c-.94-.58-1.52-1.62-1.52-2.74,0-1.59,1.08-2.67,2.74-2.67s2.74,1.05,2.85,2.49l11.99,1.37v.97c-2.13,3.03-3.32,5.74-3.32,8.01s1.23,3.65,3.29,3.65h.72v3.9h-1.08c-4.58,0-7.08-2.67-7.08-7.08,0-1.95.61-4.04,1.73-6.17l-6.64-.87-2.67,14.12h-3.97l2.96-14.98Z"/><path d="M85.11,136.97c0-1.48,1.12-2.56,2.56-2.56s2.6,1.08,2.6,2.56-1.12,2.56-2.6,2.56-2.56-1.12-2.56-2.56ZM85.65,142.49h4.04v18.41h-4.04v-18.41Z"/><path d="M94.64,134.91h4.04v10.22c1.55-1.91,3.79-3.07,6.5-3.07,5.16,0,9.06,4.15,9.06,9.64s-3.9,9.64-9.06,9.64c-2.71,0-4.95-1.16-6.5-3.07v2.64h-4.04v-25.99ZM110.06,151.7c0-3.25-2.42-5.74-5.67-5.74s-5.7,2.49-5.7,5.74,2.46,5.74,5.7,5.74,5.67-2.49,5.67-5.74Z"/><path d="M116.85,151.7c0-5.49,4.22-9.64,9.82-9.64s9.86,4.15,9.86,9.68c0,.4-.04,1.08-.11,1.52h-15.24c.61,2.67,2.78,4.44,5.67,4.44,2.13,0,3.97-.94,4.91-2.35h4.48c-1.48,3.57-5.09,5.99-9.46,5.99-5.7,0-9.93-4.15-9.93-9.64ZM121.22,149.93h10.94c-.61-2.53-2.78-4.22-5.49-4.22s-4.8,1.66-5.45,4.22Z"/><path d="M139.6,136.97c0-1.48,1.12-2.56,2.56-2.56s2.6,1.08,2.6,2.56-1.12,2.56-2.6,2.56-2.56-1.12-2.56-2.56ZM140.14,142.49h4.04v18.41h-4.04v-18.41Z"/><path d="M150.65,145.92c-.94-.58-1.52-1.62-1.52-2.74,0-1.59,1.08-2.67,2.74-2.67s2.74,1.05,2.85,2.49l11.99,1.37v.97c-2.13,3.03-3.32,5.74-3.32,8.01s1.23,3.65,3.29,3.65h.72v3.9h-1.08c-4.58,0-7.08-2.67-7.08-7.08,0-1.95.61-4.04,1.73-6.17l-6.64-.87-2.67,14.12h-3.97l2.96-14.98Z"/><path d="M169.06,151.7c0-5.49,4.22-9.64,9.86-9.64s9.86,4.15,9.86,9.64-4.26,9.64-9.86,9.64-9.86-4.15-9.86-9.64ZM184.59,151.7c0-3.25-2.42-5.74-5.67-5.74s-5.7,2.49-5.7,5.74,2.46,5.74,5.7,5.74,5.67-2.49,5.67-5.74Z"/><path d="M30.7,190.63c-.25.6-.66.97-1.28.97h-.12c-.62,0-1.05-.37-1.3-.97l-3.14-7.53c-.23-.54.12-1.22.7-1.32.56-.1,1.07.17,1.28.7l2.52,6.31,2.52-6.31c.21-.54.72-.8,1.28-.7.58.1.93.78.7,1.32l-3.16,7.53Z"/><path d="M36.93,176.62c.78,0,1.4.58,1.4,1.34s-.62,1.34-1.4,1.34-1.42-.58-1.42-1.34.66-1.34,1.42-1.34ZM38.01,182.83c0-.58-.47-1.07-1.09-1.07-.58,0-1.03.5-1.03,1.07v7.69c0,.58.45,1.07,1.03,1.07.62,0,1.09-.5,1.09-1.07v-7.69Z"/><path d="M40.92,188.36c.52-.21.91.06,1.07.41.39.74,1.13,1.16,2.08,1.16s1.67-.43,1.67-1.16c0-.62-.6-.89-1.3-1.05l-1.3-.31c-2.04-.56-2.78-1.67-2.66-3.22.12-1.42,1.67-2.54,3.45-2.54,1.28,0,2.46.41,3.09,1.42.29.5.14.99-.19,1.24-.35.29-.78.27-1.24-.12-.54-.47-1.16-.66-1.65-.66-.54,0-1.13.19-1.34.52-.17.27-.19.54-.08.83.12.37.7.56,1.22.7l1.49.37c2.08.52,2.52,1.88,2.52,2.85,0,1.86-1.63,2.91-3.84,2.91-1.49,0-2.99-.78-3.51-2.19-.17-.52.06-.99.52-1.16Z"/><path d="M58.62,190.53c0,.58-.47,1.07-1.09,1.07-.58,0-1.03-.5-1.03-1.07v-.47c-.56,1.11-1.88,1.65-2.95,1.65-2.33,0-3.67-1.51-3.67-4.23v-4.64c0-.58.47-1.07,1.09-1.07.58,0,1.03.5,1.03,1.07v4.39c0,1.53.78,2.39,2.02,2.39s2.48-.68,2.48-2.58v-4.21c0-.58.47-1.07,1.09-1.07.58,0,1.03.5,1.03,1.07v7.69Z"/><path d="M69.06,190.12c-.64,1.05-2.04,1.59-3.24,1.59-2.6,0-4.89-1.96-4.89-5.03s2.29-5.01,4.89-5.01c1.16,0,2.58.47,3.24,1.57v-.39c0-.58.45-1.07,1.03-1.07.62,0,1.09.5,1.09,1.07v7.69c0,.58-.47,1.07-1.09,1.07-.58,0-1.03-.5-1.03-1.07v-.41ZM66.07,189.64c1.57,0,2.97-1.09,2.97-2.99s-1.53-2.93-2.97-2.93c-1.61,0-2.95,1.16-2.95,2.93s1.34,2.99,2.95,2.99Z"/><path d="M76.2,190.53c0,.58-.47,1.07-1.09,1.07-.58,0-1.03-.5-1.03-1.07v-12.94c0-.58.45-1.07,1.03-1.07.62,0,1.09.5,1.09,1.07v12.94Z"/><path d="M91.86,177.59c0-.58.47-1.07,1.09-1.07.58,0,1.03.5,1.03,1.07v12.94c0,.58-.45,1.07-1.03,1.07-.62,0-1.09-.5-1.09-1.07v-.43c-.6,1.03-1.92,1.61-3.22,1.61-2.6,0-4.83-1.98-4.83-5.01s2.19-5.03,4.81-5.03c1.36,0,2.64.54,3.24,1.59v-5.65ZM88.89,183.72c-1.61,0-2.91,1.16-2.91,2.93s1.3,2.99,2.91,2.99,2.95-1.11,2.95-2.99-1.51-2.93-2.95-2.93Z"/><path d="M105.15,187.43h-6.71c.21,1.49,1.4,2.41,2.95,2.41,1.01,0,1.59-.35,2.29-.93.35-.29.93-.43,1.36-.08.39.31.41.95.04,1.34-.97,1.01-2.37,1.53-3.8,1.53-2.74,0-4.95-2-4.95-5.05s2.21-4.99,4.95-4.99,4.75,1.86,4.83,4.81c0,.56-.45.97-.97.97ZM104.03,185.89c-.21-1.51-1.3-2.37-2.74-2.37s-2.64.89-2.85,2.37h5.59Z"/><path d="M108.29,188.36c.52-.21.91.06,1.07.41.39.74,1.13,1.16,2.08,1.16s1.67-.43,1.67-1.16c0-.62-.6-.89-1.3-1.05l-1.3-.31c-2.04-.56-2.79-1.67-2.66-3.22.12-1.42,1.67-2.54,3.45-2.54,1.28,0,2.46.41,3.09,1.42.29.5.14.99-.19,1.24-.35.29-.78.27-1.24-.12-.54-.47-1.16-.66-1.65-.66-.54,0-1.13.19-1.34.52-.17.27-.19.54-.08.83.12.37.7.56,1.22.7l1.49.37c2.08.52,2.52,1.88,2.52,2.85,0,1.86-1.63,2.91-3.84,2.91-1.49,0-2.99-.78-3.51-2.19-.17-.52.06-.99.52-1.16Z"/><path d="M118.38,176.62c.78,0,1.4.58,1.4,1.34s-.62,1.34-1.4,1.34-1.42-.58-1.42-1.34.66-1.34,1.42-1.34ZM119.45,182.83c0-.58-.47-1.07-1.09-1.07-.58,0-1.03.5-1.03,1.07v7.69c0,.58.45,1.07,1.03,1.07.62,0,1.09-.5,1.09-1.07v-7.69Z"/><path d="M126.69,194.41c1.96,0,3.22-1.09,3.22-3.8v-.7c-.52,1.18-1.96,1.79-3.26,1.79-2.6,0-4.87-1.94-4.87-4.99s2.27-5.05,4.87-5.05c1.3,0,2.66.58,3.26,1.63v-.45c0-.58.45-1.07,1.03-1.07.62,0,1.09.5,1.09,1.07l-.02,7.32c-.02,4.44-2.08,6.23-5.32,6.23-1.55,0-2.93-.66-3.9-1.86-.33-.43-.27-1.07.17-1.38.45-.31,1.03-.21,1.4.21.58.64,1.49,1.05,2.33,1.05ZM126.9,183.72c-1.61,0-2.93,1.22-2.93,2.97s1.32,2.97,2.93,2.97c1.44,0,2.97-1.09,2.97-2.97s-1.38-2.97-2.97-2.97Z"/><path d="M134.9,182.83c0-.58.47-1.07,1.09-1.07.58,0,1.03.5,1.03,1.07v.47c.56-1.11,1.88-1.65,2.95-1.65,2.33,0,3.67,1.51,3.67,4.23v4.64c0,.58-.47,1.07-1.09,1.07-.58,0-1.03-.5-1.03-1.07v-4.39c0-1.53-.78-2.39-2.02-2.39s-2.48.68-2.48,2.58v4.21c0,.58-.47,1.07-1.09,1.07-.58,0-1.03-.5-1.03-1.07v-7.69Z"/><path d="M154.69,187.43h-6.71c.21,1.49,1.4,2.41,2.95,2.41,1.01,0,1.59-.35,2.29-.93.35-.29.93-.43,1.36-.08.39.31.41.95.04,1.34-.97,1.01-2.37,1.53-3.8,1.53-2.74,0-4.95-2-4.95-5.05s2.21-4.99,4.95-4.99,4.75,1.86,4.83,4.81c0,.56-.45.97-.97.97ZM153.58,185.89c-.21-1.51-1.3-2.37-2.74-2.37s-2.64.89-2.85,2.37h5.59Z"/><path d="M159.89,188.03v2.5c0,.58-.47,1.07-1.09,1.07-.58,0-1.03-.5-1.03-1.07v-7.69c0-.58.45-1.07,1.03-1.07.62,0,1.09.5,1.09,1.07v1.24c.49-1.71,1.44-2.41,2.64-2.41.31,0,.62.02.91.08.54.12.89.66.76,1.22-.19.93-1.11.7-1.73.7-1.82,0-2.58,1.82-2.58,4.37Z"/><path d="M136.83,40.98c8.02-11.63,2.61-23.27-7.4-30.08-10.01-6.84-22.68-9.35-30.6,2.36C92.73.49,77.95-2.88,67.03,2.39c-10.92,5.26-15.13,20.56-8.95,33.28-14.07-1.11-23.05,8.66-23.96,20.73-.91,12.1,2.85,24.84,16.95,25.85-7.99,11.66-2.73,26,7.28,32.83,10.01,6.81,25.43,4.6,33.35-7.08,6.07,12.74,19.53,14.17,30.45,8.9,10.92-5.24,17.59-17.04,11.41-29.76,14.09,1.11,20.12-9.59,21-21.67.91-12.1-3.62-23.49-17.73-24.5ZM117.36,37.76l-18.27,46.27c-1.19,3-4.53,4.68-7.57,3.58-1.33-.48-2.45-1.41-2.98-2.8l-4.39-11.54c-.07-.19-.16-.37-.26-.55l-12.54-33.44c-1.69-4.49,2.99-8.94,7.27-6.77.14.07.28.15.42.23l7.99,4.86,1.23.75c.44.47.72,1.12.72,1.81,0,1.48-1.2,2.67-2.67,2.67-.32,0-.61-.05-.89-.15l-.93-.57-.25-.15c-.09-.06-.19-.11-.28-.15-2.83-1.43-5.91,1.51-4.8,4.47l8.28,22.07c.07.11.13.23.17.36l2.9,7.61c.35.92,1.09,1.53,1.97,1.85,2,.72,4.21-.38,4.99-2.36l12.06-30.54c.13-.34.21-.69.19-1.05-.12-2.24-3.27-3.76-5.71-2.28l-4.82,2.95-.76.46c-.32.13-.67.2-1.04.2-1.52,0-2.76-1.24-2.76-2.76,0-.95.48-1.78,1.21-2.28.37-.11.73-.25,1.07-.44.11-.05.21-.11.31-.17l11.78-7.2c3.69-2.25,8.46.06,8.65,3.45.03.54-.09,1.08-.3,1.59Z"/></symbol><symbol id="logo-h" viewBox="0 0 333.98 122.6" fill="currentColor"><path d="M140.74,55.8c0-5.36,3.99-9.42,9.28-9.42,2.77,0,5.06,1.15,6.65,2.99v-2.55h4.14v16.82c0,5.73-3.84,9.5-9.68,9.5-4.84,0-8.54-2.59-9.28-6.62h4.25c.63,1.74,2.62,2.88,5.06,2.88,3.33,0,5.51-2.14,5.51-5.58v-1.63c-1.59,1.88-3.88,2.99-6.65,2.99-5.29,0-9.28-4.03-9.28-9.39ZM156.67,55.8c0-3.1-2.51-5.47-5.84-5.47s-5.84,2.37-5.84,5.47,2.51,5.43,5.84,5.43,5.84-2.33,5.84-5.43Z"/><path d="M165.13,41.17c0-1.52,1.15-2.62,2.62-2.62s2.66,1.11,2.66,2.62-1.15,2.62-2.66,2.62-2.62-1.15-2.62-2.62ZM165.69,46.82h4.14v18.85h-4.14v-18.85Z"/><path d="M173.67,56.24c0-5.62,4.32-9.87,10.09-9.87s10.09,4.25,10.09,9.87-4.36,9.87-10.09,9.87-10.09-4.25-10.09-9.87ZM189.56,56.24c0-3.33-2.48-5.88-5.8-5.88s-5.84,2.55-5.84,5.88,2.51,5.88,5.84,5.88,5.8-2.55,5.8-5.88Z"/><path d="M208.12,50.33c-.96-.59-1.55-1.66-1.55-2.81,0-1.63,1.11-2.73,2.81-2.73s2.81,1.07,2.92,2.55l12.27,1.4v1c-2.18,3.1-3.4,5.88-3.4,8.2s1.26,3.73,3.36,3.73h.74v3.99h-1.11c-4.69,0-7.24-2.73-7.24-7.24,0-2,.63-4.14,1.77-6.32l-6.8-.89-2.73,14.45h-4.07l3.03-15.34Z"/><path d="M227.86,41.17c0-1.52,1.15-2.62,2.62-2.62s2.66,1.11,2.66,2.62-1.15,2.62-2.66,2.62-2.62-1.15-2.62-2.62ZM228.41,46.82h4.14v18.85h-4.14v-18.85Z"/><path d="M237.62,39.06h4.14v10.46c1.59-1.96,3.88-3.14,6.65-3.14,5.28,0,9.28,4.25,9.28,9.87s-3.99,9.87-9.28,9.87c-2.77,0-5.06-1.18-6.65-3.14v2.7h-4.14v-26.61ZM253.4,56.24c0-3.33-2.48-5.88-5.8-5.88s-5.84,2.55-5.84,5.88,2.51,5.88,5.84,5.88,5.8-2.55,5.8-5.88Z"/><path d="M260.35,56.24c0-5.62,4.32-9.87,10.05-9.87s10.09,4.25,10.09,9.9c0,.41-.04,1.11-.11,1.55h-15.6c.63,2.73,2.85,4.55,5.8,4.55,2.18,0,4.07-.96,5.03-2.4h4.58c-1.52,3.66-5.21,6.13-9.68,6.13-5.84,0-10.16-4.25-10.16-9.87ZM264.82,54.43h11.2c-.63-2.59-2.85-4.32-5.62-4.32s-4.92,1.7-5.58,4.32Z"/><path d="M283.64,41.17c0-1.52,1.15-2.62,2.62-2.62s2.66,1.11,2.66,2.62-1.15,2.62-2.66,2.62-2.62-1.15-2.62-2.62ZM284.19,46.82h4.14v18.85h-4.14v-18.85Z"/><path d="M294.95,50.33c-.96-.59-1.55-1.66-1.55-2.81,0-1.63,1.11-2.73,2.81-2.73s2.81,1.07,2.92,2.55l12.27,1.4v1c-2.18,3.1-3.4,5.88-3.4,8.2s1.26,3.73,3.36,3.73h.74v3.99h-1.11c-4.69,0-7.24-2.73-7.24-7.24,0-2,.63-4.14,1.77-6.32l-6.8-.89-2.73,14.45h-4.07l3.03-15.34Z"/><path d="M313.8,56.24c0-5.62,4.32-9.87,10.09-9.87s10.09,4.25,10.09,9.87-4.36,9.87-10.09,9.87-10.09-4.25-10.09-9.87ZM329.69,56.24c0-3.33-2.48-5.88-5.8-5.88s-5.84,2.55-5.84,5.88,2.51,5.88,5.84,5.88,5.8-2.55,5.8-5.88Z"/><path d="M172.16,95.44c-.25.61-.68.99-1.31.99h-.13c-.63,0-1.08-.38-1.33-.99l-3.21-7.71c-.23-.55.13-1.25.72-1.35.57-.11,1.1.17,1.31.72l2.58,6.46,2.58-6.46c.21-.55.74-.82,1.31-.72.59.11.95.8.72,1.35l-3.23,7.71Z"/><path d="M178.54,81.1c.8,0,1.44.59,1.44,1.37s-.63,1.37-1.44,1.37-1.46-.59-1.46-1.37.68-1.37,1.46-1.37ZM179.64,87.46c0-.59-.49-1.1-1.12-1.1-.59,0-1.06.51-1.06,1.1v7.88c0,.59.46,1.1,1.06,1.1.63,0,1.12-.51,1.12-1.1v-7.88Z"/><path d="M182.62,93.12c.53-.21.93.06,1.1.42.4.76,1.16,1.18,2.13,1.18s1.71-.44,1.71-1.18c0-.63-.61-.91-1.33-1.08l-1.33-.32c-2.09-.57-2.85-1.71-2.72-3.29.13-1.46,1.71-2.6,3.53-2.6,1.31,0,2.51.42,3.17,1.46.3.51.15,1.01-.19,1.27-.36.3-.8.27-1.27-.13-.55-.49-1.18-.68-1.69-.68-.55,0-1.16.19-1.37.53-.17.27-.19.55-.08.84.13.38.72.57,1.25.72l1.52.38c2.13.53,2.58,1.92,2.58,2.91,0,1.9-1.67,2.98-3.93,2.98-1.52,0-3.06-.8-3.59-2.24-.17-.53.06-1.01.53-1.18Z"/><path d="M200.74,95.33c0,.59-.49,1.1-1.12,1.1-.59,0-1.06-.51-1.06-1.1v-.49c-.57,1.14-1.92,1.69-3.02,1.69-2.39,0-3.76-1.54-3.76-4.33v-4.75c0-.59.49-1.1,1.12-1.1.59,0,1.06.51,1.06,1.1v4.5c0,1.56.8,2.45,2.07,2.45s2.53-.7,2.53-2.64v-4.31c0-.59.49-1.1,1.12-1.1.59,0,1.06.51,1.06,1.1v7.88Z"/><path d="M211.43,94.91c-.65,1.08-2.09,1.63-3.32,1.63-2.66,0-5-2.01-5-5.15s2.34-5.13,5-5.13c1.18,0,2.64.49,3.32,1.6v-.4c0-.59.46-1.1,1.06-1.1.63,0,1.12.51,1.12,1.1v7.88c0,.59-.49,1.1-1.12,1.1-.59,0-1.06-.51-1.06-1.1v-.42ZM208.37,94.43c1.6,0,3.04-1.12,3.04-3.06s-1.56-3-3.04-3c-1.65,0-3.02,1.18-3.02,3s1.37,3.06,3.02,3.06Z"/><path d="M218.74,95.33c0,.59-.49,1.1-1.12,1.1-.59,0-1.06-.51-1.06-1.1v-13.24c0-.59.46-1.1,1.06-1.1.63,0,1.12.51,1.12,1.1v13.24Z"/><path d="M234.77,82.09c0-.59.49-1.1,1.12-1.1.59,0,1.06.51,1.06,1.1v13.24c0,.59-.46,1.1-1.06,1.1-.63,0-1.12-.51-1.12-1.1v-.44c-.61,1.06-1.96,1.65-3.29,1.65-2.66,0-4.94-2.03-4.94-5.13s2.24-5.15,4.92-5.15c1.39,0,2.7.55,3.32,1.63v-5.79ZM231.73,88.37c-1.65,0-2.98,1.18-2.98,3s1.33,3.06,2.98,3.06,3.02-1.14,3.02-3.06-1.54-3-3.02-3Z"/><path d="M248.37,92.17h-6.86c.21,1.52,1.44,2.47,3.02,2.47,1.04,0,1.63-.36,2.34-.95.36-.3.95-.44,1.39-.08.4.32.42.97.04,1.37-.99,1.03-2.43,1.56-3.89,1.56-2.81,0-5.07-2.05-5.07-5.17s2.26-5.11,5.07-5.11,4.86,1.9,4.94,4.92c0,.57-.46.99-.99.99ZM247.23,90.58c-.21-1.54-1.33-2.43-2.81-2.43s-2.7.91-2.91,2.43h5.72Z"/><path d="M251.58,93.12c.53-.21.93.06,1.1.42.4.76,1.16,1.18,2.13,1.18s1.71-.44,1.71-1.18c0-.63-.61-.91-1.33-1.08l-1.33-.32c-2.09-.57-2.85-1.71-2.72-3.29.13-1.46,1.71-2.6,3.53-2.6,1.31,0,2.51.42,3.17,1.46.3.51.15,1.01-.19,1.27-.36.3-.8.27-1.27-.13-.55-.49-1.18-.68-1.69-.68-.55,0-1.16.19-1.37.53-.17.27-.19.55-.08.84.13.38.72.57,1.25.72l1.52.38c2.13.53,2.58,1.92,2.58,2.91,0,1.9-1.67,2.98-3.93,2.98-1.52,0-3.06-.8-3.59-2.24-.17-.53.06-1.01.53-1.18Z"/><path d="M261.91,81.1c.8,0,1.44.59,1.44,1.37s-.63,1.37-1.44,1.37-1.46-.59-1.46-1.37.68-1.37,1.46-1.37ZM263.01,87.46c0-.59-.49-1.1-1.12-1.1-.59,0-1.06.51-1.06,1.1v7.88c0,.59.46,1.1,1.06,1.1.63,0,1.12-.51,1.12-1.1v-7.88Z"/><path d="M270.42,99.3c2.01,0,3.29-1.12,3.29-3.89v-.72c-.53,1.2-2.01,1.84-3.34,1.84-2.66,0-4.98-1.98-4.98-5.11s2.32-5.17,4.98-5.17c1.33,0,2.72.59,3.34,1.67v-.46c0-.59.46-1.1,1.06-1.1.63,0,1.12.51,1.12,1.1l-.02,7.5c-.02,4.54-2.13,6.38-5.45,6.38-1.58,0-3-.68-3.99-1.9-.34-.44-.27-1.1.17-1.42.46-.32,1.06-.21,1.44.21.59.65,1.52,1.08,2.39,1.08ZM270.63,88.37c-1.65,0-3,1.25-3,3.04s1.35,3.04,3,3.04c1.48,0,3.04-1.12,3.04-3.04s-1.42-3.04-3.04-3.04Z"/><path d="M278.83,87.46c0-.59.49-1.1,1.12-1.1.59,0,1.06.51,1.06,1.1v.49c.57-1.14,1.92-1.69,3.02-1.69,2.39,0,3.76,1.54,3.76,4.33v4.75c0,.59-.49,1.1-1.12,1.1-.59,0-1.06-.51-1.06-1.1v-4.5c0-1.56-.8-2.45-2.07-2.45s-2.53.7-2.53,2.64v4.31c0,.59-.49,1.1-1.12,1.1-.59,0-1.06-.51-1.06-1.1v-7.88Z"/><path d="M299.08,92.17h-6.86c.21,1.52,1.44,2.47,3.02,2.47,1.04,0,1.63-.36,2.34-.95.36-.3.95-.44,1.39-.08.4.32.42.97.04,1.37-.99,1.03-2.43,1.56-3.89,1.56-2.81,0-5.07-2.05-5.07-5.17s2.26-5.11,5.07-5.11,4.86,1.9,4.94,4.92c0,.57-.46.99-.99.99ZM297.94,90.58c-.21-1.54-1.33-2.43-2.81-2.43s-2.7.91-2.91,2.43h5.72Z"/><path d="M304.41,92.78v2.56c0,.59-.49,1.1-1.12,1.1-.59,0-1.06-.51-1.06-1.1v-7.88c0-.59.46-1.1,1.06-1.1.63,0,1.12.51,1.12,1.1v1.27c.51-1.75,1.48-2.47,2.7-2.47.32,0,.63.02.93.08.55.13.91.68.78,1.25-.19.95-1.14.72-1.77.72-1.86,0-2.64,1.86-2.64,4.48Z"/><path d="M105.27,41.94c8.21-11.91,2.67-23.82-7.58-30.79-10.25-7-23.21-9.57-31.32,2.42C60.13.5,45-2.95,33.82,2.44c-11.18,5.39-15.48,21.05-9.16,34.06C10.25,35.37,1.06,45.37.13,57.73c-.93,12.39,2.92,25.43,17.35,26.46-8.18,11.93-2.79,26.61,7.45,33.61,10.25,6.97,26.03,4.71,34.14-7.25,6.22,13.04,19.99,14.5,31.17,9.11,11.18-5.36,18-17.45,11.68-30.46,14.43,1.13,20.59-9.82,21.5-22.18.93-12.39-3.7-24.04-18.15-25.08ZM85.34,38.65l-18.7,47.37c-1.21,3.07-4.64,4.79-7.75,3.66-1.36-.49-2.51-1.44-3.05-2.87l-4.49-11.81c-.07-.19-.16-.38-.27-.56l-12.83-34.23c-1.73-4.6,3.06-9.15,7.44-6.93.15.07.29.15.43.24l8.17,4.98,1.26.77c.45.48.73,1.14.73,1.86,0,1.51-1.23,2.73-2.73,2.73-.32,0-.63-.05-.91-.16l-.95-.58-.26-.16c-.09-.06-.19-.11-.29-.16-2.89-1.46-6.05,1.54-4.92,4.58l8.47,22.59c.07.11.13.24.18.37l2.97,7.79c.36.94,1.12,1.57,2.02,1.89,2.05.74,4.31-.39,5.11-2.42l12.34-31.26c.14-.34.22-.71.2-1.07-.13-2.29-3.35-3.85-5.84-2.33l-4.94,3.02-.78.47c-.33.14-.69.21-1.06.21-1.56,0-2.83-1.27-2.83-2.83,0-.97.49-1.82,1.24-2.33.38-.11.75-.26,1.09-.45.11-.05.21-.11.32-.18l12.06-7.37c3.77-2.3,8.66.06,8.85,3.53.03.55-.09,1.11-.3,1.63Z"/></symbol><symbol id="stk-1" viewBox="0 0 231.72 231.72"><circle cx="115.86" cy="115.86" r="115.86" style="fill: #fff;"/><path d="M160.03,96.21c8.33-12.09,2.71-24.18-7.69-31.26-10.4-7.11-23.57-9.71-31.8,2.45-6.34-13.27-21.7-16.77-33.05-11.3-11.35,5.47-15.72,21.37-9.3,34.59-14.62-1.15-23.95,9-24.9,21.55-.95,12.58,2.97,25.82,17.61,26.87-8.31,12.12-2.84,27.02,7.57,34.13,10.4,7.08,26.43,4.78,34.66-7.36,6.31,13.24,20.3,14.72,31.65,9.25,11.35-5.44,18.28-17.72,11.86-30.93,14.65,1.15,20.91-9.97,21.83-22.52.95-12.58-3.76-24.41-18.43-25.46ZM139.8,92.86l-18.99,48.09c-1.23,3.12-4.71,4.86-7.87,3.72-1.38-.5-2.55-1.47-3.1-2.91l-4.56-11.99c-.07-.2-.16-.39-.27-.57l-13.03-34.75c-1.75-4.67,3.11-9.29,7.56-7.04.15.07.29.15.44.24l8.3,5.05,1.28.78c.46.49.75,1.16.75,1.88,0,1.54-1.24,2.77-2.77,2.77-.33,0-.64-.05-.93-.16l-.96-.59-.26-.16c-.1-.06-.2-.11-.29-.16-2.94-1.49-6.15,1.57-4.99,4.65l8.6,22.94c.07.12.13.24.18.38l3.01,7.91c.37.95,1.13,1.59,2.05,1.92,2.08.75,4.38-.4,5.19-2.46l12.53-31.74c.14-.35.22-.72.2-1.09-.13-2.32-3.4-3.91-5.93-2.37l-5.01,3.06-.79.48c-.33.14-.7.21-1.08.21-1.58,0-2.87-1.29-2.87-2.87,0-.98.5-1.85,1.25-2.37.39-.12.76-.26,1.11-.46.11-.05.22-.12.32-.18l12.25-7.48c3.83-2.34,8.79.06,8.99,3.58.03.56-.1,1.12-.31,1.65Z" style="fill: #7dbeff;"/><path d="M70.23,42.86c-1.77-3.37-.5-7.29,2.96-9.1,2.95-1.54,6.26-.9,8.12,1.52l-2.64,1.38c-1.06-1.06-2.74-1.28-4.22-.51-2,1.05-2.71,3.37-1.66,5.36s3.36,2.74,5.35,1.7c1.49-.78,2.26-2.28,1.99-3.76l2.64-1.38c.93,2.91-.43,5.99-3.38,7.54-3.46,1.81-7.4.62-9.16-2.76Z" style="fill: #4d0012;"/><path d="M84.26,31.62c-.74-.19-1.34-.76-1.58-1.5-.33-1.05.16-1.99,1.25-2.34,1.1-.35,2.04.12,2.41,1.05l8.22-1.61.21.65c-.77,2.45-.99,4.49-.51,6,.49,1.53,1.58,2.15,2.94,1.72l.48-.15.82,2.58-.72.23c-3.03.96-5.24-.28-6.17-3.19-.41-1.29-.44-2.8-.15-4.45l-4.58.82,1.2,9.9-2.63.83-1.19-10.53Z" style="fill: #4d0012;"/><path d="M98.1,31.61c-.49-3.78,2.05-7.01,5.91-7.5,3.88-.5,7.15,1.99,7.64,5.79.04.27.07.75.06,1.05l-10.48,1.35c.66,1.78,2.3,2.81,4.29,2.55,1.47-.19,2.65-1,3.17-2.05l3.08-.4c-.7,2.59-2.97,4.57-5.98,4.96-3.92.5-7.2-1.98-7.68-5.76ZM100.95,30l7.53-.97c-.65-1.68-2.29-2.66-4.15-2.42-1.84.24-3.16,1.57-3.38,3.39Z" style="fill: #4d0012;"/><path d="M113.8,29.76c.22-3.8,3.07-6.52,6.67-6.31,1.88.11,3.38,1,4.35,2.39l.11-1.83,2.8.17-.53,8.88c-.04.73.36,1.2,1.11,1.25h.23s-.16,2.71-.16,2.71l-.8-.05c-1.75-.1-2.81-.87-3.11-2.22-1.16,1.39-2.84,2.17-4.79,2.05-3.6-.21-6.11-3.25-5.88-7.05ZM124.55,30.4c.13-2.25-1.44-4.08-3.69-4.21-2.28-.13-4.05,1.49-4.19,3.74-.13,2.25,1.44,4.08,3.72,4.21,2.25.13,4.03-1.49,4.16-3.74Z" style="fill: #4d0012;"/><path d="M131.72,33.98l1.34-6.14-2.1-.46.54-2.5,1.27.28c.64.14,1.05-.13,1.19-.77l.52-2.4,2.59.56-.74,3.38,3.08.67-.54,2.5-3.08-.67-1.24,5.7c-.24,1.1.3,1.91,1.45,2.16l1.25.27-.55,2.52-1.64-.36c-2.72-.59-3.89-2.28-3.35-4.75Z" style="fill: #4d0012;"/><path d="M139.88,33.17c1.35-3.56,5.11-5.22,8.74-3.84,3.65,1.38,5.38,5.11,4.02,8.7-.1.26-.29.69-.44.96l-9.88-3.74c-.26,1.88.71,3.56,2.59,4.27,1.38.52,2.81.37,3.76-.32l2.9,1.1c-1.84,1.96-4.77,2.64-7.61,1.57-3.7-1.4-5.42-5.13-4.07-8.69ZM143.15,33.09l7.1,2.69c.22-1.79-.77-3.42-2.52-4.09-1.73-.66-3.52-.1-4.57,1.4Z" style="fill: #4d0012;"/><path d="M212.53,112.67l.05,2.98-17.28.31-.05-2.98,17.28-.31Z" style="fill: #e27be6;"/><path d="M208.16,120.41l-.32,2.79-1.62-.18c1.13,1.16,1.63,2.71,1.43,4.5-.34,3.01-2.56,4.8-5.58,4.46l-4.13-.47c-.72-.08-1.22.29-1.3,1.01l-.03.25-2.69-.31.09-.8c.25-2.21,1.51-3.26,3.62-3.02l3.83.44c1.94.22,3.38-.88,3.6-2.79.23-2.02-.94-3.51-2.9-3.73l-7.02-.8.32-2.79,12.69,1.45Z" style="fill: #e27be6;"/><path d="M194.69,136.47l-1.62-1.39.85-2.78,10.53,9.23-.94,3.06c-3.44-.24-4.76,3.99-9.1,2.66-2.94-.9-4.35-3.41-3.39-6.52.62-2.04,2.01-3.55,3.67-4.27ZM201.27,142.18l-4.67-4.06c-1.27.37-2.39,1.47-2.83,2.9-.5,1.63.09,3.04,1.55,3.49,2.06.63,3.4-1.78,5.96-2.34Z" style="fill: #e27be6;"/><path d="M200.48,153.12l-1.31,2.48-1.62-.85c.67,1.57.66,3.32-.22,4.98-1.67,3.17-5.48,4.22-8.85,2.44-3.37-1.78-4.65-5.51-2.98-8.68.88-1.66,2.31-2.66,3.99-2.99l-5.83-3.07,1.31-2.48,15.51,8.18ZM189.84,159.6c1.99,1.05,4.31.37,5.36-1.62s.32-4.31-1.68-5.36c-1.99-1.05-4.32-.35-5.37,1.64-1.05,1.99-.31,4.29,1.69,5.34Z" style="fill: #e27be6;"/><path d="M191.83,168.15l-1.63,2.28-10.41-7.41,1.63-2.29,10.41,7.41ZM195.17,170.06c.84.6,1,1.66.42,2.48-.6.84-1.66,1.03-2.49.44-.82-.58-1-1.66-.4-2.5.58-.82,1.66-1,2.48-.42Z" style="fill: #e27be6;"/><path d="M185.09,173.28c.74-.21,1.54-.01,2.11.51.81.75.86,1.81.08,2.66-.78.85-1.82.91-2.61.29l-6.33,5.48-.5-.46c-.55-2.51-1.37-4.39-2.53-5.46-1.18-1.08-2.44-1.09-3.4-.03l-.34.37-1.99-1.83.51-.55c2.15-2.34,4.69-2.36,6.94-.29,1,.92,1.78,2.21,2.34,3.78l3.56-2.98-5.95-7.99,1.86-2.03,6.26,8.55Z" style="fill: #e27be6;"/><path d="M173.11,180.16c2.3,3.03,1.71,7.1-1.39,9.45-3.11,2.36-7.19,1.84-9.51-1.22-.17-.22-.43-.61-.58-.88l8.42-6.39c-1.46-1.22-3.4-1.29-5-.08-1.18.89-1.8,2.18-1.73,3.36l-2.47,1.88c-.68-2.6.3-5.45,2.72-7.28,3.15-2.39,7.23-1.87,9.53,1.17ZM171.43,182.97l-6.05,4.59c1.4,1.14,3.31,1.17,4.8.03,1.48-1.12,1.96-2.93,1.24-4.62Z" style="fill: #e27be6;"/><path d="M49.95,186.91l-5.59-5.89c-1.76-1.85-1.78-4.56.04-6.29,1.2-1.14,2.84-1.48,4.12-1.08-.83-1.67-.36-3.84,1.18-5.3,1.98-1.88,4.83-1.72,6.71.27l6.07,6.4-12.54,11.9ZM49.91,182.98l3.2-3.03-3.1-3.27c-.83-.87-2.19-.93-3.1-.06-.91.86-.96,2.19-.1,3.1l3.1,3.27ZM54.95,178.2l3.62-3.43-3.59-3.78c-.97-1.02-2.51-1.04-3.52-.07-1.02.97-1.06,2.49-.09,3.51l3.59,3.78Z" style="fill: #7dbeff;"/><path d="M50.9,165.63c-.79-.49-1.67-.9-2.55-1.18-.89,2.26-2.67,4.41-5.2,6.13-3.69,2.5-6.76,2.31-8.37-.08-1.53-2.26-.68-4.98,2.47-7.12,2.59-1.76,5.78-2.5,8.89-2.15.05-1.09-.22-2.15-.86-3.11l-.39-.58,2.24-1.52.49.73c1.07,1.58,1.5,3.34,1.37,5.1,1.11.39,2.2.93,3.19,1.62l-1.26,2.16ZM45.39,163.94c-2.29-.08-4.61.52-6.54,1.83-1.76,1.19-2.39,2.41-1.8,3.28.6.89,2.07.78,4.31-.74,1.82-1.24,3.24-2.77,4.03-4.37Z" style="fill: #7dbeff;"/><path d="M40.98,158.38c-3.45,1.61-7.3.18-8.96-3.36-1.65-3.52-.29-7.42,3.16-9.03,3.45-1.61,7.31-.16,8.96,3.36,1.66,3.54.29,7.42-3.16,9.03ZM36.42,148.63c-2.04.96-2.9,3.21-1.94,5.25.96,2.04,3.24,2.85,5.29,1.9,2.04-.96,2.89-3.23,1.93-5.27-.96-2.04-3.23-2.83-5.28-1.87Z" style="fill: #7dbeff;"/><path d="M34.45,143.93c-3.69.95-7.21-1.17-8.18-4.96-.97-3.76,1.09-7.34,4.77-8.29s7.21,1.2,8.18,4.96c.97,3.78-1.09,7.34-4.77,8.29ZM31.76,133.49c-2.18.56-3.44,2.62-2.88,4.8.56,2.18,2.66,3.4,4.84,2.84s3.43-2.64,2.87-4.83-2.65-3.38-4.84-2.82Z" style="fill: #7dbeff;"/><path d="M23.87,127.78l-.06-2.8,1.48-.03c-1.17-.93-1.82-2.27-1.86-3.92-.04-1.93.81-3.42,2.25-4.2-1.52-.95-2.38-2.48-2.42-4.46-.06-2.83,1.81-4.75,4.69-4.8l4.41-.09c.73-.01,1.17-.47,1.15-1.2v-.25s2.7-.05,2.7-.05l.02.83c.04,2.23-1.06,3.43-3.19,3.47l-4.21.08c-1.75.04-2.88,1.16-2.85,2.89.04,1.8,1.24,3.01,3.02,2.97l7.41-.15.06,2.8-7.46.15c-1.75.04-2.88,1.16-2.85,2.89.04,1.8,1.24,3.01,3.02,2.97l7.41-.15.06,2.8-12.77.26Z" style="fill: #7dbeff;"/></symbol><symbol id="stk-2" viewBox="0 0 136.73 106.52"><rect width="136.73" height="106.52" rx="12" ry="12" style="fill: #fff;"/><path d="M14.04,20.31c0-4.64,3.57-8.14,8.33-8.14,4.06,0,7.26,2.56,7.9,6.22h-3.63c-.55-1.74-2.23-2.93-4.27-2.93-2.74,0-4.82,2.1-4.82,4.85s2.07,4.85,4.82,4.85c2.04,0,3.72-1.19,4.27-2.93h3.63c-.64,3.66-3.84,6.22-7.9,6.22-4.76,0-8.33-3.51-8.33-8.14Z" style="fill: #4d0012;"/><path d="M34.2,15.42c-.79-.49-1.28-1.37-1.28-2.32,0-1.34.91-2.26,2.32-2.26s2.32.88,2.41,2.1l10.13,1.16v.82c-1.8,2.56-2.81,4.85-2.81,6.77s1.04,3.08,2.78,3.08h.61v3.29h-.91c-3.87,0-5.98-2.26-5.98-5.98,0-1.65.52-3.42,1.46-5.22l-5.61-.73-2.26,11.93h-3.35l2.5-12.66Z" style="fill: #4d0012;"/><path d="M49.75,20.31c0-4.64,3.57-8.14,8.3-8.14s8.33,3.51,8.33,8.17c0,.34-.03.91-.09,1.28h-12.87c.52,2.26,2.35,3.75,4.79,3.75,1.8,0,3.35-.79,4.15-1.98h3.78c-1.25,3.02-4.3,5.06-7.99,5.06-4.82,0-8.39-3.51-8.39-8.14ZM53.44,18.81h9.24c-.52-2.13-2.35-3.57-4.64-3.57s-4.06,1.4-4.61,3.57Z" style="fill: #4d0012;"/><path d="M68.48,20.31c0-4.64,3.26-8.14,7.66-8.14,2.29,0,4.18.98,5.46,2.59v-2.23h3.42v10.83c0,.88.52,1.43,1.43,1.43h.27v3.29h-.98c-2.13,0-3.48-.85-3.93-2.47-1.31,1.77-3.29,2.84-5.67,2.84-4.39,0-7.66-3.51-7.66-8.14ZM81.59,20.31c0-2.74-2.04-4.85-4.79-4.85s-4.82,2.1-4.82,4.85,2.04,4.85,4.82,4.85,4.79-2.1,4.79-4.85Z" style="fill: #4d0012;"/><path d="M90.65,23.29v-7.66h-2.62v-3.11h1.59c.79,0,1.22-.43,1.22-1.22v-2.99h3.23v4.21h3.84v3.11h-3.84v7.11c0,1.37.85,2.2,2.29,2.2h1.56v3.14h-2.04c-3.39,0-5.22-1.71-5.22-4.79Z" style="fill: #4d0012;"/><path d="M99.71,20.31c0-4.64,3.57-8.14,8.3-8.14s8.33,3.51,8.33,8.17c0,.34-.03.91-.09,1.28h-12.87c.52,2.26,2.35,3.75,4.79,3.75,1.8,0,3.35-.79,4.15-1.98h3.78c-1.25,3.02-4.3,5.06-7.99,5.06-4.82,0-8.39-3.51-8.39-8.14ZM103.4,18.81h9.24c-.52-2.13-2.35-3.57-4.64-3.57s-4.06,1.4-4.61,3.57Z" style="fill: #4d0012;"/><path d="M14.62,40.48c0-1.28.96-2.21,2.21-2.21s2.24.93,2.24,2.21-.96,2.21-2.24,2.21-2.21-.96-2.21-2.21ZM15.09,45.24h3.48v15.86h-3.48v-15.86Z" style="fill: #e27be6;"/><path d="M22.77,45.24h3.48v2.02c1.28-1.56,3.11-2.39,5.35-2.39,3.76,0,6.28,2.49,6.28,6.25v5.16c0,.9.53,1.46,1.43,1.46h.31v3.36h-1c-2.77,0-4.23-1.4-4.23-4.04v-4.79c0-2.43-1.56-4.04-3.95-4.04-2.52,0-4.2,1.65-4.2,4.11v8.77h-3.48v-15.86Z" style="fill: #e27be6;"/><path d="M45.01,58.68l-1.06,2.43h-3.61l7.12-15.86h3.98c.96,4.17,6.47,4.2,6.47,9.83,0,3.83-2.46,6.41-6.5,6.41-2.64,0-4.95-1.09-6.41-2.8ZM49.4,48.79l-3.11,7.03c.9,1.37,2.61,2.3,4.48,2.3,2.12,0,3.58-1.21,3.58-3.11,0-2.68-3.36-3.39-4.95-6.22Z" style="fill: #e27be6;"/><path d="M60.66,45.24h3.48v2.27c1.34-1.65,3.27-2.64,5.6-2.64,4.45,0,7.81,3.58,7.81,8.3s-3.36,8.3-7.81,8.3c-2.33,0-4.26-1-5.6-2.64v8.18h-3.48v-21.77ZM73.94,53.17c0-2.8-2.08-4.95-4.88-4.95s-4.91,2.15-4.91,4.95,2.12,4.95,4.91,4.95,4.88-2.15,4.88-4.95Z" style="fill: #e27be6;"/><path d="M80.35,40.48c0-1.28.96-2.21,2.21-2.21s2.24.93,2.24,2.21-.96,2.21-2.24,2.21-2.21-.96-2.21-2.21ZM80.82,45.24h3.48v15.86h-3.48v-15.86Z" style="fill: #e27be6;"/><path d="M89.87,48.2c-.81-.5-1.31-1.4-1.31-2.36,0-1.37.93-2.3,2.36-2.3s2.36.9,2.46,2.15l10.33,1.18v.84c-1.84,2.61-2.86,4.95-2.86,6.91s1.06,3.14,2.83,3.14h.62v3.36h-.93c-3.95,0-6.1-2.3-6.1-6.1,0-1.68.53-3.48,1.49-5.32l-5.72-.75-2.3,12.16h-3.42l2.55-12.91Z" style="fill: #e27be6;"/><path d="M105.73,53.17c0-4.73,3.64-8.3,8.46-8.3s8.49,3.58,8.49,8.34c0,.34-.03.93-.09,1.31h-13.13c.53,2.3,2.4,3.83,4.88,3.83,1.83,0,3.42-.81,4.23-2.02h3.86c-1.28,3.08-4.39,5.16-8.15,5.16-4.91,0-8.55-3.58-8.55-8.3ZM109.5,51.65h9.42c-.53-2.18-2.4-3.64-4.73-3.64s-4.14,1.43-4.7,3.64Z" style="fill: #e27be6;"/><path d="M15.09,74.16h3.48v8.8c1.34-1.65,3.27-2.64,5.6-2.64,4.45,0,7.81,3.58,7.81,8.3s-3.36,8.3-7.81,8.3c-2.33,0-4.26-1-5.6-2.64v2.27h-3.48v-22.39ZM28.37,88.62c0-2.8-2.08-4.94-4.88-4.94s-4.91,2.15-4.91,4.94,2.12,4.95,4.91,4.95,4.88-2.15,4.88-4.95Z" style="fill: #7dbeff;"/><path d="M34.19,93.75c1.06-.47,2.08-1.09,2.99-1.8-1.71-2.49-2.68-5.82-2.68-9.61,0-5.54,2.33-8.55,5.91-8.55,3.39,0,5.6,2.77,5.6,7.5,0,3.89-1.46,7.68-3.98,10.64,1.09.81,2.36,1.28,3.79,1.28h.87v3.36h-1.09c-2.36,0-4.48-.78-6.19-2.15-1.18.87-2.49,1.62-3.89,2.15l-1.34-2.8ZM39.76,89.27c1.68-2.3,2.68-5.1,2.68-7.99,0-2.64-.81-4.14-2.12-4.14s-2.24,1.59-2.24,4.95c0,2.74.59,5.26,1.68,7.18Z" style="fill: #7dbeff;"/><path d="M48.06,88.62c0-4.73,3.64-8.3,8.49-8.3s8.49,3.58,8.49,8.3-3.67,8.3-8.49,8.3-8.49-3.58-8.49-8.3ZM61.44,88.62c0-2.8-2.08-4.94-4.88-4.94s-4.91,2.15-4.91,4.94,2.12,4.95,4.91,4.95,4.88-2.15,4.88-4.95Z" style="fill: #7dbeff;"/><path d="M87.35,80.69h3.48v1.84c1.18-1.43,2.86-2.21,4.91-2.21,2.4,0,4.23,1.09,5.16,2.89,1.21-1.87,3.14-2.89,5.6-2.89,3.51,0,5.85,2.36,5.85,5.94v5.47c0,.9.56,1.46,1.46,1.46h.31v3.36h-1.03c-2.77,0-4.23-1.4-4.23-4.04v-5.23c0-2.18-1.37-3.61-3.51-3.61s-3.76,1.46-3.76,3.67v9.21h-3.48v-9.27c0-2.18-1.37-3.61-3.51-3.61s-3.76,1.46-3.76,3.67v9.21h-3.48v-15.86Z" style="fill: #7dbeff;"/><path d="M82.65,85.32c1.31-1.9.43-3.8-1.21-4.91-1.64-1.12-3.71-1.53-5,.39-1-2.09-3.41-2.64-5.2-1.78-1.78.86-2.47,3.36-1.46,5.44-2.3-.18-3.77,1.41-3.91,3.39-.15,1.98.47,4.06,2.77,4.22-1.31,1.9-.45,4.25,1.19,5.37,1.64,1.11,4.16.75,5.45-1.16.99,2.08,3.19,2.31,4.98,1.45,1.78-.86,2.87-2.79,1.86-4.86,2.3.18,3.29-1.57,3.43-3.54.15-1.98-.59-3.84-2.9-4Z" style="fill: #7dbeff;"/></symbol><symbol id="stk-3" viewBox="0 0 174.4 167.13"><path d="M171.08,92.34l-5.21-8.55,5.22-8.55c4.14-6.78,4.41-15.37.72-22.41-3.52-6.7-9.96-10.95-17.2-11.35-.36-.02-.72-.03-1.08-.03-2.52,0-5.04.49-7.41,1.44l-28.09,11.09,10.12-25.63c1.12-2.79,1.6-5.67,1.44-8.54-.62-11.12-10.26-19.83-21.95-19.83-4.17,0-8.26,1.15-11.82,3.33l-8.54,5.22-8.62-5.25c-.51-.31-1.01-.59-1.48-.82-3.03-1.53-6.4-2.34-9.75-2.34-7.1,0-13.78,3.54-17.88,9.46-4.09,5.91-5.03,13.45-2.51,20.17l9.04,24.1-27.7-10.94c-2.44-.98-4.95-1.47-7.48-1.47-.36,0-.72.01-1.07.03-7.26.4-13.7,4.65-17.22,11.35-3.7,7.04-3.42,15.63.72,22.42l5.22,8.55-5.23,8.59c-.31.52-.6,1.03-.84,1.52-3.41,6.74-3.09,14.6.86,21.03,3.98,6.48,11.16,10.51,18.72,10.51,2.63,0,5.22-.47,7.7-1.4l27.18-10.19-9.84,24.92c-1.12,2.79-1.6,5.67-1.44,8.54.62,11.12,10.26,19.83,21.95,19.83,4.17,0,8.26-1.15,11.82-3.33l8.54-5.22,8.59,5.23c.52.31,1.03.6,1.51.84,3.03,1.53,6.4,2.34,9.75,2.34h0c7.09,0,13.78-3.54,17.88-9.46,4.09-5.91,5.03-13.45,2.51-20.17l-8.51-22.69,24.96,9.36c2.48.93,5.08,1.41,7.71,1.41,7.56,0,14.73-4.03,18.72-10.51,3.95-6.43,4.28-14.29.89-20.99-.28-.55-.57-1.08-.89-1.6Z" style="fill: #fff;"/><path d="M113.76,20.71c.03.61-.1,1.21-.33,1.78l-20.48,51.88c-1.33,3.36-5.08,5.24-8.49,4.01-1.49-.54-2.75-1.58-3.34-3.14l-4.92-12.93c-.08-.21-.18-.42-.29-.61l-14.06-37.49c-1.89-5.04,3.35-10.03,8.15-7.59.16.08.31.17.47.26l8.95,5.45,1.38.84c.5.53.81,1.25.81,2.03,0,1.66-1.34,2.99-2.99,2.99-.35,0-.69-.06-1-.17l-1.04-.63-.28-.17c-.1-.06-.21-.12-.31-.17-3.17-1.6-6.63,1.69-5.38,5.01l9.28,24.75c.08.13.14.26.19.41l3.25,8.54c.39,1.03,1.22,1.72,2.21,2.07,2.24.81,4.72-.43,5.6-2.65l13.52-34.24c.15-.38.24-.78.22-1.18-.14-2.51-3.67-4.21-6.4-2.55l-5.41,3.31-.85.52c-.36.15-.75.23-1.16.23-1.71,0-3.09-1.39-3.09-3.09,0-1.06.54-2,1.35-2.55.42-.13.82-.29,1.2-.49.12-.06.23-.13.35-.19l13.21-8.07c4.13-2.52,9.48.07,9.7,3.87Z" style="fill: #7dbeff;"/><path d="M61.46,146.43c-.03-.61.1-1.21.33-1.78l20.48-51.88c1.33-3.36,5.08-5.24,8.49-4.01,1.49.54,2.75,1.58,3.34,3.14l4.92,12.93c.08.21.18.42.29.61l14.06,37.49c1.89,5.04-3.35,10.03-8.15,7.59-.16-.08-.31-.17-.47-.26l-8.95-5.45-1.38-.84c-.5-.53-.81-1.25-.81-2.03,0-1.66,1.34-2.99,2.99-2.99.35,0,.69.06,1,.17l1.04.63.28.17c.1.06.21.12.31.17,3.17,1.6,6.63-1.69,5.38-5.01l-9.28-24.75c-.08-.13-.14-.26-.19-.41l-3.25-8.54c-.39-1.03-1.22-1.72-2.21-2.07-2.24-.81-4.72.43-5.6,2.65l-13.52,34.24c-.15.38-.24.78-.22,1.18.14,2.51,3.67,4.21,6.4,2.55l5.41-3.31.85-.52c.36-.15.75-.23,1.16-.23,1.71,0,3.09,1.39,3.09,3.09,0,1.06-.54,2-1.35,2.55-.42.13-.82.29-1.2.49-.12.06-.23.13-.35.19l-13.21,8.07c-4.13,2.52-9.48-.07-9.7-3.87Z" style="fill: #7dbeff;"/><path d="M20.69,57.3c.61-.03,1.21.1,1.78.33l51.88,20.48c3.36,1.33,5.24,5.08,4.01,8.49-.54,1.49-1.58,2.75-3.14,3.34l-12.93,4.92c-.21.08-.42.18-.61.29l-37.49,14.06c-5.04,1.89-10.03-3.35-7.59-8.15.08-.16.17-.31.26-.47l5.45-8.95.84-1.38c.53-.5,1.25-.81,2.03-.81,1.66,0,2.99,1.34,2.99,2.99,0,.35-.06.69-.17,1l-.63,1.04-.17.28c-.06.1-.12.21-.17.31-1.6,3.17,1.69,6.63,5.01,5.38l24.75-9.28c.13-.08.26-.14.41-.19l8.54-3.25c1.03-.39,1.72-1.22,2.07-2.21.81-2.24-.43-4.72-2.65-5.6l-34.24-13.52c-.38-.15-.78-.24-1.18-.22-2.51.14-4.21,3.67-2.55,6.4l3.31,5.41.52.85c.15.36.23.75.23,1.16,0,1.71-1.39,3.09-3.09,3.09-1.06,0-2-.54-2.55-1.35-.13-.42-.29-.82-.49-1.2-.06-.12-.13-.23-.19-.35l-8.07-13.21c-2.52-4.13.07-9.48,3.87-9.7Z" style="fill: #7dbeff;"/><path d="M153.71,57.3c-.61-.03-1.21.1-1.78.33l-51.88,20.48c-3.36,1.33-5.24,5.08-4.01,8.49.54,1.49,1.58,2.75,3.14,3.34l12.93,4.92c.21.08.42.18.61.29l37.49,14.06c5.04,1.89,10.03-3.35,7.59-8.15-.08-.16-.17-.31-.26-.47l-5.45-8.95-.84-1.38c-.53-.5-1.25-.81-2.03-.81-1.66,0-2.99,1.34-2.99,2.99,0,.35.06.69.17,1l.63,1.04.17.28c.06.1.12.21.17.31,1.6,3.17-1.69,6.63-5.01,5.38l-24.75-9.28c-.13-.08-.26-.14-.41-.19l-8.54-3.25c-1.03-.39-1.72-1.22-2.07-2.21-.81-2.24.43-4.72,2.65-5.6l34.24-13.52c.38-.15.78-.24,1.18-.22,2.51.14,4.21,3.67,2.55,6.4l-3.31,5.41-.52.85c-.15.36-.23.75-.23,1.16,0,1.71,1.39,3.09,3.09,3.09,1.06,0,2-.54,2.55-1.35.13-.42.29-.82.49-1.2.06-.12.13-.23.19-.35l8.07-13.21c2.52-4.13-.07-9.48-3.87-9.7Z" style="fill: #7dbeff;"/></symbol><symbol id="stk-4" viewBox="0 0 225.33 223.63"><path d="M192.01,76.51c14.97-21.72,4.87-43.44-13.82-56.16-18.69-12.77-42.34-17.45-57.13,4.41C109.67.92,82.07-5.37,61.68,4.45c-20.39,9.83-28.24,38.39-16.72,62.13C18.7,64.52,1.94,82.75.24,105.3c-1.7,22.59,5.33,46.38,31.64,48.26-14.92,21.77-5.1,48.54,13.59,61.31,18.69,12.72,47.48,8.59,62.27-13.23,11.34,23.79,36.46,26.45,56.85,16.62,20.39-9.78,32.83-31.82,21.31-55.57,26.31,2.07,37.56-17.91,39.22-40.46,1.7-22.59-6.75-43.86-33.11-45.74Z" style="fill: #fff;"/><path d="M170.8,85.95c10.97-15.91,3.57-31.83-10.13-41.15-13.69-9.35-31.02-12.79-41.85,3.23-8.34-17.46-28.56-22.07-43.5-14.87-14.94,7.2-20.69,28.13-12.25,45.52-19.25-1.51-31.53,11.84-32.77,28.36-1.25,16.55,3.9,33.98,23.18,35.36-10.93,15.95-3.73,35.56,9.96,44.92,13.69,9.32,34.79,6.29,45.62-9.69,8.31,17.43,26.71,19.38,41.65,12.18,14.94-7.17,24.06-23.32,15.61-40.71,19.28,1.51,27.52-13.12,28.73-29.64,1.24-16.55-4.95-32.13-24.26-33.51ZM144.17,81.54l-24.99,63.3c-1.62,4.1-6.2,6.4-10.35,4.89-1.82-.65-3.35-1.93-4.08-3.83l-6.01-15.78c-.1-.26-.22-.51-.36-.75l-17.15-45.74c-2.31-6.14,4.09-12.23,9.95-9.27.2.1.38.2.58.32l10.92,6.65,1.68,1.02c.61.65.98,1.53.98,2.48,0,2.02-1.64,3.65-3.65,3.65-.43,0-.84-.07-1.22-.21l-1.27-.77-.34-.21c-.13-.08-.26-.15-.38-.21-3.87-1.96-8.09,2.06-6.57,6.12l11.32,30.19c.1.15.17.32.24.49l3.96,10.42c.48,1.25,1.49,2.1,2.7,2.53,2.74.99,5.76-.52,6.83-3.23l16.5-41.78c.18-.46.29-.95.26-1.44-.17-3.06-4.48-5.14-7.81-3.11l-6.6,4.03-1.04.63c-.44.18-.92.28-1.42.28-2.08,0-3.78-1.69-3.78-3.78,0-1.3.65-2.44,1.65-3.11.51-.15,1-.35,1.46-.6.15-.07.29-.15.43-.24l16.12-9.85c5.04-3.08,11.57.08,11.83,4.72.04.74-.13,1.48-.4,2.17Z" style="fill: #f5c5ff;"/></symbol><symbol id="stk-5" viewBox="0 0 145.07 164.72"><path d="M70.7,164.72c-4.18,0-8.3-.72-12.23-2.15-9.51-3.42-17.01-10.69-20.52-19.92l-8.76-23.02c-.34-.7-.65-1.42-.93-2.15L2.25,48.11C-1.82,37.26-.31,25.08,6.3,15.53,12.93,5.96,23.72.25,35.16.25c5.47,0,10.75,1.27,15.71,3.78.81.41,1.66.88,2.52,1.4l18.49,11.26,18.49-11.3c5.79-3.53,12.42-5.4,19.19-5.4,18.89,0,34.47,13.98,35.46,31.82.26,4.56-.52,9.14-2.3,13.6l-37.86,95.89c-5.54,14-19.27,23.4-34.17,23.4Z" style="fill: #fff;"/><path d="M120.91,33.16c.06,1.12-.19,2.24-.61,3.3l-37.89,95.98c-2.46,6.22-9.4,9.7-15.7,7.42-2.76-.99-5.08-2.93-6.18-5.81l-9.11-23.93c-.15-.39-.33-.77-.54-1.13L24.87,39.63c-3.5-9.32,6.2-18.55,15.09-14.05.3.15.58.31.88.49l16.56,10.09,2.55,1.55c.92.98,1.49,2.31,1.49,3.76,0,3.06-2.48,5.54-5.54,5.54-.65,0-1.27-.11-1.85-.32l-1.92-1.17-.52-.32c-.19-.12-.39-.22-.58-.32-5.86-2.97-12.26,3.13-9.96,9.28l17.17,45.78c.15.23.26.49.36.75l6.01,15.79c.73,1.9,2.26,3.18,4.09,3.83,4.15,1.5,8.74-.79,10.35-4.9l25.02-63.35c.27-.7.44-1.44.4-2.18-.25-4.64-6.79-7.8-11.84-4.72l-10,6.12-1.57.96c-.67.27-1.39.42-2.16.42-3.16,0-5.73-2.57-5.73-5.73,0-1.96.99-3.7,2.5-4.72.77-.23,1.52-.53,2.22-.91.22-.11.43-.23.64-.36l24.45-14.94c7.65-4.67,17.55.13,17.94,7.15Z" style="fill: #4d0012;"/></symbol><symbol id="stk-6" viewBox="0 0 204.34 252.66"><ellipse cx="102.17" cy="126.33" rx="102.17" ry="126.33" style="fill: #fff;"/><path d="M191.7,126.33c0,10.16-12.37,18.66-14.58,27.94-2.35,9.88,4.65,23.13.17,31.54-4.78,8.97-19.67,10.29-26.42,17.02-7.15,7.14-8.94,22.04-17.74,25.99s-20.9-4.65-30.95-4.65-22.02,8.66-30.95,4.65c-8.8-3.95-10.6-18.85-17.74-25.99-6.74-6.73-21.63-8.05-26.41-17.02-4.48-8.41,2.52-21.66.17-31.54-2.21-9.28-14.58-17.78-14.58-27.94s12.37-18.66,14.58-27.94c2.35-9.88-4.65-23.13-.17-31.54,4.78-8.97,19.67-10.29,26.42-17.02,7.15-7.14,8.94-22.04,17.74-25.99,8.93-4.01,20.9,4.65,30.95,4.65s22.02-8.66,30.95-4.65c8.8,3.95,10.6,18.85,17.74,25.99,6.74,6.73,21.63,8.05,26.41,17.02,4.48,8.41-2.52,21.66-.17,31.54,2.21,9.28,14.58,17.78,14.58,27.94Z" style="fill: #c2d8f9;"/><path d="M87.81,102.45c-3.96-4.59-9.66-7.45-16.58-7.45-13.15,0-23.08,10.1-23.08,23.47s9.94,23.36,23.08,23.36c6.92,0,12.62-2.77,16.58-7.45v4.04c0,8.55-5.42,13.89-13.73,13.89-6.06,0-11.04-2.85-12.59-7.17h-10.57c1.83,10.02,11.04,16.47,23.08,16.47,14.53,0,24.11-9.38,24.11-23.66v-41.85h-10.3v6.34ZM82.12,118.1c-.15,2.09-1.2,3.94-3.64,3.75,1.07,2.2-.08,4.25-1.98,5.15-1.89.91-4.22.66-5.27-1.54-1.37,2.02-4.04,2.41-5.78,1.23-1.73-1.18-2.65-3.67-1.26-5.69-2.44-.17-3.09-2.38-2.94-4.48.16-2.09,1.71-3.78,4.15-3.59-1.07-2.2-.34-4.85,1.55-5.76,1.89-.91,4.45-.33,5.51,1.88,1.37-2.03,3.57-1.59,5.3-.41,1.73,1.18,2.67,3.2,1.28,5.21,2.45.17,3.23,2.15,3.07,4.24Z" style="fill: #330d0d;"/><path d="M154.35,133.09c-5.24,0-8.37-3.41-8.37-9.3s3.04-12.7,8.47-20.43v-2.49l-30.55-3.5c-.28-3.68-3.04-6.35-7.27-6.35s-7,2.76-7,6.81c0,2.85,1.47,5.52,3.87,6.99l-7.54,38.19h10.12l6.81-35.98,16.93,2.21c-2.85,5.43-4.42,10.77-4.42,15.74,0,11.23,6.35,18.04,18.04,18.04h2.76v-9.94h-1.84Z" style="fill: #330d0d;"/></symbol><symbol id="stk-7" viewBox="0 0 144.14 126.18"><path d="M140.53,74.28c-1.51,2.06-3.52,3.78-5.96,5.11l-16.98,9.32,3.37,9.87c1.9,5.57,1.23,11.54-1.88,16.82-3.9,6.65-11.21,10.78-19.08,10.78-3.81,0-7.59-.96-10.93-2.8l-17.31-9.5-16.68,9.16c-3.35,1.84-7.13,2.8-10.94,2.8-7.86,0-15.18-4.14-19.09-10.8-3.1-5.26-3.77-11.23-1.87-16.79l3.18-9.31-16.83-9.24c-2.39-1.29-4.4-3.01-5.92-5.08-3.99-5.39-4.72-12.58-1.96-19.22,3.04-7.29,9.77-12.52,17.56-13.65l24.59-3.57,8.29-23.9C55.05,5.74,63.15,0,72.25,0c8.42,0,15.72,4.77,19.05,12.44.21.49.43,1.04.63,1.63l7.02,20.42h0s1.15,3.31,1.15,3.31l24.82,3.61c7.8,1.13,14.53,6.36,17.57,13.65,2.76,6.64,2.03,13.83-1.96,19.22Z" style="fill: #fff;"/><path d="M123.3,52.63l-24.93-3.62c-.21-.03-.43-.07-.64-.12-.69-.13-1.36-.36-2.01-.63-1.28-.12-2.58.25-3.62,1.09l-4.49-12.94s0-.02,0-.03l-.85-2.48-5.54-16.13c-.1-.29-.2-.55-.32-.82-3.49-8.03-15.23-7.23-18.1,1.04l-10.94,31.54c-1-.73-2.23-1.05-3.43-.93-.65.28-1.33.5-2.01.63-.21.05-.42.09-.64.12l-24.93,3.62c-7.8,1.13-11.8,9.94-8.12,14.91.59.79,1.39,1.41,2.27,1.89l25.18,13.83-6.25,18.31c-.88,2.57-.39,5.18.92,7.4,2.98,5.08,9.63,6.62,14.79,3.8l22.14-12.16,22.76,12.5c5.16,2.83,11.81,1.28,14.79-3.8,1.31-2.22,1.8-4.83.92-7.4l-6.45-18.89,25.37-13.93c.88-.48,1.68-1.09,2.27-1.89,3.68-4.97-.33-13.78-8.12-14.91ZM51.34,78.24c.08-.23.15-.47.18-.71l12.7-36.61c.09-.07.19-.11.28-.19.44-.37.8-.78,1.07-1.25l.64-1.87.17-.51c.06-.19.14-.37.22-.54,1.58-3.64,5.74-4.53,8.8-2.96.9.61,1.66,1.47,2.16,2.62.08.17.15.36.22.54l.17.51.64,1.87c.27.45.61.86,1.04,1.22l13.01,37.51c.03.24.09.48.18.71l.4,1.18-21.45,11.78-21.02-11.54.6-1.75ZM33.25,69.96c-2.43-3.28.22-9.09,5.36-9.84l10.09-1.46-5.89,16.98-8.07-4.43c-.58-.32-1.11-.72-1.49-1.25ZM56.91,99.69c-3.4,1.87-7.79.85-9.76-2.5-.87-1.47-1.19-3.19-.61-4.89l1.5-4.39,15.16,8.33-6.29,3.45ZM97.61,92.65c.57,1.7.26,3.42-.61,4.89-1.97,3.35-6.36,4.37-9.76,2.5l-6.91-3.79,15.58-8.56,1.7,4.97ZM110.9,69.62c-.39.52-.92.93-1.49,1.25l-8.27,4.54-5.94-17.13.14.02,10.2,1.48c5.14.75,7.79,6.56,5.36,9.84Z" style="fill: #330d0d;"/></symbol><symbol id="nome" viewBox="0 0 188.78 61.98" fill="currentColor"><g transform="translate(0.00 -134.41)"><path d="M0,151.26c0-5.23,3.9-9.21,9.06-9.21,2.71,0,4.95,1.12,6.5,2.92v-2.49h4.04v16.43c0,5.6-3.75,9.28-9.46,9.28-4.73,0-8.34-2.53-9.06-6.46h4.15c.61,1.7,2.56,2.82,4.95,2.82,3.25,0,5.38-2.09,5.38-5.45v-1.59c-1.55,1.84-3.79,2.92-6.5,2.92-5.16,0-9.06-3.94-9.06-9.17ZM15.56,151.26c0-3.03-2.46-5.34-5.7-5.34s-5.7,2.31-5.7,5.34,2.46,5.31,5.7,5.31,5.7-2.27,5.7-5.31Z"/><path d="M23.83,136.97c0-1.48,1.12-2.56,2.56-2.56s2.6,1.08,2.6,2.56-1.12,2.56-2.6,2.56-2.56-1.12-2.56-2.56ZM24.37,142.49h4.04v18.41h-4.04v-18.41Z"/><path d="M32.17,151.7c0-5.49,4.22-9.64,9.86-9.64s9.86,4.15,9.86,9.64-4.26,9.64-9.86,9.64-9.86-4.15-9.86-9.64ZM47.7,151.7c0-3.25-2.42-5.74-5.67-5.74s-5.7,2.49-5.7,5.74,2.46,5.74,5.7,5.74,5.67-2.49,5.67-5.74Z"/><path d="M65.83,145.92c-.94-.58-1.52-1.62-1.52-2.74,0-1.59,1.08-2.67,2.74-2.67s2.74,1.05,2.85,2.49l11.99,1.37v.97c-2.13,3.03-3.32,5.74-3.32,8.01s1.23,3.65,3.29,3.65h.72v3.9h-1.08c-4.58,0-7.08-2.67-7.08-7.08,0-1.95.61-4.04,1.73-6.17l-6.64-.87-2.67,14.12h-3.97l2.96-14.98Z"/><path d="M85.11,136.97c0-1.48,1.12-2.56,2.56-2.56s2.6,1.08,2.6,2.56-1.12,2.56-2.6,2.56-2.56-1.12-2.56-2.56ZM85.65,142.49h4.04v18.41h-4.04v-18.41Z"/><path d="M94.64,134.91h4.04v10.22c1.55-1.91,3.79-3.07,6.5-3.07,5.16,0,9.06,4.15,9.06,9.64s-3.9,9.64-9.06,9.64c-2.71,0-4.95-1.16-6.5-3.07v2.64h-4.04v-25.99ZM110.06,151.7c0-3.25-2.42-5.74-5.67-5.74s-5.7,2.49-5.7,5.74,2.46,5.74,5.7,5.74,5.67-2.49,5.67-5.74Z"/><path d="M116.85,151.7c0-5.49,4.22-9.64,9.82-9.64s9.86,4.15,9.86,9.68c0,.4-.04,1.08-.11,1.52h-15.24c.61,2.67,2.78,4.44,5.67,4.44,2.13,0,3.97-.94,4.91-2.35h4.48c-1.48,3.57-5.09,5.99-9.46,5.99-5.7,0-9.93-4.15-9.93-9.64ZM121.22,149.93h10.94c-.61-2.53-2.78-4.22-5.49-4.22s-4.8,1.66-5.45,4.22Z"/><path d="M139.6,136.97c0-1.48,1.12-2.56,2.56-2.56s2.6,1.08,2.6,2.56-1.12,2.56-2.6,2.56-2.56-1.12-2.56-2.56ZM140.14,142.49h4.04v18.41h-4.04v-18.41Z"/><path d="M150.65,145.92c-.94-.58-1.52-1.62-1.52-2.74,0-1.59,1.08-2.67,2.74-2.67s2.74,1.05,2.85,2.49l11.99,1.37v.97c-2.13,3.03-3.32,5.74-3.32,8.01s1.23,3.65,3.29,3.65h.72v3.9h-1.08c-4.58,0-7.08-2.67-7.08-7.08,0-1.95.61-4.04,1.73-6.17l-6.64-.87-2.67,14.12h-3.97l2.96-14.98Z"/><path d="M169.06,151.7c0-5.49,4.22-9.64,9.86-9.64s9.86,4.15,9.86,9.64-4.26,9.64-9.86,9.64-9.86-4.15-9.86-9.64ZM184.59,151.7c0-3.25-2.42-5.74-5.67-5.74s-5.7,2.49-5.7,5.74,2.46,5.74,5.7,5.74,5.67-2.49,5.67-5.74Z"/><path d="M30.7,190.63c-.25.6-.66.97-1.28.97h-.12c-.62,0-1.05-.37-1.3-.97l-3.14-7.53c-.23-.54.12-1.22.7-1.32.56-.1,1.07.17,1.28.7l2.52,6.31,2.52-6.31c.21-.54.72-.8,1.28-.7.58.1.93.78.7,1.32l-3.16,7.53Z"/><path d="M36.93,176.62c.78,0,1.4.58,1.4,1.34s-.62,1.34-1.4,1.34-1.42-.58-1.42-1.34.66-1.34,1.42-1.34ZM38.01,182.83c0-.58-.47-1.07-1.09-1.07-.58,0-1.03.5-1.03,1.07v7.69c0,.58.45,1.07,1.03,1.07.62,0,1.09-.5,1.09-1.07v-7.69Z"/><path d="M40.92,188.36c.52-.21.91.06,1.07.41.39.74,1.13,1.16,2.08,1.16s1.67-.43,1.67-1.16c0-.62-.6-.89-1.3-1.05l-1.3-.31c-2.04-.56-2.78-1.67-2.66-3.22.12-1.42,1.67-2.54,3.45-2.54,1.28,0,2.46.41,3.09,1.42.29.5.14.99-.19,1.24-.35.29-.78.27-1.24-.12-.54-.47-1.16-.66-1.65-.66-.54,0-1.13.19-1.34.52-.17.27-.19.54-.08.83.12.37.7.56,1.22.7l1.49.37c2.08.52,2.52,1.88,2.52,2.85,0,1.86-1.63,2.91-3.84,2.91-1.49,0-2.99-.78-3.51-2.19-.17-.52.06-.99.52-1.16Z"/><path d="M58.62,190.53c0,.58-.47,1.07-1.09,1.07-.58,0-1.03-.5-1.03-1.07v-.47c-.56,1.11-1.88,1.65-2.95,1.65-2.33,0-3.67-1.51-3.67-4.23v-4.64c0-.58.47-1.07,1.09-1.07.58,0,1.03.5,1.03,1.07v4.39c0,1.53.78,2.39,2.02,2.39s2.48-.68,2.48-2.58v-4.21c0-.58.47-1.07,1.09-1.07.58,0,1.03.5,1.03,1.07v7.69Z"/><path d="M69.06,190.12c-.64,1.05-2.04,1.59-3.24,1.59-2.6,0-4.89-1.96-4.89-5.03s2.29-5.01,4.89-5.01c1.16,0,2.58.47,3.24,1.57v-.39c0-.58.45-1.07,1.03-1.07.62,0,1.09.5,1.09,1.07v7.69c0,.58-.47,1.07-1.09,1.07-.58,0-1.03-.5-1.03-1.07v-.41ZM66.07,189.64c1.57,0,2.97-1.09,2.97-2.99s-1.53-2.93-2.97-2.93c-1.61,0-2.95,1.16-2.95,2.93s1.34,2.99,2.95,2.99Z"/><path d="M76.2,190.53c0,.58-.47,1.07-1.09,1.07-.58,0-1.03-.5-1.03-1.07v-12.94c0-.58.45-1.07,1.03-1.07.62,0,1.09.5,1.09,1.07v12.94Z"/><path d="M91.86,177.59c0-.58.47-1.07,1.09-1.07.58,0,1.03.5,1.03,1.07v12.94c0,.58-.45,1.07-1.03,1.07-.62,0-1.09-.5-1.09-1.07v-.43c-.6,1.03-1.92,1.61-3.22,1.61-2.6,0-4.83-1.98-4.83-5.01s2.19-5.03,4.81-5.03c1.36,0,2.64.54,3.24,1.59v-5.65ZM88.89,183.72c-1.61,0-2.91,1.16-2.91,2.93s1.3,2.99,2.91,2.99,2.95-1.11,2.95-2.99-1.51-2.93-2.95-2.93Z"/><path d="M105.15,187.43h-6.71c.21,1.49,1.4,2.41,2.95,2.41,1.01,0,1.59-.35,2.29-.93.35-.29.93-.43,1.36-.08.39.31.41.95.04,1.34-.97,1.01-2.37,1.53-3.8,1.53-2.74,0-4.95-2-4.95-5.05s2.21-4.99,4.95-4.99,4.75,1.86,4.83,4.81c0,.56-.45.97-.97.97ZM104.03,185.89c-.21-1.51-1.3-2.37-2.74-2.37s-2.64.89-2.85,2.37h5.59Z"/><path d="M108.29,188.36c.52-.21.91.06,1.07.41.39.74,1.13,1.16,2.08,1.16s1.67-.43,1.67-1.16c0-.62-.6-.89-1.3-1.05l-1.3-.31c-2.04-.56-2.79-1.67-2.66-3.22.12-1.42,1.67-2.54,3.45-2.54,1.28,0,2.46.41,3.09,1.42.29.5.14.99-.19,1.24-.35.29-.78.27-1.24-.12-.54-.47-1.16-.66-1.65-.66-.54,0-1.13.19-1.34.52-.17.27-.19.54-.08.83.12.37.7.56,1.22.7l1.49.37c2.08.52,2.52,1.88,2.52,2.85,0,1.86-1.63,2.91-3.84,2.91-1.49,0-2.99-.78-3.51-2.19-.17-.52.06-.99.52-1.16Z"/><path d="M118.38,176.62c.78,0,1.4.58,1.4,1.34s-.62,1.34-1.4,1.34-1.42-.58-1.42-1.34.66-1.34,1.42-1.34ZM119.45,182.83c0-.58-.47-1.07-1.09-1.07-.58,0-1.03.5-1.03,1.07v7.69c0,.58.45,1.07,1.03,1.07.62,0,1.09-.5,1.09-1.07v-7.69Z"/><path d="M126.69,194.41c1.96,0,3.22-1.09,3.22-3.8v-.7c-.52,1.18-1.96,1.79-3.26,1.79-2.6,0-4.87-1.94-4.87-4.99s2.27-5.05,4.87-5.05c1.3,0,2.66.58,3.26,1.63v-.45c0-.58.45-1.07,1.03-1.07.62,0,1.09.5,1.09,1.07l-.02,7.32c-.02,4.44-2.08,6.23-5.32,6.23-1.55,0-2.93-.66-3.9-1.86-.33-.43-.27-1.07.17-1.38.45-.31,1.03-.21,1.4.21.58.64,1.49,1.05,2.33,1.05ZM126.9,183.72c-1.61,0-2.93,1.22-2.93,2.97s1.32,2.97,2.93,2.97c1.44,0,2.97-1.09,2.97-2.97s-1.38-2.97-2.97-2.97Z"/><path d="M134.9,182.83c0-.58.47-1.07,1.09-1.07.58,0,1.03.5,1.03,1.07v.47c.56-1.11,1.88-1.65,2.95-1.65,2.33,0,3.67,1.51,3.67,4.23v4.64c0,.58-.47,1.07-1.09,1.07-.58,0-1.03-.5-1.03-1.07v-4.39c0-1.53-.78-2.39-2.02-2.39s-2.48.68-2.48,2.58v4.21c0,.58-.47,1.07-1.09,1.07-.58,0-1.03-.5-1.03-1.07v-7.69Z"/><path d="M154.69,187.43h-6.71c.21,1.49,1.4,2.41,2.95,2.41,1.01,0,1.59-.35,2.29-.93.35-.29.93-.43,1.36-.08.39.31.41.95.04,1.34-.97,1.01-2.37,1.53-3.8,1.53-2.74,0-4.95-2-4.95-5.05s2.21-4.99,4.95-4.99,4.75,1.86,4.83,4.81c0,.56-.45.97-.97.97ZM153.58,185.89c-.21-1.51-1.3-2.37-2.74-2.37s-2.64.89-2.85,2.37h5.59Z"/><path d="M159.89,188.03v2.5c0,.58-.47,1.07-1.09,1.07-.58,0-1.03-.5-1.03-1.07v-7.69c0-.58.45-1.07,1.03-1.07.62,0,1.09.5,1.09,1.07v1.24c.49-1.71,1.44-2.41,2.64-2.41.31,0,.62.02.91.08.54.12.89.66.76,1.22-.19.93-1.11.7-1.73.7-1.82,0-2.58,1.82-2.58,4.37Z"/></g></symbol><symbol id="flor" viewBox="0 0 120.68 119.77" fill="currentColor"><g transform="translate(-33.99 0)"><path d="M136.83,40.98c8.02-11.63,2.61-23.27-7.4-30.08-10.01-6.84-22.68-9.35-30.6,2.36C92.73.49,77.95-2.88,67.03,2.39c-10.92,5.26-15.13,20.56-8.95,33.28-14.07-1.11-23.05,8.66-23.96,20.73-.91,12.1,2.85,24.84,16.95,25.85-7.99,11.66-2.73,26,7.28,32.83,10.01,6.81,25.43,4.6,33.35-7.08,6.07,12.74,19.53,14.17,30.45,8.9,10.92-5.24,17.59-17.04,11.41-29.76,14.09,1.11,20.12-9.59,21-21.67.91-12.1-3.62-23.49-17.73-24.5ZM117.36,37.76l-18.27,46.27c-1.19,3-4.53,4.68-7.57,3.58-1.33-.48-2.45-1.41-2.98-2.8l-4.39-11.54c-.07-.19-.16-.37-.26-.55l-12.54-33.44c-1.69-4.49,2.99-8.94,7.27-6.77.14.07.28.15.42.23l7.99,4.86,1.23.75c.44.47.72,1.12.72,1.81,0,1.48-1.2,2.67-2.67,2.67-.32,0-.61-.05-.89-.15l-.93-.57-.25-.15c-.09-.06-.19-.11-.28-.15-2.83-1.43-5.91,1.51-4.8,4.47l8.28,22.07c.07.11.13.23.17.36l2.9,7.61c.35.92,1.09,1.53,1.97,1.85,2,.72,4.21-.38,4.99-2.36l12.06-30.54c.13-.34.21-.69.19-1.05-.12-2.24-3.27-3.76-5.71-2.28l-4.82,2.95-.76.46c-.32.13-.67.2-1.04.2-1.52,0-2.76-1.24-2.76-2.76,0-.95.48-1.78,1.21-2.28.37-.11.73-.25,1.07-.44.11-.05.21-.11.31-.17l11.78-7.2c3.69-2.25,8.46.06,8.65,3.45.03.54-.09,1.08-.3,1.59Z"/></g></symbol></svg>
 
-<a class="pular" href="#trabalhos">Pular para os trabalhos</a>
+<a class="pular" href="#trabalhos" data-t="pular">Pular para os trabalhos</a>
 
 <header class="topo">
   <a class="topo-marca" href="#/" aria-label="gio ribeiro, início">
@@ -1868,30 +2860,35 @@ section{padding:96px 0; position:relative}
   </a>
 
   <nav class="nav-desk">
-    <a href="#/#sobre">Sobre</a>
-    <a href="#/#trabalhos">Trabalhos</a>
-    <a href="#/#contato">Contato</a>
+    <a href="#/#sobre" data-t="nav.sobre">Sobre</a>
+    <a href="#/#trabalhos" data-t="nav.trabalhos">Trabalhos</a>
+    <a href="#/#contato" data-t="nav.contato">Contato</a>
   </nav>
 
   <div class="topo-acoes">
+    <button class="btn btn-vazio idioma" id="btnIdioma" data-t-aria="idioma.aria" aria-label="Ver o site em inglês">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg>
+      <span data-t="idioma.rotulo">EN</span>
+    </button>
+
     <div class="baixar" id="baixar">
       <button class="btn btn-cheio" id="btnBaixar" aria-expanded="false" aria-haspopup="true">
-        Baixar
+        <span data-t="baixar">Baixar</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v13M6 12l6 6 6-6"/></svg>
       </button>
       <div class="baixar-menu" id="baixarMenu" role="menu">
         <a href="#/portfolio/grafico" role="menuitem">
-          <strong>Portfólio de design gráfico</strong><span>Identidade, editorial, social e autorais</span>
+          <strong data-t="baixar.grafico.t">Portfólio de design gráfico</strong><span data-t="baixar.grafico.d">Identidade, editorial, social e autorais</span>
         </a>
         <a href="#/portfolio/uxui" role="menuitem">
-          <strong>Portfólio de UX/UI</strong><span>Cases de UX e design de interface</span>
+          <strong data-t="baixar.uxui.t">Portfólio de UX/UI</strong><span data-t="baixar.uxui.d">Cases de UX e design de interface</span>
         </a>
         <div class="baixar-sep"></div>
         <a href="#/curriculo/criativo" role="menuitem">
-          <strong>Currículo criativo</strong><span>Com a identidade visual</span>
+          <strong data-t="baixar.cvCriativo.t">Currículo criativo</strong><span data-t="baixar.cvCriativo.d">Com a identidade visual</span>
         </a>
         <a href="#/curriculo/ats" role="menuitem">
-          <strong>Currículo ATS</strong><span>Para triagem automática</span>
+          <strong data-t="baixar.cvAts.t">Currículo ATS</strong><span data-t="baixar.cvAts.d">Para triagem automática</span>
         </a>
       </div>
     </div>
@@ -1903,10 +2900,14 @@ section{padding:96px 0; position:relative}
 </header>
 
 <div class="gaveta" id="gaveta">
-  <a href="#/#sobre">Sobre</a>
-  <a href="#/#trabalhos">Trabalhos</a>
-  <a href="#/#contato">Contato</a>
-  <a href="#/curriculo/criativo">Currículo</a>
+  <a href="#/#sobre" data-t="nav.sobre">Sobre</a>
+  <a href="#/#trabalhos" data-t="nav.trabalhos">Trabalhos</a>
+  <a href="#/#contato" data-t="nav.contato">Contato</a>
+  <a href="#/curriculo/criativo" data-t="nav.curriculo">Currículo</a>
+  <button class="gaveta-idioma" id="btnIdiomaMob" data-t-aria="idioma.aria" aria-label="Ver o site em inglês">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg>
+    <span data-t="idioma.rotulo">EN</span>
+  </button>
 </div>
 
 <!-- A Netlify lê o HTML estático para descobrir o formulário. Este bloco é
@@ -1918,27 +2919,152 @@ section{padding:96px 0; position:relative}
 
 <main id="app"></main>
 
-<button class="tema" id="btnTema" aria-label="Trocar a cor do site">
+<button class="tema" id="btnTema" data-t-aria="tema.aria" aria-label="Trocar a cor do site">
   <svg viewBox="0 0 120.68 119.77" aria-hidden="true"><use href="#flor"></use></svg>
   <span class="tema-dica" id="temaDica">Cor do site: Claro</span>
 </button>
 
 <div class="cortina" id="cortina" aria-hidden="true"></div>
 
-<div class="lupa" id="lupa" hidden role="dialog" aria-modal="true" aria-label="Imagem ampliada">
-  <button class="lupa-btn lupa-fechar" id="lupaFechar" aria-label="Fechar">&times;</button>
-  <button class="lupa-btn lupa-ant" id="lupaAnt" aria-label="Imagem anterior">&lsaquo;</button>
+<div class="lupa" id="lupa" hidden role="dialog" aria-modal="true" data-t-aria="lupa.aria" aria-label="Imagem ampliada">
+  <button class="lupa-btn lupa-fechar" id="lupaFechar" data-t-aria="lupa.fechar" aria-label="Fechar">&times;</button>
+  <button class="lupa-btn lupa-ant" id="lupaAnt" data-t-aria="lupa.anterior" aria-label="Imagem anterior">&lsaquo;</button>
   <figure class="lupa-quadro">
     <img id="lupaImg" alt="">
     <figcaption id="lupaLeg"></figcaption>
   </figure>
-  <button class="lupa-btn lupa-prox" id="lupaProx" aria-label="Próxima imagem">&rsaquo;</button>
+  <button class="lupa-btn lupa-prox" id="lupaProx" data-t-aria="lupa.proxima" aria-label="Próxima imagem">&rsaquo;</button>
 </div>
 
 <script>
 (function(){
   "use strict";
-  const C = CONTEUDO;
+
+  /* ---- Textos da interface nos dois idiomas ----------------------------- */
+  /* Só o que não está no bloco de conteúdo: botões, rótulos e avisos.      */
+  const TEXTOS = {
+    pt: {
+      "pular":"Pular para os trabalhos", "nav.sobre":"Sobre", "nav.trabalhos":"Trabalhos",
+      "nav.contato":"Contato", "nav.curriculo":"Currículo", "baixar":"Baixar",
+      "baixar.grafico.t":"Portfólio de design gráfico",
+      "baixar.grafico.d":"Identidade, editorial, social e autorais",
+      "baixar.uxui.t":"Portfólio de UX/UI", "baixar.uxui.d":"Cases de UX e design de interface",
+      "baixar.cvCriativo.t":"Currículo criativo", "baixar.cvCriativo.d":"Com a identidade visual",
+      "baixar.cvAts.t":"Currículo ATS", "baixar.cvAts.d":"Para triagem automática",
+      "menu.abrir":"Abrir menu", "menu.fechar":"Fechar menu",
+      "idioma.rotulo":"EN", "idioma.aria":"Ver o site em inglês",
+      "tema.aria":"Trocar a cor do site", "corDoSite":"Cor do site: ",
+      "tema.claro":"Claro", "tema.vinho":"Vinho", "tema.rosa":"Rosa",
+      "tema.azul":"Azul", "tema.carvao":"Carvão",
+      "lupa.aria":"Imagem ampliada", "lupa.fechar":"Fechar",
+      "lupa.anterior":"Imagem anterior", "lupa.proxima":"Próxima imagem",
+      "capa.dica":"Pegue os adesivos e arraste onde quiser",
+      "capa.ver":"Ver os trabalhos", "capa.falar":"Falar comigo",
+      "trabalhos.titulo":"Trabalhos", "trabalhos.todos":"Todos",
+      "trabalhos.vazio":"Nenhum projeto neste eixo ainda.",
+      "sobre.retrato":"Retrato de ",
+      "contato.titulo":"Entre em contato", "form.nome":"Seu nome", "form.email":"Seu e-mail",
+      "form.msg":"Como posso ajudar?", "form.mel":"Deixe este campo vazio",
+      "form.enviar":"Enviar mensagem", "form.enviando":"Enviando…",
+      "form.ok":"Mensagem enviada. Respondo assim que possível.",
+      "form.obrigatorio":"Nome, e-mail e mensagem são obrigatórios.",
+      "form.erro":"Não consegui enviar agora. Me escreve direto em ",
+      "contato.canais":"Ou me encontre em", "contato.email":"E-mail",
+      "proj.voltar":"Trabalhos", "proj.antes":"Antes", "proj.depois":"Depois",
+      "proj.antesDepois":"Antes e depois", "proj.oProjeto":"O projeto",
+      "proj.indice":"Seções do projeto", "proj.aprendizados":"O que eu levei desse projeto",
+      "proj.proximo":"Próximo projeto · ", "proj.verTodos":"Ver todos os trabalhos",
+      "ficha.cliente":"Cliente", "ficha.papel":"Meu papel", "ficha.papelCurto":"Papel",
+      "ficha.ano":"Ano", "ficha.duracao":"Duração", "ficha.equipe":"Equipe",
+      "ficha.ferramentas":"Ferramentas",
+      "cv.criativo":"Criativo", "cv.ats":"ATS", "cv.baixar":"Baixar em PDF",
+      "cv.avisoCriativo":"Modelo criativo: usa a identidade visual. Ideal para enviar direto a um estúdio ou anexar em uma proposta.",
+      "cv.avisoAts":"Modelo ATS: uma coluna, sem cor e sem elementos gráficos, do jeito que os sistemas de triagem conseguem ler. Use este em vagas de portais grandes.",
+      "cv.resumo":"Resumo", "cv.experiencia":"Experiência", "cv.formacao":"Formação",
+      "cv.cursos":"Cursos", "cv.habilidades":"Habilidades", "cv.idiomas":"Idiomas",
+      "cv.arquivo":"Curriculo - ",
+      "pf.portfolio":"portfólio", "pf.conteudo":"conteúdo", "pf.fim":"nos vemos em breve!",
+      "pf.fimSub":"entre em contato comigo", "pf.preparando":"Preparando…",
+      "pf.dicaImpressao":" Na janela de impressão, escolha \"Salvar como PDF\".",
+      "pf.arquivo":"Portfolio - ",
+    },
+    en: {
+      "pular":"Skip to the work", "nav.sobre":"About", "nav.trabalhos":"Work",
+      "nav.contato":"Contact", "nav.curriculo":"Resume", "baixar":"Download",
+      "baixar.grafico.t":"Graphic design portfolio",
+      "baixar.grafico.d":"Identity, editorial, social and personal work",
+      "baixar.uxui.t":"UX/UI portfolio", "baixar.uxui.d":"UX cases and interface design",
+      "baixar.cvCriativo.t":"Creative resume", "baixar.cvCriativo.d":"With the visual identity",
+      "baixar.cvAts.t":"ATS resume", "baixar.cvAts.d":"For automated screening",
+      "menu.abrir":"Open menu", "menu.fechar":"Close menu",
+      "idioma.rotulo":"PT", "idioma.aria":"View the site in Portuguese",
+      "tema.aria":"Change the site colour", "corDoSite":"Site colour: ",
+      "tema.claro":"Light", "tema.vinho":"Wine", "tema.rosa":"Pink",
+      "tema.azul":"Blue", "tema.carvao":"Charcoal",
+      "lupa.aria":"Enlarged image", "lupa.fechar":"Close",
+      "lupa.anterior":"Previous image", "lupa.proxima":"Next image",
+      "capa.dica":"Grab the stickers and drag them anywhere",
+      "capa.ver":"See the work", "capa.falar":"Get in touch",
+      "trabalhos.titulo":"Work", "trabalhos.todos":"All",
+      "trabalhos.vazio":"No projects in this area yet.",
+      "sobre.retrato":"Portrait of ",
+      "contato.titulo":"Get in touch", "form.nome":"Your name", "form.email":"Your email",
+      "form.msg":"How can I help?", "form.mel":"Leave this field empty",
+      "form.enviar":"Send message", "form.enviando":"Sending…",
+      "form.ok":"Message sent. I'll reply as soon as I can.",
+      "form.obrigatorio":"Name, email and message are required.",
+      "form.erro":"I couldn't send it right now. Write to me directly at ",
+      "contato.canais":"Or find me at", "contato.email":"Email",
+      "proj.voltar":"Work", "proj.antes":"Before", "proj.depois":"After",
+      "proj.antesDepois":"Before and after", "proj.oProjeto":"The project",
+      "proj.indice":"Project sections", "proj.aprendizados":"What I took from this project",
+      "proj.proximo":"Next project · ", "proj.verTodos":"See all the work",
+      "ficha.cliente":"Client", "ficha.papel":"My role", "ficha.papelCurto":"Role",
+      "ficha.ano":"Year", "ficha.duracao":"Duration", "ficha.equipe":"Team",
+      "ficha.ferramentas":"Tools",
+      "cv.criativo":"Creative", "cv.ats":"ATS", "cv.baixar":"Download as PDF",
+      "cv.avisoCriativo":"Creative version: uses the visual identity. Best to send straight to a studio or attach to a proposal.",
+      "cv.avisoAts":"ATS version: one column, no colour and no graphic elements, the way screening systems can read it. Use this one for large job boards.",
+      "cv.resumo":"Summary", "cv.experiencia":"Experience", "cv.formacao":"Education",
+      "cv.cursos":"Courses", "cv.habilidades":"Skills", "cv.idiomas":"Languages",
+      "cv.arquivo":"Resume - ",
+      "pf.portfolio":"portfolio", "pf.conteudo":"contents", "pf.fim":"see you soon!",
+      "pf.fimSub":"get in touch", "pf.preparando":"Preparing…",
+      "pf.dicaImpressao":" In the print dialog, choose \"Save as PDF\".",
+      "pf.arquivo":"Portfolio - ",
+    },
+  };
+
+  /* ---- idioma ---------------------------------------------------------- */
+  /* Na primeira visita segue o idioma do navegador; depois, a escolha da pessoa. */
+  function idiomaInicial(){
+    try { const g = localStorage.getItem("idioma"); if (g === "pt" || g === "en") return g; } catch(e){}
+    return (navigator.language || "pt").toLowerCase().startsWith("pt") ? "pt" : "en";
+  }
+  let LANG = idiomaInicial();
+  let C = LANG === "en" ? CONTEUDO_EN : CONTEUDO;
+  const T = k => (TEXTOS[LANG] && TEXTOS[LANG][k]) || TEXTOS.pt[k] || "";
+
+  function aplicarIdioma(){
+    C = LANG === "en" ? CONTEUDO_EN : CONTEUDO;
+    document.documentElement.lang = LANG === "en" ? "en" : "pt-BR";
+    document.title = C.marca.nome + " · " + C.marca.cargo;
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute("content", LANG === "en"
+      ? "Portfolio of Gio Ribeiro, visual designer. Brand identity, editorial design, UX/UI and social media."
+      : "Portfólio de Gio Ribeiro, visual designer. Identidade visual, diagramação, UX/UI e social media.");
+    document.querySelectorAll("[data-t]").forEach(el => el.textContent = T(el.dataset.t));
+    document.querySelectorAll("[data-t-aria]").forEach(el => el.setAttribute("aria-label", T(el.dataset.tAria)));
+  }
+
+  function trocarIdioma(){
+    LANG = LANG === "pt" ? "en" : "pt";
+    try { localStorage.setItem("idioma", LANG); } catch(e){}
+    aplicarIdioma();
+    navegar();
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }
+
   const POSICOES = [
     {lado:"esq", x:"6%",  y:"15%", tam:120, rot:"-12deg", dur:"7.5s",  atraso:".55s", mob:true,  ym:"6%"},
     {lado:"dir", x:"28%", y:"10%", tam:106, rot:"11deg",  dur:"8.5s",  atraso:".70s", mob:true,  ym:"5%"},
@@ -1956,13 +3082,12 @@ section{padding:96px 0; position:relative}
 
   /* ---- tema ----------------------------------------------------------- */
   const temas = ["claro","vinho","rosa","azul","carvao"];
-  const nomeTema = {claro:"Claro", vinho:"Vinho", rosa:"Rosa", azul:"Azul", carvao:"Carvão"};
   let tema = 0;
   const dica = document.getElementById("temaDica");
   document.getElementById("btnTema").addEventListener("click", () => {
     tema = (tema + 1) % temas.length;
     document.body.dataset.tema = temas[tema];
-    dica.textContent = "Cor do site: " + nomeTema[temas[tema]];
+    dica.textContent = T("corDoSite") + T("tema." + temas[tema]);
     const bt = document.getElementById("btnTema");
     bt.classList.add("mostra");
     clearTimeout(bt._t); bt._t = setTimeout(() => bt.classList.remove("mostra"), 1800);
@@ -1973,7 +3098,7 @@ section{padding:96px 0; position:relative}
   sand.addEventListener("click", () => {
     const on = document.body.classList.toggle("menu-on");
     sand.setAttribute("aria-expanded", on);
-    sand.setAttribute("aria-label", on ? "Fechar menu" : "Abrir menu");
+    sand.setAttribute("aria-label", on ? T("menu.fechar") : T("menu.abrir"));
   });
   document.getElementById("gaveta").addEventListener("click", e => {
     if (e.target.tagName === "A") { document.body.classList.remove("menu-on"); sand.setAttribute("aria-expanded","false"); }
@@ -2052,13 +3177,13 @@ section{padding:96px 0; position:relative}
     <section class="capa">
       <div class="capa-ades" aria-hidden="true">${ad}</div>
       <div class="env capa-centro">
-        <p class="capa-dica subir">Pegue os adesivos e arraste onde quiser</p>
+        <p class="capa-dica subir">${esc(T("capa.dica"))}</p>
         <div class="capa-flor anim-flor">${flor("marca-svg")}</div>
         <h1 class="subir d1">${esc(C.marca.nome)}</h1>
         <p class="capa-cargo subir d2">${esc(C.marca.cargo)}</p>
         <div class="capa-cta subir d3">
-          <a class="btn btn-cheio" href="#/#trabalhos">Ver os trabalhos</a>
-          <a class="btn btn-vazio" href="#/#contato">Falar comigo</a>
+          <a class="btn btn-cheio" href="#/#trabalhos">${esc(T("capa.ver"))}</a>
+          <a class="btn btn-vazio" href="#/#contato">${esc(T("capa.falar"))}</a>
         </div>
       </div>
       <div class="fita" aria-hidden="true"><div class="fita-fila">${fita}${fita}</div></div>
@@ -2067,14 +3192,14 @@ section{padding:96px 0; position:relative}
 
   function blocoTrabalhos(){
     const conta = id => C.projetos.filter(p => p.eixo === id).length;
-    const chips = [`<button class="chip" data-eixo="todos" aria-pressed="true">Todos <span class="cont">${C.projetos.length}</span></button>`]
+    const chips = [`<button class="chip" data-eixo="todos" aria-pressed="true">${esc(T("trabalhos.todos"))} <span class="cont">${C.projetos.length}</span></button>`]
       .concat(C.eixos.map(e => `<button class="chip" data-eixo="${esc(e.id)}" aria-pressed="false">${esc(e.nome)} <span class="cont">${conta(e.id)}</span>${e.grupo?`<small>${esc(e.grupo)}</small>`:""}</button>`))
       .join("");
     return `
     <section id="trabalhos">
       <div class="env">
         <div class="reveal">
-          <h2 class="secao-titulo">Trabalhos</h2>
+          <h2 class="secao-titulo">${esc(T("trabalhos.titulo"))}</h2>
           <div class="secao-linha"></div>
         </div>
         <div class="filtros reveal" id="filtros">${chips}</div>
@@ -2124,13 +3249,13 @@ section{padding:96px 0; position:relative}
     const lista = filtro === "todos" ? C.projetos : C.projetos.filter(p => p.eixo === filtro);
     grade.innerHTML = lista.length
       ? semBuracos(lista).map(cartao).join("")
-      : `<p class="vazio">Nenhum projeto neste eixo ainda.</p>`;
+      : `<p class="vazio">${esc(T("trabalhos.vazio"))}</p>`;
     observar();
   }
 
   function blocoSobre(){
     const s = C.sobre;
-    const foto = s.foto ? `<img src="${esc(s.foto)}" alt="Retrato de ${esc(C.marca.nome)}" onerror="this.remove()">` : flor("flor-fundo");
+    const foto = s.foto ? `<img src="${esc(s.foto)}" alt="${esc(T("sobre.retrato") + C.marca.nome)}" onerror="this.remove()">` : flor("flor-fundo");
     return `
     <section id="sobre" class="tom tom-a">
       <div class="env sobre-grade">
@@ -2155,33 +3280,33 @@ section{padding:96px 0; position:relative}
     return `
     <section id="contato" class="tom tom-b">
       <div class="env reveal">
-        <h2 class="secao-titulo">Entre em contato</h2>
+        <h2 class="secao-titulo">${esc(T("contato.titulo"))}</h2>
         <div class="secao-linha"></div>
         <p>Conta o que você precisa e eu respondo com um caminho possível.</p>
 
         <div class="contato-grade">
           <form class="form" id="formContato" novalidate>
             <p class="campo">
-              <label for="fNome">Seu nome</label>
+              <label for="fNome">${esc(T("form.nome"))}</label>
               <input id="fNome" name="nome" type="text" required autocomplete="name">
             </p>
             <p class="campo">
-              <label for="fEmail">Seu e-mail</label>
+              <label for="fEmail">${esc(T("form.email"))}</label>
               <input id="fEmail" name="email" type="email" required autocomplete="email">
             </p>
             <p class="campo">
-              <label for="fMsg">Como posso ajudar?</label>
+              <label for="fMsg">${esc(T("form.msg"))}</label>
               <textarea id="fMsg" name="mensagem" rows="5" required></textarea>
             </p>
-            <p class="campo-mel"><label>Deixe este campo vazio<input name="bot-field" tabindex="-1"></label></p>
-            <button class="btn btn-cheio" type="submit" id="fEnviar">Enviar mensagem</button>
+            <p class="campo-mel"><label>${esc(T("form.mel"))}<input name="bot-field" tabindex="-1"></label></p>
+            <button class="btn btn-cheio" type="submit" id="fEnviar">${esc(T("form.enviar"))}</button>
             <p class="form-aviso" id="formAviso" role="status" aria-live="polite"></p>
           </form>
 
           <aside class="canais">
-            <h3>Ou me encontre em</h3>
+            <h3>${esc(T("contato.canais"))}</h3>
             ${c.redes.map(r => canal(r.selo || "→", r.nome, r.url, true)).join("")}
-            ${canal("@", "E-mail", "mailto:" + c.email, false)}
+            ${canal("@", T("contato.email"), "mailto:" + c.email, false)}
             <p class="canais-local">${esc(c.cidade)}</p>
           </aside>
         </div>
@@ -2199,7 +3324,7 @@ section{padding:96px 0; position:relative}
       e.preventDefault();
       if (!f.checkValidity()) {
         aviso.className = "form-aviso erro";
-        aviso.textContent = "Nome, e-mail e mensagem são obrigatórios.";
+        aviso.textContent = T("form.obrigatorio");
         f.reportValidity(); return;
       }
       /* "netlify" usa a detecção automática da Netlify; qualquer outro valor é um
@@ -2213,7 +3338,7 @@ section{padding:96px 0; position:relative}
       };
       botao.disabled = true;
       aviso.className = "form-aviso";
-      aviso.textContent = "Enviando…";
+      aviso.textContent = T("form.enviando");
       try {
         const r = await fetch(netlify ? "/" : destino, netlify
           ? { method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body: new URLSearchParams(dados).toString() }
@@ -2221,10 +3346,10 @@ section{padding:96px 0; position:relative}
         if (!r.ok) throw new Error(r.status);
         f.reset();
         aviso.className = "form-aviso ok";
-        aviso.textContent = "Mensagem enviada. Respondo assim que possível.";
+        aviso.textContent = T("form.ok");
       } catch (err) {
         aviso.className = "form-aviso erro";
-        aviso.innerHTML = "Não consegui enviar agora. Me escreve direto em " +
+        aviso.innerHTML = T("form.erro") +
           `<a href="mailto:${esc(C.contato.email)}">${esc(C.contato.email)}</a>.`;
       } finally {
         botao.disabled = false;
@@ -2372,8 +3497,8 @@ section{padding:96px 0; position:relative}
       (s.fluxo && s.fluxo.length) ? blocoFluxo(s) : "",
       temComp ? `
         <div class="comp-modos" data-comp="${i}">
-          <button data-fase="antes" aria-pressed="false">Antes</button>
-          <button data-fase="depois" aria-pressed="true">Depois</button>
+          <button data-fase="antes" aria-pressed="false">${esc(T("proj.antes"))}</button>
+          <button data-fase="depois" aria-pressed="true">${esc(T("proj.depois"))}</button>
         </div>
         <div class="comp-gal" id="compGal${i}">${galeria(s.depois, alt)}</div>` : "",
       galeria(s.imagens, alt),
@@ -2404,16 +3529,16 @@ section{padding:96px 0; position:relative}
     let intro = p.introducao;
     if (!secoes) {
       secoes = [];
-      if (p.antes && p.depois) secoes.push({ titulo: "Antes e depois", antes: p.antes, depois: p.depois });
-      if (p.imagens && p.imagens.length) secoes.push({ titulo: "O projeto", imagens: p.imagens });
+      if (p.antes && p.depois) secoes.push({ titulo: T("proj.antesDepois"), antes: p.antes, depois: p.depois });
+      if (p.imagens && p.imagens.length) secoes.push({ titulo: T("proj.oProjeto"), imagens: p.imagens });
       if (!intro) intro = p.descricao;
     }
 
     /* ficha técnica: só entra o que o projeto tiver preenchido */
     const fichas = [
-      ["Cliente", p.cliente], ["Meu papel", p.papel], ["Ano", p.ano],
-      ["Duração", p.duracao], ["Equipe", p.equipe],
-      ["Ferramentas", (p.ferramentas || []).join(", ")],
+      [T("ficha.cliente"), p.cliente], [T("ficha.papel"), p.papel], [T("ficha.ano"), p.ano],
+      [T("ficha.duracao"), p.duracao], [T("ficha.equipe"), p.equipe],
+      [T("ficha.ferramentas"), (p.ferramentas || []).join(", ")],
     ].filter(f => f[1])
      .map(f => `<div class="ficha"><span>${esc(f[0])}</span><strong>${esc(f[1])}</strong></div>`).join("");
 
@@ -2443,7 +3568,7 @@ section{padding:96px 0; position:relative}
     });
 
     const indice = htmlSecoes.length >= 3 ? `
-      <nav class="indice" aria-label="Seções do projeto">
+      <nav class="indice" aria-label="${esc(T("proj.indice"))}">
         <div class="env indice-fila">
           ${htmlSecoes.map(x => `<a href="#sec-${x.i}" data-alvo="${x.i}">${esc(x.titulo)}</a>`).join("")}
         </div>
@@ -2454,7 +3579,7 @@ section{padding:96px 0; position:relative}
     const aprendizados = aprendList.length
       ? `<section class="tom ${tomAprend} aprendi">
            <div class="env reveal">
-             <h2 class="secao-titulo">O que eu levei desse projeto</h2>
+             <h2 class="secao-titulo">${esc(T("proj.aprendizados"))}</h2>
              <div class="secao-linha"></div>
              <ul>${aprendList.map(a => `<li${pendente(a) ? ' class="pendente"' : ""}>${esc(a)}</li>`).join("")}</ul>
            </div>
@@ -2474,12 +3599,12 @@ section{padding:96px 0; position:relative}
               ? `<img src="${esc(prox.capa)}" alt="" loading="lazy" style="object-position:${esc(prox.capaFoco || "center")}" onerror="this.remove()">`
               : flor("flor-fundo")}</div>
             <div class="proximo-txt">
-              <span>Próximo projeto · ${esc(pe.nome)}</span>
+              <span>${esc(T("proj.proximo") + pe.nome)}</span>
               <strong>${esc(prox.titulo)} →</strong>
               <p>${esc(prox.resumo)}</p>
             </div>
           </a>
-          <a class="voltar todos" href="#/#trabalhos">Ver todos os trabalhos</a>
+          <a class="voltar todos" href="#/#trabalhos">${esc(T("proj.verTodos"))}</a>
         </div>
       </section>`;
 
@@ -2490,7 +3615,7 @@ section{padding:96px 0; position:relative}
         <div class="env">
           <a class="voltar" href="#/#trabalhos">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
-            Trabalhos
+            ${esc(T("proj.voltar"))}
           </a>
           <div class="cartao-meta proj-meta"><span>${esc(e.nome)}</span><span>·</span><span>${esc(p.ano)}</span></div>
           <h1 class="proj-titulo">${esc(p.titulo)}</h1>
@@ -2567,12 +3692,12 @@ section{padding:96px 0; position:relative}
         <p class="cv-contato">${esc(contatoLinha)}<br>${esc(links)}</p>
 
         <div class="cv-secao">
-          <h2>Resumo</h2>
+          <h2>${esc(T("cv.resumo"))}</h2>
           <p>${esc(cv.resumo)}</p>
         </div>
 
         <div class="cv-secao">
-          <h2>Experiência</h2>
+          <h2>${esc(T("cv.experiencia"))}</h2>
           ${cv.experiencias.map(x => `
             <div class="cv-item">
               <h3>${esc(x.cargo)}</h3>
@@ -2582,7 +3707,7 @@ section{padding:96px 0; position:relative}
         </div>
 
         <div class="cv-secao">
-          <h2>Formação</h2>
+          <h2>${esc(T("cv.formacao"))}</h2>
           ${cv.formacao.map(f => `
             <div class="cv-item">
               <h3>${esc(f.curso)}</h3>
@@ -2592,17 +3717,17 @@ section{padding:96px 0; position:relative}
 
         ${cv.cursos && cv.cursos.length ? `
         <div class="cv-secao">
-          <h2>Cursos</h2>
+          <h2>${esc(T("cv.cursos"))}</h2>
           ${cv.cursos.map(f => `<div class="cv-item"><div class="cv-linha">${esc(f.nome)} · ${esc(f.instituicao)} · ${esc(f.ano)}</div></div>`).join("")}
         </div>` : ""}
 
         <div class="cv-secao">
-          <h2>Habilidades</h2>
+          <h2>${esc(T("cv.habilidades"))}</h2>
           <div class="cv-tags">${cv.habilidades.map(h => `<span>${esc(h)}</span>`).join("")}</div>
         </div>
 
         <div class="cv-secao">
-          <h2>Idiomas</h2>
+          <h2>${esc(T("cv.idiomas"))}</h2>
           <div class="cv-tags">${cv.idiomas.map(i => `<span>${esc(i.idioma)}: ${esc(i.nivel)}</span>`).join("")}</div>
         </div>
       </div>`;
@@ -2611,14 +3736,12 @@ section{padding:96px 0; position:relative}
       <div class="env">
         <div class="cv-barra">
           <div class="cv-modos">
-            <button data-modelo="criativo" aria-pressed="${criativo}">Criativo</button>
-            <button data-modelo="ats" aria-pressed="${!criativo}">ATS</button>
+            <button data-modelo="criativo" aria-pressed="${criativo}">${esc(T("cv.criativo"))}</button>
+            <button data-modelo="ats" aria-pressed="${!criativo}">${esc(T("cv.ats"))}</button>
           </div>
-          <button class="btn btn-cheio" id="btnImprimir">Baixar em PDF</button>
+          <button class="btn btn-cheio" id="btnImprimir">${esc(T("cv.baixar"))}</button>
         </div>
-        <p class="cv-aviso">${criativo
-          ? "Modelo criativo: usa a identidade visual. Ideal para enviar direto a um estúdio ou anexar em uma proposta."
-          : "Modelo ATS: uma coluna, sem cor e sem elementos gráficos, do jeito que os sistemas de triagem conseguem ler. Use este em vagas de portais grandes."}</p>
+        <p class="cv-aviso">${esc(T(criativo ? "cv.avisoCriativo" : "cv.avisoAts"))}</p>
         ${folha}
       </div>`;
 
@@ -2629,7 +3752,7 @@ section{padding:96px 0; position:relative}
     document.getElementById("btnImprimir").addEventListener("click", () => {
       /* o navegador sugere o <title> como nome do arquivo ao salvar em PDF */
       const antes = document.title;
-      document.title = "Curriculo - " + nomeCV + " - " + (criativo ? "Criativo" : "ATS");
+      document.title = T("cv.arquivo") + nomeCV + " - " + T(criativo ? "cv.criativo" : "cv.ats");
       window.print();
       setTimeout(() => { document.title = antes; }, 600);
     });
@@ -2681,7 +3804,7 @@ section{padding:96px 0; position:relative}
     const capa = pag("pf-capa", `
       <div class="pf-capa-txt">
         <span class="pf-sobre">${esc(C.marca.nome)} · ${esc(C.marca.cargo)} · ${ano}</span>
-        <h1>portfólio</h1>
+        <h1>${esc(T("pf.portfolio"))}</h1>
         <p class="pf-tipo">${esc(cfg.titulo)}</p>
         <p class="pf-inclui">${esc(eixosPF.map(g => g.eixo.nome).join(" · "))}</p>
         <div class="pf-capa-marca-h">${logoH}</div>
@@ -2701,7 +3824,7 @@ section{padding:96px 0; position:relative}
 
     /* 3. sumário */
     const sumario = pag("pf-sumario", `
-      <h2 class="pf-tarja">conteúdo</h2>
+      <h2 class="pf-tarja">${esc(T("pf.conteudo"))}</h2>
       <div class="pf-sum-grade c${Math.min(eixosPF.length, 4)}">${eixosPF.map((g, i) => `
         <div>
           <h3><span>${i + 1}.</span> ${esc(g.eixo.nome)}</h3>
@@ -2714,8 +3837,8 @@ section{padding:96px 0; position:relative}
     function paginasProjeto(p){
       const imgs = imagensDoProjeto(p);
       const principal = p.abertura || p.capa || (imgs[0] && imgs[0].src) || "";
-      const fichas = [["Cliente", p.cliente], ["Papel", p.papel], ["Ano", p.ano],
-        ["Duração", p.duracao], ["Ferramentas", (p.ferramentas || []).join(", ")]]
+      const fichas = [[T("ficha.cliente"), p.cliente], [T("ficha.papelCurto"), p.papel], [T("ficha.ano"), p.ano],
+        [T("ficha.duracao"), p.duracao], [T("ficha.ferramentas"), (p.ferramentas || []).join(", ")]]
         .filter(f => f[1]).map(f => `<div><span>${esc(f[0])}</span>${esc(f[1])}</div>`).join("");
       const intro = textos(p.introducao || p.descricao).filter(t => !pendente(t))[0] || "";
       const a = pag("pf-proj", `
@@ -2766,8 +3889,8 @@ section{padding:96px 0; position:relative}
     /* 5. contato */
     const fim = pag("pf-fim", `
       <div>
-        <h2 class="pf-tarja">nos vemos em breve!</h2>
-        <p>entre em contato comigo</p>
+        <h2 class="pf-tarja">${esc(T("pf.fim"))}</h2>
+        <p>${esc(T("pf.fimSub"))}</p>
         <ul class="pf-contatos">
           <li>${esc(c.email)}</li>
           ${c.redes.map(r => `<li>${esc(r.url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""))}</li>`).join("")}
@@ -2783,9 +3906,9 @@ section{padding:96px 0; position:relative}
       <div class="env">
         <div class="cv-barra">
           <div class="cv-modos">${botoes}</div>
-          <button class="btn btn-cheio" id="btnImprimirPf">Baixar em PDF</button>
+          <button class="btn btn-cheio" id="btnImprimirPf">${esc(T("cv.baixar"))}</button>
         </div>
-        <p class="cv-aviso">${esc(cfg.aviso || "")} Na janela de impressão, escolha "Salvar como PDF".</p>
+        <p class="cv-aviso">${esc((cfg.aviso || "") + T("pf.dicaImpressao"))}</p>
       </div>
       <div class="pf-doc" id="pfDoc">${capa}${prazer}${sumario}${corpo}${fim}</div>`;
 
@@ -2800,13 +3923,13 @@ section{padding:96px 0; position:relative}
     });
     document.getElementById("btnImprimirPf").addEventListener("click", async () => {
       const bt = document.getElementById("btnImprimirPf");
-      bt.textContent = "Preparando…";
+      bt.textContent = T("pf.preparando");
       /* espera todas as imagens carregarem, senão elas saem em branco no PDF */
       await Promise.all([...document.querySelectorAll("#pfDoc img")].map(i =>
         i.complete ? null : new Promise(r => { i.onload = i.onerror = r; })));
-      bt.textContent = "Baixar em PDF";
+      bt.textContent = T("cv.baixar");
       const antes = document.title;
-      document.title = "Portfolio - " + nomePF + " - " + cfg.titulo;
+      document.title = T("pf.arquivo") + nomePF + " - " + cfg.titulo;
       document.body.classList.add("imprimindo-pf");
       window.print();
       setTimeout(() => { document.title = antes; document.body.classList.remove("imprimindo-pf"); }, 800);
@@ -2913,8 +4036,12 @@ section{padding:96px 0; position:relative}
     });
   }, {passive:true});
 
+  document.getElementById("btnIdioma").addEventListener("click", trocarIdioma);
+  document.getElementById("btnIdiomaMob").addEventListener("click", trocarIdioma);
+
   window.addEventListener("hashchange", navegar);
   if (!location.hash) location.hash = "#/";
+  aplicarIdioma();
   navegar();
 })();
 </script>

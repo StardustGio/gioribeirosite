@@ -70,7 +70,7 @@ cole logo abaixo e troque o conteúdo:
 },
 ```
 
-A página de cada projeto é montada sempre na mesma ordem (veja a seção 12).
+A página de cada projeto é montada sempre na mesma ordem (veja a seção 13).
 
 ### Imagens
 
@@ -137,7 +137,40 @@ Três coisas o PDF resolve sozinho, para nada sair cortado:
 
 ---
 
-## 2. Os currículos
+## 2. O site em dois idiomas
+
+O site fala português e inglês. Quem chega pela primeira vez vê o idioma do
+próprio navegador; a partir daí, vale a escolha feita no botão do globo, que
+fica ao lado do "Baixar" (no celular, dentro do menu). A escolha fica guardada
+no navegador da pessoa. Os currículos e os dois portfólios em PDF acompanham o
+idioma escolhido.
+
+### Onde fica cada texto
+
+O arquivo tem **dois blocos de conteúdo**, um embaixo do outro:
+
+- `const CONTEUDO` é o português
+- `const CONTEUDO_EN` é o inglês, com a mesma estrutura, campo por campo
+
+Para editar um texto nos dois idiomas, ache o mesmo campo nos dois blocos.
+Caminhos de imagem, cores e ids são iguais nos dois: só o texto muda. Se você
+adicionar um projeto novo, copie o bloco `{ ... }` dele para os dois lugares.
+Esquecer de copiar não quebra o site: o projeto simplesmente não aparece na
+versão em inglês.
+
+Os textos de interface (botões, rótulos, avisos do formulário) ficam logo
+abaixo, em `const TEXTOS`, com `pt` de um lado e `en` do outro.
+
+### Nomes que foram traduzidos
+
+Nomes de marca ficaram como estão: Deathmare Studios, LabRattack, Stardust Sun,
+Meu DU, Supi, Café Litteralis, Ghosts Squeezed, Academia STEM. Os descritivos
+viraram inglês: "Rebrand pessoal" é "Personal rebrand", "Agricultura familiar"
+é "Family farming", "Revista do CONIC" é "CONIC Journal". O clube literário
+ficou "Os Rejeitados Book Club", mantendo o nome próprio e traduzindo só a
+parte genérica.
+
+## 3. Os currículos
 
 Os dois modelos saem do mesmo bloco `curriculo` — você preenche uma vez e os
 dois ficam sincronizados.
@@ -162,7 +195,7 @@ olhar — estúdio, indicação, proposta direta.
 
 ---
 
-## 3. Como publicar
+## 4. Como publicar
 
 ### Cache das imagens (Vercel)
 
@@ -220,11 +253,11 @@ Não é preciso refazer nada do site — o domínio só aponta pro que já exist
 
 ---
 
-## 4. O que ainda falta
+## 5. O que ainda falta
 
 - [ ] Escrever o texto do Ghosts Squeezed e colocar as imagens dele
 - [ ] Colocar uma foto sua em `imagens/` e apontar o caminho em `sobre.foto`
-- [ ] Trocar as páginas de PDF pelos mockups soltos (ver a seção 5)
+- [ ] Trocar as páginas de PDF pelos mockups soltos (ver a seção 6)
 - [ ] Decidir sobre as fontes (ver abaixo)
 
 ### Sobre as fontes
@@ -244,7 +277,7 @@ arquivos `.woff2` na pasta `fontes/` e me avise que eu ajusto o CSS.
 
 ---
 
-## 5. Trocando as imagens pelos mockups
+## 6. Trocando as imagens pelos mockups
 
 As imagens de hoje são páginas dos seus PDFs exportadas em 1600px. Funcionam,
 mas trazem o texto do PDF junto com a arte — o que duplica o que já está
@@ -282,14 +315,14 @@ simplesmente não aparece — o resto do site continua de pé.
 | Capa de card normal | 16:11 (1600 × 1100) | recorta pelo centro |
 | Capa de card destaque | 21:9 (2100 × 900) | recorta pelo centro |
 | Abertura da página | 16:9 (2400 × 1350) | recorta pelo centro |
-| Imagens das seções | depende do formato | veja a seção 8 |
+| Imagens das seções | depende do formato | veja a seção 9 |
 
 Ou seja: só a capa precisa de atenção. Escolha uma imagem onde o assunto
 principal esteja no meio, ou exporte uma versão recortada só para a capa.
 
 ---
 
-## 6. Acessibilidade
+## 7. Acessibilidade
 
 A cada versão, o site passa por uma verificação automática de contraste: todo
 texto visível, nos cinco temas, na página inicial, nas páginas de projeto e
@@ -310,7 +343,7 @@ de trocar cor, contagem de projetos em cada filtro, e respeito à preferência d
 
 ---
 
-## 7. Ligando o formulário de contato
+## 8. Ligando o formulário de contato
 
 O site é estático — ele não consegue mandar e-mail sozinho, porque não existe
 servidor rodando. O formulário precisa de um serviço que receba a mensagem e
@@ -397,7 +430,7 @@ mexa nele.
 
 ---
 
-## 8. Como as imagens entram nos projetos
+## 9. Como as imagens entram nos projetos
 
 Cada imagem pode ser escrita de duas formas. A curta, quando tanto faz:
 
@@ -490,7 +523,7 @@ aberturaFoco: "center",
 
 ---
 
-## 9. Nome diferente no currículo
+## 10. Nome diferente no currículo
 
 O bloco `curriculo` começa com duas linhas que valem só para os dois modelos
 de currículo:
@@ -510,7 +543,7 @@ Ribeiro - ATS.pdf`, em vez do título do site.
 
 ---
 
-## 10. Metodologias e fluxos editáveis
+## 11. Metodologias e fluxos editáveis
 
 As metodologias e os fluxos de tela **não são imagens**. São HTML montado a
 partir do bloco de conteúdo, então reflui em qualquer tela e você edita o texto
@@ -561,7 +594,7 @@ ver o desenho completo com os caminhos de erro — é só clicar para ampliar.
 
 ---
 
-## 11. O que ainda falta
+## 12. O que ainda falta
 
 - [x] Responder os **ESCREVA AQUI** (busque com Ctrl+F). São os achados de
       pesquisa, os resultados de teste e os aprendizados — a parte que só você
@@ -581,7 +614,7 @@ ver o desenho completo com os caminhos de erro — é só clicar para ampliar.
 
 ---
 
-## 12. Como a página de um projeto é montada
+## 13. Como a página de um projeto é montada
 
 Toda página segue a mesma ordem, em todos os projetos:
 
