@@ -2883,7 +2883,7 @@ section{padding:96px 0; position:relative}
 <a class="pular" href="#trabalhos" data-t="pular">Pular para os trabalhos</a>
 
 <header class="topo">
-  <a class="topo-marca" href="#/" aria-label="gio ribeiro, início">
+  <a class="topo-marca" href="#/" data-t-aria="logo.aria" aria-label="gio ribeiro, início">
     <svg viewBox="0 0 333.98 122.6" class="marca-svg" role="img"><use href="#logo-h"></use></svg>
   </a>
 
@@ -2921,7 +2921,7 @@ section{padding:96px 0; position:relative}
       </div>
     </div>
 
-    <button class="sanduiche" id="sanduiche" aria-label="Abrir menu" aria-expanded="false">
+    <button class="sanduiche" id="sanduiche" data-t-aria="menu.abrir" aria-label="Abrir menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -2949,7 +2949,7 @@ section{padding:96px 0; position:relative}
 
 <button class="tema" id="btnTema" data-t-aria="tema.aria" aria-label="Trocar a cor do site">
   <svg viewBox="0 0 120.68 119.77" aria-hidden="true"><use href="#flor"></use></svg>
-  <span class="tema-dica" id="temaDica">Cor do site: Claro</span>
+  <span class="tema-dica" id="temaDica"></span>
 </button>
 
 <div class="cortina" id="cortina" aria-hidden="true"></div>
@@ -2979,7 +2979,7 @@ section{padding:96px 0; position:relative}
       "baixar.uxui.t":"Portfólio de UX/UI", "baixar.uxui.d":"Cases de UX e design de interface",
       "baixar.cvCriativo.t":"Currículo criativo", "baixar.cvCriativo.d":"Com a identidade visual",
       "baixar.cvAts.t":"Currículo ATS", "baixar.cvAts.d":"Para triagem automática",
-      "menu.abrir":"Abrir menu", "menu.fechar":"Fechar menu", "menu.aberto":"baixar este",
+      "menu.abrir":"Abrir menu", "menu.fechar":"Fechar menu", "menu.aberto":"baixar este", "logo.aria":"gio ribeiro, início",
       "idioma.rotulo":"EN", "idioma.aria":"Ver o site em inglês",
       "tema.aria":"Trocar a cor do site", "corDoSite":"Cor do site: ",
       "tema.claro":"Claro", "tema.vinho":"Vinho", "tema.rosa":"Rosa",
@@ -2991,7 +2991,7 @@ section{padding:96px 0; position:relative}
       "trabalhos.titulo":"Trabalhos", "trabalhos.todos":"Todos",
       "trabalhos.vazio":"Nenhum projeto neste eixo ainda.",
       "sobre.retrato":"Retrato de ",
-      "contato.titulo":"Entre em contato", "form.nome":"Seu nome", "form.email":"Seu e-mail",
+      "contato.titulo":"Entre em contato", "contato.texto":"Conta o que você precisa e eu respondo com um caminho possível.", "form.nome":"Seu nome", "form.email":"Seu e-mail",
       "form.msg":"Como posso ajudar?", "form.mel":"Deixe este campo vazio",
       "form.enviar":"Enviar mensagem", "form.enviando":"Enviando…",
       "form.ok":"Mensagem enviada. Respondo assim que possível.",
@@ -3024,7 +3024,7 @@ section{padding:96px 0; position:relative}
       "baixar.uxui.t":"UX/UI portfolio", "baixar.uxui.d":"UX cases and interface design",
       "baixar.cvCriativo.t":"Creative resume", "baixar.cvCriativo.d":"With the visual identity",
       "baixar.cvAts.t":"ATS resume", "baixar.cvAts.d":"For automated screening",
-      "menu.abrir":"Open menu", "menu.fechar":"Close menu", "menu.aberto":"download this",
+      "menu.abrir":"Open menu", "menu.fechar":"Close menu", "menu.aberto":"download this", "logo.aria":"gio ribeiro, home",
       "idioma.rotulo":"PT", "idioma.aria":"View the site in Portuguese",
       "tema.aria":"Change the site colour", "corDoSite":"Site colour: ",
       "tema.claro":"Light", "tema.vinho":"Wine", "tema.rosa":"Pink",
@@ -3036,7 +3036,7 @@ section{padding:96px 0; position:relative}
       "trabalhos.titulo":"Work", "trabalhos.todos":"All",
       "trabalhos.vazio":"No projects in this area yet.",
       "sobre.retrato":"Portrait of ",
-      "contato.titulo":"Get in touch", "form.nome":"Your name", "form.email":"Your email",
+      "contato.titulo":"Get in touch", "contato.texto":"Tell me what you need and I'll come back with a possible path.", "form.nome":"Your name", "form.email":"Your email",
       "form.msg":"How can I help?", "form.mel":"Leave this field empty",
       "form.enviar":"Send message", "form.enviando":"Sending…",
       "form.ok":"Message sent. I'll reply as soon as I can.",
@@ -3084,6 +3084,14 @@ section{padding:96px 0; position:relative}
     document.querySelectorAll("[data-t]").forEach(el => el.textContent = T(el.dataset.t));
     document.querySelectorAll("[data-t-aria]").forEach(el => el.setAttribute("aria-label", T(el.dataset.tAria)));
     document.querySelectorAll("#baixarMenu strong").forEach(el => el.dataset.aberto = T("menu.aberto"));
+    escreverDicaTema();
+  }
+
+  /* A dica do tema é escrita pelo idioma atual, e não só quando alguém clica. */
+  function escreverDicaTema(){
+    const dica = document.getElementById("temaDica");
+    const atual = document.documentElement.getAttribute("data-tema") || "claro";
+    if (dica) dica.textContent = T("corDoSite") + T("tema." + atual);
   }
 
   function trocarIdioma(){
@@ -3336,7 +3344,7 @@ section{padding:96px 0; position:relative}
       <div class="env reveal">
         <h2 class="secao-titulo">${esc(T("contato.titulo"))}</h2>
         <div class="secao-linha"></div>
-        <p>Conta o que você precisa e eu respondo com um caminho possível.</p>
+        <p>${esc(T("contato.texto"))}</p>
 
         <div class="contato-grade">
           <form class="form" id="formContato" novalidate>
